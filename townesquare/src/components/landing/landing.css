@@ -1,0 +1,10 @@
+.landing-top-header-logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.landing-top-header-logo span {
+    margin-left: 10px;
+    font-size: 1.5rem;
+}

@@ -7,13 +7,19 @@ import useMatchBreakpoints from '../../../hooks/useMatchBreakpoints';
 // import Button from '@mui/material/Button';
 import styled from '@emotion/styled';
 import Appbar from '../../Appbar';
-
+import { ThemeProvider } from '@emotion/react';
+import { darkColors, lightColors } from '../../../styles/colors';
 
 const Page: React.FC<React.HTMLAttributes<HTMLDivElement>>  = ({children}) => {
     const navigate = useNavigate()
     // const theme = useTheme();
     const { isMobile } = useMatchBreakpoints()
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+    // TODO: Set up to use useTheme() from @emotion/react
+    const [theme, setTheme] = useState({
+        isDarkmode: false,
+        colors: lightColors,
+    })
     const mobileMenuRef = useRef(null);
     
     useEffect(() => {
@@ -50,35 +56,45 @@ const Page: React.FC<React.HTMLAttributes<HTMLDivElement>>  = ({children}) => {
         navigate(to)
     }
 
+    const handleToggleTheme = () => {
+        const newColors = theme ? lightColors : darkColors;
+        setTheme({
+            isDarkmode: !theme.isDarkmode,
+            colors: newColors
+        })
+    }
+
     return (
-        <StyledPage>
-            <Appbar handleMobileMenu={toggleMenu}/>
-            <BodyWrapper>
-                {children}
-            </BodyWrapper>
-            {!isMobile && <FooterWrapper>
-                {/* <Footer /> */}
-            </FooterWrapper>}
-            {(isMobile && showMobileMenu) && 
-                <MenuOverlay ref={mobileMenuRef}/>}
-            {(isMobile && showMobileMenu) && (
-                <MobileMenuWrapper>
-                    {/* <DropdownMenu options={[
-                        <MenuOption>
-                            <Button onClick={() => handleNavigate('/collections')}>
-                                <Text bold>Profile</Text>
-                            </Button>
-                        </MenuOption>
-                        ,
-                        <MenuOption>
-                            <Button onClick={() => handleNavigate('/nfts')}>
-                                <Text bold>Marketplace</Text>
-                            </Button>
-                        </MenuOption>
-                    ]}/> */}
-                </MobileMenuWrapper>
-            )}
-        </StyledPage>
+        <ThemeProvider theme={theme} >
+            <StyledPage>
+                <Appbar handleMobileMenu={toggleMenu} onThemeToggle={handleToggleTheme} isDarkMode={theme.isDarkmode} />
+                <BodyWrapper>
+                    {children}
+                </BodyWrapper>
+                {!isMobile && <FooterWrapper>
+                    {/* <Footer /> */}
+                </FooterWrapper>}
+                {(isMobile && showMobileMenu) && 
+                    <MenuOverlay ref={mobileMenuRef}/>}
+                {(isMobile && showMobileMenu) && (
+                    <MobileMenuWrapper>
+                        {/* <DropdownMenu options={[
+                            <MenuOption>
+                                <Button onClick={() => handleNavigate('/collections')}>
+                                    <Text bold>Profile</Text>
+                                </Button>
+                            </MenuOption>
+                            ,
+                            <MenuOption>
+                                <Button onClick={() => handleNavigate('/nfts')}>
+                                    <Text bold>Marketplace</Text>
+                                </Button>
+                            </MenuOption>
+                        ]}/> */}
+                    </MobileMenuWrapper>
+                )}
+            </StyledPage>
+        </ThemeProvider>
     );
 }
 
@@ -146,6 +162,6 @@ const MobileMenuWrapper = styled.div`
 //         }
 //     }
 
-// `;
+//  `;
 
 export default Page;

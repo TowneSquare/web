@@ -1,7 +1,11 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
-import {Dehaze as MenuIcon} from '@mui/icons-material';
+import {
+    Dehaze as MenuIcon,
+    DarkMode as DarkmodeIcon,
+    LightMode as LightmodeIcon,
+} from '@mui/icons-material';
 
 import useMatchBreakpoints from '../../hooks/useMatchBreakpoints';
 import { Text } from '../Foundation';
@@ -15,7 +19,11 @@ import { baseColors } from '../../styles/colors';
 type SearchResultType = {
     posts: Array<Post>
 }
-const Appbar = ({handleMobileMenu}: {handleMobileMenu?: (open?: boolean) => void}) => {
+const Appbar = ({handleMobileMenu, onThemeToggle, isDarkMode}: {
+    handleMobileMenu?: (open?: boolean) => void, 
+    onThemeToggle: () => void,
+    isDarkMode?: boolean
+}) => {
     const store = useStore();
     const searchbarRef = useRef(null);
     const { isMobile } = useMatchBreakpoints();
@@ -103,7 +111,6 @@ const Appbar = ({handleMobileMenu}: {handleMobileMenu?: (open?: boolean) => void
         setShowResults(false)
         handleMobileMenu!()
     }
-
       
     return (
         <HeaderWrapper>
@@ -119,6 +126,11 @@ const Appbar = ({handleMobileMenu}: {handleMobileMenu?: (open?: boolean) => void
                         : (<></>)
                 } */}
             </div>
+            <ThemeToggle onClick={onThemeToggle}>
+        
+                {isDarkMode && <DarkmodeIcon />}
+                {!isDarkMode && <LightmodeIcon />}
+            </ThemeToggle>
             <div style={{position: 'relative'}}>
                 {
                     isMobile 
@@ -148,7 +160,7 @@ const HeaderWrapper = styled.div`
     width: 100vw;
     height: 80px;
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr auto auto;
     align-items: center;
     grid-gap: 16px;
     justify-content: space-between;
@@ -171,6 +183,10 @@ const LogoWrapper = styled(Link)`
         
         text-align: left;
     }
+`;
+
+const ThemeToggle = styled.div`
+    cursor: pointer;
 `;
 
 const NavButtons = styled.div`

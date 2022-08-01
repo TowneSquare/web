@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { lightColors } from "../../../styles/colors";
 import { TextProps } from "./types";
 
 const getFontSize = ({ fontSize, small }: TextProps) => {
@@ -11,11 +10,8 @@ const Text = styled.div<TextProps>`
     font-size: ${getFontSize};
     font-weight: ${({ bold }) => (bold ? 900 : 500)};
     line-height: 1.75;
-    color: ${({ color }) => color ?? lightColors.textPrimary};
+    color: ${({ color, theme }) => color ?? theme.colors.textPrimary};
     ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
 `;
-
-// TODO: add colors themes then add in below:
-// color: ${({ color, theme }) => color ?? theme.colors.textPrimary};
 
 export default Text

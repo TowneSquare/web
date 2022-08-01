@@ -8,8 +8,10 @@ import useMatchBreakpoints from '../../../hooks/useMatchBreakpoints';
 import styled from '@emotion/styled';
 import Appbar from '../../Appbar';
 import { ThemeProvider } from '@emotion/react';
+import { light } from '../../../styles/Theme.styled';
 import { darkColors, lightColors } from '../../../styles/colors';
 
+const darkTheme = oldTheme => ({ ...oldTheme, colors: light })
 const Page: React.FC<React.HTMLAttributes<HTMLDivElement>>  = ({children}) => {
     const navigate = useNavigate()
     // const theme = useTheme();
@@ -65,7 +67,7 @@ const Page: React.FC<React.HTMLAttributes<HTMLDivElement>>  = ({children}) => {
     }
 
     return (
-        <ThemeProvider theme={theme} >
+        <ThemeProvider theme={darkTheme} >
             <StyledPage>
                 <Appbar handleMobileMenu={toggleMenu} onThemeToggle={handleToggleTheme} isDarkMode={theme.isDarkmode} />
                 <BodyWrapper>

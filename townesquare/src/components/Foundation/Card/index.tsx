@@ -18,14 +18,15 @@ const Card: React.FC<CardProps> = ({height, width, maxWidth, background,borderRa
     )
 }
 
-const StyledCard = styled.div<{width: string; maxWidth?: string; height: string,boxShadow?: string; borderRadius?: string; background?: string}>`
+const StyledCard = styled.div<CardProps>`
     width: ${({ width }) => width};
     height:  ${({height }) => height};
     max-width: ${props => props.maxWidth ?? '1200px'};
+    background: ${({background, theme}) => background ?? theme.colors.gradient};
+    box-shadow: ${props => props.boxShadow ?? props.theme.shadows.card};
+    border-radius: ${props => props.borderRadius ?? props.theme.radii.default};
 `;
 
-// background: ${({background, theme}) => background ?? theme.colors.gradient};
-//     box-shadow: ${props => props.boxShadow ?? props.theme.shadows.card};
-//     border-radius: ${props => props.borderRadius ?? props.theme.radii.default};
+
 
 export default Card;

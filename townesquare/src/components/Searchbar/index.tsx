@@ -2,15 +2,13 @@ import React, { useCallback,useState } from 'react';
 import styled from '@emotion/styled';
 import { Search as SearchIcon } from '@mui/icons-material';
 import { Card } from '../Foundation';
-// import { useTheme } from '@emotion/react';
-// import { Input } from '@mui/material';
 
 const SearchBar = ({
     changeHandler,
 }: {
     changeHandler: (e: any) => void;
 }) => {
-    // const theme = useTheme()
+  
     const [query, setQuery] = useState('')
 
   const inputHandler = useCallback(
@@ -24,12 +22,12 @@ const SearchBar = ({
     return (
         <Card height="45px" style={{cursor: 'pointer'}} boxShadow="none" >
             <SearchBarWrapper >
-                {/* <Input 
+                <Input 
                     type="text"
                     value={query}
                     placeholder="Search anything"
                     onChange={inputHandler}
-                /> */}
+                />
                 <IconWrapper>
                     <SearchIcon/>
                 </IconWrapper>
@@ -58,20 +56,20 @@ const IconWrapper = styled.div`
     }
 `;
 
-// const Input = styled.input<{ size?: number }>`
-//   width: 100%;
-//   background: transparent;
-//   border: 0;
-//   outline: 0;
-//   font-size: 16px;
-//   line-height: 24px;
-//   color: ${({ theme }) => theme.colors.textPrimary};
-//   &:focus {
-//     color: ${({ theme }) => theme.colors.textPrimary};
-//     ::placeholder {
-//       color: ${({ theme }) => theme.colors.textPrimary};
-//     }
-//   }
-// `
+const Input = styled.input`
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: ${({ theme }) => theme.colors.textPrimary};
+  &:focus {
+    color: ${({ theme }) => theme.colors.textPrimary};
+    ::placeholder {
+      color: ${({ theme }) => theme.colors.textPrimary};
+    }
+  }
+`
 
 export default SearchBar;

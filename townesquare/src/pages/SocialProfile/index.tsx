@@ -60,7 +60,7 @@ const SocialProfile = () => {
 
   return (
     <Page className="profile-layout">
-      <div>
+      
         <Row items="center">
           <CoverPhotoWrapper className="cover-photo-container">
             <div />
@@ -109,7 +109,6 @@ const SocialProfile = () => {
               </div>
           </InfoBox>
         </Row>
-      </div>
     </Page>
   )
 }

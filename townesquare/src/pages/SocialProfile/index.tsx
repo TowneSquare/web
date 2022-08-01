@@ -1,23 +1,22 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import Button from "@mui/material/Button";
 import { shortenAddress } from "../../utils/utils";
 import { Blur,
     ProfileAvatar, 
     CopiedTooltip,
      CoverPhotoWrapper, 
      InfoBox, 
-     InfoItem,
-      Layout, 
+     InfoItem, 
       UsernameInfoBox,
        FollowInfo 
     } from "./styles"
 import { Col, Row } from "../../styles/common";
+import Page from "../../components/Foundation/Page";
 
 const SocialProfile = () => {
   const location = useLocation();
   const [coverPhoto, setCoverPhoto] = useState<string>();
-  const [profileImg, setProfileImg] = useState<string>();
+//   const [profileImg, setProfileImg] = useState<string>();
   const [displayAddress, setDisplayAddress] = useState<string>('');
   const [showCopied, setShowCopied] = useState(false);
 
@@ -60,7 +59,7 @@ const SocialProfile = () => {
   }
 
   return (
-    <Layout className="profile-layout">
+    <Page className="profile-layout">
       <div>
         <Row items="center">
           <CoverPhotoWrapper className="cover-photo-container">
@@ -97,12 +96,12 @@ const SocialProfile = () => {
               </UsernameInfoBox>
 
               <Col className="profile-socials" align="start">
-                <Button id="twitter" className="social-link">
+                <button id="twitter" className="social-link">
                   Twitter
-                </Button>
-                <Button id="website" className="social-link">
+                </button>
+                <button id="website" className="social-link">
                   Website
-                </Button>
+                </button>
               </Col>
 
               <div className="profile-bio">
@@ -111,7 +110,7 @@ const SocialProfile = () => {
           </InfoBox>
         </Row>
       </div>
-    </Layout>
+    </Page>
   )
 }
 

@@ -4,12 +4,12 @@ import SocialProfile from './pages/SocialProfile'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<SocialProfile />} />
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<SocialProfile />} />
+        </Routes>
+      </BrowserRouter>
   );
 }
 

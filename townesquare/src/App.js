@@ -1,19 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home'
+import SocialProfile from './pages/SocialProfile'
 
 function App() {
   return (
-    <div className="App">
-      <center>
-        <h1>TowneSquare Checklist:</h1>
-        <body>Build site: x<br />Win hackathon: x<br />Publish TowneSquare: x<br />Get rich: x</body>
-        <br />
-        <img src="https://media4.giphy.com/media/Qv5TjYPMeesh3ALM4N/giphy.gif"/>
-        <br />
-        <br />
-        <body>Message Dreamer#6463 on Discord when you run out of work to do! :)</body>
-      </center>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<SocialProfile />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

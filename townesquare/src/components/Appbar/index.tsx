@@ -129,11 +129,11 @@ const Appbar = ({handleMobileMenu}: {handleMobileMenu?: (open?: boolean) => void
                         ) 
                         : (
                             <NavButtons>
-                                <Link className="menu-item" to="/collections">
-                                    <Text color={baseColors.primary} bold>Collections</Text>
+                                <Link className="menu-item" to="/">
+                                    <Text color={baseColors.primary} bold>Marketplace</Text>
                                 </Link>
-                                <Link className="menu-item" to="/nfts">
-                                    <Text color={baseColors.primary} bold>NFTs</Text>
+                                <Link className="menu-item" to="/profile">
+                                    <Text color={baseColors.primary} bold>Profile</Text>
                                 </Link>
                             </NavButtons>
                         )

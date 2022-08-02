@@ -9,18 +9,18 @@ export const Ecosystem = (props) => {
   const theme = useTheme();
     return (
       <Container background={theme.colors.secondaryLight} >
-        <Wrapper padding={isMobile ? "16px 32px" : "48px 64px"}>
-          <Row>
-            <Text bold fontSize={isMobile ? "28px" : "40px"} style={{marginLeft: '1rem'}}>
+        <ContentWrapper>
+          <Row style={{margin: '0 16px'}}>
+            <Text fontSize={isMobile ? "32px" : "40px"} style={{marginLeft: '1rem'}}>
               Fully integrated with a suite of ecosystem tools
             </Text>
             <Col>
             <DetailBlock>
               <Row style={{padding: '1rem'}}>
-                <Text bold>
+                <Text bold fontSize="20px">
                   Solana Pay
                 </Text>
-                <Text fontSize={isMobile ? "12px" : "14px"}>
+                <Text fontSize={isMobile ? "14px" : "16px"}>
                   Integrated with Solana Pay to enable social transactions
                   in Web3 and real-world settings
                 </Text>
@@ -28,10 +28,10 @@ export const Ecosystem = (props) => {
             </DetailBlock>
             <DetailBlock>
               <Row style={{padding: '1rem'}}>
-                <Text bold>
+                <Text bold fontSize="20px">
                   Metaplex
                 </Text>
-                <Text fontSize={isMobile ? "12px" : "14px"}>
+                <Text fontSize={isMobile ? "14px" : "16px"}>
                   Access to NFT-related data is made possible with
                   integrations with Metaplex to enrich Web3 social experience
                 </Text>
@@ -39,18 +39,25 @@ export const Ecosystem = (props) => {
             </DetailBlock>
             </Col>
           </Row>
-        </Wrapper>
+        </ContentWrapper>
       </Container>
     )
 }
 
+const ContentWrapper = styled(Wrapper)`
+  padding: 32px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
 const DetailBlock = styled.div`
-  width: calc(100vw / 3);
-  min-width: 100px;
+  min-width: calc(100vw / 3);
+  max-width: calc(100vw / 2);
 
   @media(min-width: 638px) {
     width: calc(100vw / 4);
     max-width: 300px;
-    min-width: 200px;
+    min-width: 240px;
   }
 `;

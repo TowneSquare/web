@@ -18,12 +18,12 @@ const LandingPage = () => {
 
     return (
         <div>
-        <LandingTop />
-        <Header data={landingPageData} />
-        <Profile data={landingPageData} />
-        <ContentMarketplace data={landingPageData} />
-        <Rewards data={landingPageData} />
-        <Ecosystem data={landingPageData} />
+          <LandingTop />
+          <Header data={landingPageData} />
+          <Profile data={landingPageData} />
+          <ContentMarketplace data={landingPageData} />
+          <Rewards data={landingPageData} />
+          <Ecosystem data={landingPageData} />
         </div>
     );
 }

@@ -1,12 +1,14 @@
 import { Container } from '../../styles/common';
 import '../../App.css';
 import Page from '../../components/Foundation/Page';
+import LandingPage from '../LandingPage';
 
 function Home() {
   return (
     <Page>
       <div className="App">
-        <Container>
+        <LandingPage />
+        {/* <Container>
           <h1>TowneSquare Checklist:</h1>
           <div>Build site: x<br />Win hackathon: x<br />Publish TowneSquare: x<br />Get rich: x</div>
           <br />
@@ -14,7 +16,7 @@ function Home() {
           <br />
           <br />
           <div>Message Dreamer#6463 on Discord when you run out of work to do! :)</div>
-        </Container>
+        </Container> */}
       </div>
     </Page>
   );

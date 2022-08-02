@@ -4,7 +4,6 @@ import Input from "@mui/material/Input";
 import { Row } from "../../styles/common";
 
 export const CoverPhotoWrapper = styled.div<{imgUrl?: string}>`
-  cursor: pointer;
   width: 100%;
   min-width: calc(100vw - 50px);
   max-width: calc(100vw - 50px);

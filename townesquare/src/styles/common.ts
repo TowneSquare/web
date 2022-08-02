@@ -25,6 +25,9 @@ export const ContentContainer = styled.div`
   width: 100%;
 `;
 
+export const Wrapper = styled.div<{padding?: string}>`
+  padding: ${props => props.padding ?? '0'};
+`;
 
 export const Row = styled.div<{
   gap?: string;

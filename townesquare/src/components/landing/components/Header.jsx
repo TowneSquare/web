@@ -1,11 +1,18 @@
+import { useTheme } from "@emotion/react"
+import styled from "@emotion/styled"
+import useMatchBreakpoints from "../../../hooks/useMatchBreakpoints"
+import { Wrapper } from "../../../styles/common"
+
 export const Header = (props) => {
+  const { isMobile } = useMatchBreakpoints()
+  const theme = useTheme();
     return (
       <header id='header'>
         <div className='intro'>
           <div className='overlay'>
             <div className='container'>
               <div className='row'>
-                <div className='col-md-8 col-md-offset-2 intro-text'>
+                <ContentWrapper className='col-md-12 intro-text'>
                   <h1>
                     {props.data ? props.data.title : 'Loading'}
                     <span></span>
@@ -23,7 +30,7 @@ export const Header = (props) => {
                   >
                     Read Docs
                   </a>{' '}
-                </div>
+                </ContentWrapper>
               </div>
             </div>
           </div>
@@ -31,3 +38,10 @@ export const Header = (props) => {
       </header>
     )
 }
+
+const ContentWrapper = styled(Wrapper)`
+  padding: 32px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;

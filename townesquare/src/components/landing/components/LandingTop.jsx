@@ -1,38 +1,33 @@
-import { style } from '@mui/system';
-import { Row, Col } from 'react-bootstrap';
-
-const styles = {
-    logo: {
-      maxHeight: "200px",
-      backgroundColor: "#fff",
-      padding: "0 20px",
-      display: "inline"
-    },
-    brandName: {
-        verticalAlign: "top"
-    },
-    landingHeader: {
-        display: "flex",
-        color: "#fff",
-        whiteSpace: "nowrap"
-    }
-  }
-  
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row'
+import { ImageStyle } from '../../../pages/LandingPage/styles';
+import { NavLink } from 'react-router-dom';
 
 function LandingTop() {
     return (
-        <div className='landing-top'>
-            <Row>
-                <Col lg={12} sm={12} xs={12}>
-                    <div class={styles.landingHeader}>
-                        <p style={styles.brandName}>
-                            <img style={styles.logo} src='/logo.png' alt="The Logo for Townesquare"/>
-                            TowneSquare
-                        </p>
-                    </div>
-                </Col>
-            </Row>
-        </div>
+        <Navbar bg="dark" variant="dark">
+            <Container>
+                <Row>
+                    <Navbar.Brand>
+                        <div className="col-md-2">
+                            <ImageStyle
+                            alt=""
+                            src="/logo.png"
+                            width="100"
+                            height="100"
+                            className="d-inline-block align-top" >
+                            </ImageStyle>{' '}
+                        </div>
+                        <div className="col-md-10">
+                            <NavLink>
+                                TowneSquare
+                            </NavLink>
+                        </div>
+                    </Navbar.Brand>
+                </Row>
+            </Container>
+        </Navbar>
     )
 };
 

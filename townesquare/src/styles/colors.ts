@@ -30,7 +30,7 @@ export const lightColors: Colors = {
 export const darkColors: Colors = {
     ...baseColors,
     primaryLight:  "#b73ed52b",
-    secondaryLight: "#61dafb21",
+    secondaryLight: "#005f78b0",
     textPrimary: "#fff",
     textSecondary: "#878a9b",
     textHighlight: '#14a1c1',

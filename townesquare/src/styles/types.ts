@@ -47,6 +47,7 @@ export type Colors = {
   green: string;
   bg: string;
   card: string;
+  cardOverlay: string;
   gradient: string;
   buttonSurface: string;
   buttonText: string;

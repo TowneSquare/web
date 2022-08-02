@@ -8,20 +8,14 @@ import useMatchBreakpoints from '../../../hooks/useMatchBreakpoints';
 import styled from '@emotion/styled';
 import Appbar from '../../Appbar';
 import { ThemeProvider } from '@emotion/react';
-import { light } from '../../../styles/Theme.styled';
-import { darkColors, lightColors } from '../../../styles/colors';
+import { dark, light } from '../../../styles/Theme.styled';
 
-const darkTheme = oldTheme => ({ ...oldTheme, colors: light })
 const Page: React.FC<React.HTMLAttributes<HTMLDivElement>>  = ({children}) => {
     const navigate = useNavigate()
-    // const theme = useTheme();
     const { isMobile } = useMatchBreakpoints()
     const [showMobileMenu, setShowMobileMenu] = useState(false);
     // TODO: Set up to use useTheme() from @emotion/react
-    const [theme, setTheme] = useState({
-        isDarkmode: false,
-        colors: lightColors,
-    })
+    const [isDark, setIsDark] = useState(false)
     const mobileMenuRef = useRef(null);
     
     useEffect(() => {
@@ -59,17 +53,13 @@ const Page: React.FC<React.HTMLAttributes<HTMLDivElement>>  = ({children}) => {
     }
 
     const handleToggleTheme = () => {
-        const newColors = theme ? lightColors : darkColors;
-        setTheme({
-            isDarkmode: !theme.isDarkmode,
-            colors: newColors
-        })
+        setIsDark(!isDark)
     }
 
     return (
-        <ThemeProvider theme={darkTheme} >
+        <ThemeProvider theme={isDark ? dark : light} >
             <StyledPage>
-                <Appbar handleMobileMenu={toggleMenu} onThemeToggle={handleToggleTheme} isDarkMode={theme.isDarkmode} />
+                <Appbar handleMobileMenu={toggleMenu} onThemeToggle={handleToggleTheme} isDarkMode={isDark} />
                 <BodyWrapper>
                     {children}
                 </BodyWrapper>

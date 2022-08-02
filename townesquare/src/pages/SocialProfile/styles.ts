@@ -3,45 +3,44 @@ import FormGroup from "@mui/material/FormGroup"
 import Input from "@mui/material/Input";
 import { Row } from "../../styles/common";
 
-export const Layout = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  height: 100%;
-  width: 100%;
-  justify-content: start;
-  justify-items: center;
+// export const Layout = styled.div`
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   height: 100%;
+//   width: 100%;
+//   justify-content: start;
+//   justify-items: center;
 
-  .profile-header {
+//   .profile-header {
 
-    .bottom-div {
-      position: fixed;
-      bottom: 2%;
-      right: 3%;
+//     .bottom-div {
+//       position: fixed;
+//       bottom: 2%;
+//       right: 3%;
 
-      .edit-profile-buttons {
-        cursor: pointer;
-        position: sticky;
-        right: 0;
-        bottom: 0;
-        background: transparent;
-        padding:.5rem 1rem 1rem 1rem;
-        border-radius: 4px;
-        transition: all 0.1s ease-in-out;
+//       .edit-profile-buttons {
+//         cursor: pointer;
+//         position: sticky;
+//         right: 0;
+//         bottom: 0;
+//         background: transparent;
+//         padding:.5rem 1rem 1rem 1rem;
+//         border-radius: ${props => props.theme.radii.default};
+//         transition: all 0.1s ease-in-out;
 
-        &:hover {
-          background: #d6d7db24;
-        }
+//         &:hover {
+//           background: #d6d7db24;
+//         }
 
-        p {
-          color: var(--white);
-          font-family: var(--font-family-montserrat-semibold);
-        }
-      }
-    }
-  }
+//         p {
+//           color: ${props => props.theme.colors.textPrimary};
+//         }
+//       }
+//     }
+//   }
 
 
-`;
+// `;
 
 export const CoverPhotoWrapper = styled.div<{imgUrl?: string}>`
   cursor: pointer;
@@ -52,9 +51,8 @@ export const CoverPhotoWrapper = styled.div<{imgUrl?: string}>`
   height: 100%;
   min-height: 300px;
   max-height: 300px;
-  background: #5597732A;
-  // background: rgb(0,0,0, 0.3); 
-  border-radius: 5px;
+  background: ${({ theme }) => theme.colors.cardOverlay};
+  border-radius: ${props => props.theme.radii.default};
   background-image: url(${props => props.imgUrl ?? "none"});
   position: relative;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
@@ -83,7 +81,6 @@ export const CoverPhotoWrapper = styled.div<{imgUrl?: string}>`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    // background: rgb(0,0,0, 0.3);
   }
   `;
   
@@ -105,12 +102,10 @@ export const ProfileAvatar = styled.div`
   max-width: 140px;
   min-height: 140px;
   max-height: 140px;
-  transform: translateY(-50px);
-  border-radius: 5px;
+  border-radius: ${props => props.theme.radii.default};
   overflow: hidden;
   position: relative;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  position: relative;
   display:grid;
   grid-template-rows: 1fr;
   justify-content: center;
@@ -131,7 +126,7 @@ export const ProfileAvatar = styled.div`
     object-fit: cover;
     width: 100%;
     height: 100%;
-    background: var(--pickled-bluewood);  
+    background: ${props => props.theme.colors.primary};
     transform: translateY(2px);
   }
 `;
@@ -152,10 +147,9 @@ export const InfoBox = styled.div`
   min-height: 210px;
   max-height: 250px;
   justify-items: center;
-  background: rgb(0,0,0, 0.3);
+  background: ${props => `${props.theme.colors.card}`};
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  transform: translateY(-30px);
+  border-radius: ${props => props.theme.radii.default};
 
   @media(min-width: 1024px) {
     width: 400px;
@@ -175,8 +169,7 @@ export const InfoBox = styled.div`
   }
   .profile-bio {
     transform: translateY(-60px);
-    color: var(--white);
-    font-family: var(--font-family-montserrat-regular);
+    color: ${props => props.theme.colors.textPrimary};
     font-size: 14px;
   }
 `;
@@ -190,23 +183,18 @@ export const GridWrap = styled.div`
   export const InfoItem = styled.div`
   display: grid;
   grid-auto-flow: row;
-  height: 80px;
   width: 160px;
-  border-radius: 5px;
-  background: var(--pickled-bluewood);
+  border-radius: ${props => props.theme.radii.default};
   
   .row-item-title {
     text-align: center;
     font-size: 24px;
     margin: 1rem 1rem 0 1rem;
-    font-family:var(--font-family-montserrat-semibold);
-    color: var(--white);
+    color: ${props => props.theme.colors.textPrimary};
   }
   .row-item-value {
-    font-family: var(--font-family-montserrat-regular);
     font-size: 18px;
-    color: var(--white);
-    text-align: center;
+    color: ${props => props.theme.colors.textPrimary};
     text-align: center;
   }
 
@@ -214,8 +202,8 @@ export const GridWrap = styled.div`
 
 export const UsernameInfoBox = styled(Row)`
   align-items: center;
-  border-radius: 4px;
-  background: rgb(0,0,0, 0.3);
+  border-radius: ${props => props.theme.radii.small};
+  background: ${props => props.theme.colors.tertiary};
   transform: translateY(8px);
   padding: 0 1rem;
   margin-bottom: 1rem;
@@ -223,8 +211,7 @@ export const UsernameInfoBox = styled(Row)`
   position: relative;
 
   p {
-    color: var(--white);
-    font-family: var(--font-family-montserrat-regular);
+    color: ${props => props.theme.colors.textPrimary};
     font-size: 14px;
   }
   
@@ -252,8 +239,8 @@ export const UsernameInfoBox = styled(Row)`
 export const CopiedTooltip = styled.div`
   width: 100px;
   height: 80px;
-  background: var(--white);
-  border-radius: 4px;
+  background: ${props => props.theme.colors.card};
+  border-radius: ${props => props.theme.radii.small};
   margin: 1rem;
   display: grid;
   grid-template-rows: 1fr;
@@ -264,15 +251,14 @@ export const CopiedTooltip = styled.div`
   transform: translateY(60px);
 
   p {
-    color: var(--black);
+    color: ${props => props.theme.colors.textPrimary};
     font-size: 14px;
-    font-family: var(--font-family-montserrat-regular);
   }
 `;
 
 export const EditForm = styled(FormGroup)`
   padding: .75rem 1rem;
-  background: var(--pickled-bluewood);
+  background: ${props => props.theme.colors.card};
 `;
 
 export const EditAction = styled.div<{color?: string, size?: number}>`
@@ -281,7 +267,7 @@ export const EditAction = styled.div<{color?: string, size?: number}>`
   bottom: 1rem;
   right: 30px;
   background: #FFFFFF31;
-  border-radius: 50%;
+  border-radius: ${props => props.theme.radii.circle};
   height: ${props => props.size ? `${props.size}px` : '40px'};
   width: ${props => props.size ? `${props.size}px` : '40px'};
   display: grid;
@@ -300,13 +286,12 @@ export const EditAction = styled.div<{color?: string, size?: number}>`
     margin-top: 2px;
     height: ${props => props.size ? `${props.size / 1.5}px` : '28px'};
     width: ${props => props.size ? `${props.size / 1.5}px` : '28px'};
-    // stroke: ${props => props.color ? props.color : 'var(--pickled-bluewood)'};
   }
 `;
 
 export const EditProfileIcon = styled.div<{bg?: string, hoverColor?: string}>`
   curser: pointer;
-  border-radius: 50%;
+  border-radius: ${props => props.theme.radii.circle};
   height: 35px;
   width: 35px;
   position: absolute;
@@ -317,7 +302,7 @@ export const EditProfileIcon = styled.div<{bg?: string, hoverColor?: string}>`
   grid-template-rows: 1fr;
   align-items: center;
   justify-content: center;
-  background: ${props => props.bg ?? 'var(--mountain-meadow'};
+  background: ${props => props.bg ?? props.theme.colors.bg};
   transition: all 0.15s ease-in-out;
 
   &:hover {
@@ -329,25 +314,21 @@ export const EditProfileIcon = styled.div<{bg?: string, hoverColor?: string}>`
 
 export const TextField = styled(Input)`
   opacity: 0.3;
-  color: var(--cerulean);
-  // text-decoration: underline;
+  color: ${props => props.theme.colors.textSecondary};
   width: 100%;
   max-width: 150px;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-family: var(--font-family-montserrat-regular);
   font-size: 14px;
   cursor: pointer;
 `;
 
 export const FollowInfo = styled.div`
-  padding: 1rem 2rem;
-  border-radius: 4px;
-  transform: translateY(-40px);
+
+  border-radius: ${props => props.theme.radii.default};
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
   align-items: center;
   justify-content: space-between;
-  background: rgb(0,0,0, 0.3);
 `;

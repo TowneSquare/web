@@ -2,13 +2,14 @@ import React, { useCallback,useState } from 'react';
 import styled from '@emotion/styled';
 import { Search as SearchIcon } from '@mui/icons-material';
 import { Card } from '../Foundation';
+import { useTheme } from '@emotion/react';
 
 const SearchBar = ({
     changeHandler,
 }: {
     changeHandler: (e: any) => void;
 }) => {
-  
+    const theme = useTheme()
     const [query, setQuery] = useState('')
 
   const inputHandler = useCallback(
@@ -20,7 +21,7 @@ const SearchBar = ({
   )
 
     return (
-        <Card height="45px" style={{cursor: 'pointer'}} boxShadow="none" >
+        <Card height="45px" style={{cursor: 'pointer'}} background={theme.colors.cardOverlay} boxShadow="none" >
             <SearchBarWrapper >
                 <Input 
                     type="text"

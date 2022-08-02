@@ -22,7 +22,7 @@ const StyledCard = styled.div<CardProps>`
     width: ${({ width }) => width};
     height:  ${({height }) => height};
     max-width: ${props => props.maxWidth ?? '1200px'};
-    background: ${({background, theme}) => background ?? theme.colors.gradient};
+    background: ${({background, theme}) => background ?? theme.colors.card};
     box-shadow: ${props => props.boxShadow ?? props.theme.shadows.card};
     border-radius: ${props => props.borderRadius ?? props.theme.radii.default};
 `;

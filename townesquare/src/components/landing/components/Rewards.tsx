@@ -1,4 +1,5 @@
 
+import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import useMatchBreakpoints from "../../../hooks/useMatchBreakpoints"
 import { Col, Container, Row, Wrapper } from "../../../styles/common"
@@ -20,6 +21,8 @@ const cardSizes = {
 }
 export const Rewards = (props) => {
   const { isMobile, isTablet } = useMatchBreakpoints();
+  const theme = useTheme();
+
   const getCardSize = () => {
     return ({
       width: isMobile 
@@ -35,7 +38,7 @@ export const Rewards = (props) => {
       })
   }
     return (
-      <Container background="#e7ddcd3b">
+      <Container background={theme.isDark ? "#000000c4": "#e7ddcd3b"}>
         <ContentWrapper>
           <Row gap="32px" style={{maxWidth: '1600px', margin: '0 16px'}}>
             <Row>
@@ -49,7 +52,7 @@ export const Rewards = (props) => {
             </Row>
             <Col gap="8px" justify="space-evenly">
               <Row items="center" gap="8px">
-                <NFTCard width={getCardSize().width} height={getCardSize().height}>
+                <NFTCard isDark={theme.isDark} width={getCardSize().width} height={getCardSize().height}>
                   <TextWrapper>
                     <Text textAlign="center" fontSize={isMobile ? "14px" : "18px"}>
                       Creator NFT
@@ -63,7 +66,7 @@ export const Rewards = (props) => {
                 </DetailWrapper>
               </Row>
               <Row items="center" gap="8px">
-                <NFTCard width={getCardSize().width} height={getCardSize().height}>
+                <NFTCard isDark={theme.isDark} width={getCardSize().width} height={getCardSize().height}>
                   <TextWrapper>
                     <Text textAlign="center" fontSize={isMobile ? "14px" : "18px"}>
                       Founder NFT
@@ -78,7 +81,7 @@ export const Rewards = (props) => {
                 </DetailWrapper>
               </Row>
               <Row items="center" gap="8px">
-                <NFTCard width={getCardSize().width} height={getCardSize().height}>
+                <NFTCard isDark={theme.isDark} width={getCardSize().width} height={getCardSize().height}>
                   <TextWrapper>
                     <Text textAlign="center" fontSize={isMobile ? "14px" : "18px"}>
                       Advertiser NFT
@@ -92,7 +95,7 @@ export const Rewards = (props) => {
                 </DetailWrapper>
               </Row>
               <Row items="center" gap="8px">
-                <NFTCard width={getCardSize().width} height={getCardSize().height}>
+                <NFTCard isDark={theme.isDark} width={getCardSize().width} height={getCardSize().height}>
                   <TextWrapper>
                     <Text textAlign="center" fontSize={isMobile ? "14px" : "18px"}>
                       Streamer NFT
@@ -119,10 +122,10 @@ const ContentWrapper = styled(Wrapper)`
   justify-content: center;
 `;
 
-const NFTCard = styled(Card)<{width: string; height: string}>`
+const NFTCard = styled(Card)<{width: string; height: string; isDark: boolean}>`
   border-radius: ${props => props.theme.radii.small};
   background: transparent;
-  border: 1px solid #000;
+  border: 1px solid ${props => props.isDark ? props.theme.colors.textPrimary : '#000'};
   height: 100%;
   align-items: center;
   min-height: ${props => props.height};

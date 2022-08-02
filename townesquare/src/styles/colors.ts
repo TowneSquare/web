@@ -49,14 +49,14 @@ export const darkColors: Colors = {
 }
 
 const _lightShadows: ElevationShadows = {
-    default: "0px 0px 10px adb1b000;",
-    card: "0px 0px 10px adb1b000;",
-    hover: "0px 0px 10px adb1b000;",
+    default: "0px 0px 10px #adb1b000;",
+    card: "0px 0px 10px #adb1b000;",
+    hover: "0px 0px 10px #adb1b000;",
 }
 
 const _darkShadows: ElevationShadows = {
-  default: "0px 0px 10px rgba(0,0,0,0.3);",
-  card: "0px 0px 10px rgba(0,0,0,0.3);",
+  default: "0px 0px 10px #adb1b000;",
+  card: "0px 0px 10px #adb1b000;",
   hover: "inset -2px 2px 4px rgba(15, 16, 16, 0.2), inset 2px -2px 4px rgba(15, 16, 16, 0.2), inset -2px -2px 4px rgba(59, 62, 62, 0.9), inset 2px 2px 5px rgba(15, 16, 16, 0.9);",
 }
 

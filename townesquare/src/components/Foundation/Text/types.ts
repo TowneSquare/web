@@ -25,7 +25,7 @@ export const variants = {
 export type Scale = typeof scales[keyof typeof scales];
 type Font = typeof fontObj[keyof typeof fontObj];
 
-export interface TextProps  {
+export interface TextProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     font?: Font
     color?: string;
     fontSize?: string;

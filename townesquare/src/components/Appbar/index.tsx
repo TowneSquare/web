@@ -9,12 +9,10 @@ import {
 
 import useMatchBreakpoints from '../../hooks/useMatchBreakpoints';
 import { Text } from '../Foundation';
-// import SearchBar from '../SearchBar';
 import useStore from '../../state/store';
 import { Post } from '../../types/post';
 import { baseColors } from '../../styles/colors';
-// import SearchBar from '../Searchbar';
-// import SearchResults from './SearchResults';
+import SearchBar from '../Searchbar';
 
 type SearchResultType = {
     posts: Array<Post>
@@ -118,7 +116,7 @@ const Appbar = ({handleMobileMenu, onThemeToggle, isDarkMode}: {
                 <img width={isMobile ? '35px' : '50px'} src='./logo.png' alt="social-logo" />
             </LogoWrapper>
             <div ref={searchbarRef} style={{minWidth: '200px', maxWidth: '500px', position: 'relative'}}>
-                {/* <SearchBar changeHandler={changeHandler}/> */}
+                <SearchBar changeHandler={changeHandler}/>
                 {/* { 
                     (searchResults.posts.length > 0)
                         && showResults
@@ -128,8 +126,8 @@ const Appbar = ({handleMobileMenu, onThemeToggle, isDarkMode}: {
             </div>
             <ThemeToggle onClick={onThemeToggle}>
         
-                {isDarkMode && <DarkmodeIcon />}
-                {!isDarkMode && <LightmodeIcon />}
+                {isDarkMode && <LightmodeIcon />}
+                {!isDarkMode && <DarkmodeIcon />}
             </ThemeToggle>
             <div style={{position: 'relative'}}>
                 {

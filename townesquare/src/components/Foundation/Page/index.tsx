@@ -9,13 +9,13 @@ import styled from '@emotion/styled';
 import Appbar from '../../Appbar';
 import { ThemeProvider } from '@emotion/react';
 import { dark, light } from '../../../styles/Theme.styled';
+import useStore from '../../../state/store';
 
 const Page: React.FC<React.HTMLAttributes<HTMLDivElement>>  = ({children}) => {
     const navigate = useNavigate()
     const { isMobile } = useMatchBreakpoints()
     const [showMobileMenu, setShowMobileMenu] = useState(false);
     // TODO: Set up to use useTheme() from @emotion/react
-    const [isDark, setIsDark] = useState(false)
     const mobileMenuRef = useRef(null);
     
     useEffect(() => {
@@ -51,15 +51,19 @@ const Page: React.FC<React.HTMLAttributes<HTMLDivElement>>  = ({children}) => {
         setShowMobileMenu(false)
         navigate(to)
     }
-
+    const store = useStore();
     const handleToggleTheme = () => {
-        setIsDark(!isDark)
+        store.setIsDark();
     }
 
+    React.useEffect(() => {
+        console.log(store.isDark)
+    }, [store.isDark])
+
     return (
-        <ThemeProvider theme={isDark ? dark : light} >
+        <ThemeProvider theme={store.isDark ? dark : light} >
             <StyledPage>
-                <Appbar handleMobileMenu={toggleMenu} onThemeToggle={handleToggleTheme} isDarkMode={isDark} />
+                <Appbar handleMobileMenu={toggleMenu} onThemeToggle={handleToggleTheme} isDarkMode={store.isDark} />
                 <BodyWrapper>
                     {children}
                 </BodyWrapper>

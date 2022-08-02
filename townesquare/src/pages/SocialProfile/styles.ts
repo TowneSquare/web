@@ -29,7 +29,7 @@ export const CoverPhotoWrapper = styled.div<{imgUrl?: string}>`
     transform: translateY(60px);
   }
 
-  @media(min-width: 1024px) {
+  @media(min-width: 638px) {
     min-width: calc(100vw - 200px);
     max-width: calc(100vw - 200px);
     min-height: 400px;

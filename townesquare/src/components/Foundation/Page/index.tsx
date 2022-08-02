@@ -56,10 +56,6 @@ const Page: React.FC<React.HTMLAttributes<HTMLDivElement>>  = ({children}) => {
         store.setIsDark();
     }
 
-    React.useEffect(() => {
-        console.log(store.isDark)
-    }, [store.isDark])
-
     return (
         <ThemeProvider theme={store.isDark ? dark : light} >
             <StyledPage>

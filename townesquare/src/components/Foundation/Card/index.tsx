@@ -10,22 +10,15 @@ interface CardProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDiv
     borderRadius?: string;
 }
 
-const Card: React.FC<CardProps> = ({height, width, maxWidth, background,borderRadius, boxShadow, children}, props) => {
-    return (
-        <StyledCard height={height ?? '100%'} width={width ?? '100%'} maxWidth={maxWidth} boxShadow={boxShadow} borderRadius={borderRadius} background={background} {...props}>
-            {children}
-        </StyledCard>
-    )
-}
-
-const StyledCard = styled.div<{width: string; maxWidth?: string; height: string,boxShadow?: string; borderRadius?: string; background?: string}>`
+const Card = styled.div<CardProps>`
     width: ${({ width }) => width};
     height:  ${({height }) => height};
-    max-width: ${props => props.maxWidth ?? '1200px'};
+    max-width: ${props => props.maxWidth ?? '100%'};
+    background: ${({background, theme}) => background ?? theme.colors.card};
+    box-shadow: ${props => props.boxShadow ?? props.theme.shadows.card};
+    border-radius: ${props => props.borderRadius ?? props.theme.radii.default};
 `;
 
-// background: ${({background, theme}) => background ?? theme.colors.gradient};
-//     box-shadow: ${props => props.boxShadow ?? props.theme.shadows.card};
-//     border-radius: ${props => props.borderRadius ?? props.theme.radii.default};
+
 
 export default Card;

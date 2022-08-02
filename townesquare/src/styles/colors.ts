@@ -2,12 +2,14 @@ import { Colors, ElevationShadows } from './types'
 
 export const baseColors = {
   primary: '#b73ed5',
-  secondary: "#a6c6f7",
+  secondary: "#a5ecff",
   tertiary: '#63e77f'
 }
 
 export const lightColors: Colors = {
     ...baseColors,
+    primaryLight:  "#b73ed52b",
+    secondaryLight: "#61dafb21",
     textPrimary: "#000000de",
     textSecondary: "#505363",
     textDisabled: "#393B3B",
@@ -16,7 +18,7 @@ export const lightColors: Colors = {
     red: "#d32f2f",
     blue: "#00B4C9",
     green: "#388e3c",
-    card: "#eef2f3",
+    card: "#b73ed5",
     gradient: "linear-gradient(117deg, #eef2f3, #222832)",
     bg: "#eef2f3",
     buttonSurface: "#03b2cb",
@@ -27,6 +29,8 @@ export const lightColors: Colors = {
 
 export const darkColors: Colors = {
     ...baseColors,
+    primaryLight:  "#b73ed52b",
+    secondaryLight: "#61dafb21",
     textPrimary: "#fff",
     textSecondary: "#878a9b",
     textHighlight: '#14a1c1',
@@ -45,14 +49,14 @@ export const darkColors: Colors = {
 }
 
 const _lightShadows: ElevationShadows = {
-    default: "-2px 2px 4px rgb(29 30 30 / 20%), 2px -2px 4px rgb(29 30 30 / 20%), -2px -2px 4px #00799429, 2px 2px 5px rgb(29 30 30 / 90%), inset 1px 1px 2px rgb(45 48 48 / 30%), inset -1px -1px 2px rgb(29 30 30 / 47%);",
-    card: "-2px 2px 4px rgb(29 30 30 / 20%), 2px -2px 4px rgb(29 30 30 / 20%), -2px -2px 4px #00799429, 2px 2px 5px rgb(29 30 30 / 90%), inset 1px 1px 2px rgb(45 48 48 / 30%), inset -1px -1px 2px rgb(29 30 30 / 47%);",
-    hover: "1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(143, 144, 149, 0.5), inset -2px 2px 4px rgba(143, 144, 149, 0.2), inset 2px -2px 4px rgba(143, 144, 149, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.9), inset 2px 2px 5px rgba(143, 144, 149, 0.9);",
+    default: "0px 0px 10px adb1b000;",
+    card: "0px 0px 10px adb1b000;",
+    hover: "0px 0px 10px adb1b000;",
 }
 
 const _darkShadows: ElevationShadows = {
-  default: "-2px 2px 4px rgb(29 30 30 / 20%), 2px -2px 4px rgb(29 30 30 / 20%), -2px -2px 4px #00799429, 2px 2px 5px rgb(29 30 30 / 90%), inset 1px 1px 2px rgb(45 48 48 / 30%), inset -1px -1px 2px rgb(29 30 30 / 47%);",
-  card: "-2px 2px 4px rgb(29 30 30 / 20%), 2px -2px 4px rgb(29 30 30 / 20%), -2px -2px 4px #00799429, 2px 2px 5px rgb(29 30 30 / 90%), inset 1px 1px 2px rgb(45 48 48 / 30%), inset -1px -1px 2px rgb(29 30 30 / 47%);",
+  default: "0px 0px 10px rgba(0,0,0,0.3);",
+  card: "0px 0px 10px rgba(0,0,0,0.3);",
   hover: "inset -2px 2px 4px rgba(15, 16, 16, 0.2), inset 2px -2px 4px rgba(15, 16, 16, 0.2), inset -2px -2px 4px rgba(59, 62, 62, 0.9), inset 2px 2px 5px rgba(15, 16, 16, 0.9);",
 }
 

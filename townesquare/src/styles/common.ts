@@ -2,10 +2,6 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div<{background?: string}>`
   width: 100vw;
-  min-height: 100vh;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
   background: ${props => props.background ?? 'transparent'};
 `;
 
@@ -13,7 +9,6 @@ export const ColoredContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 100vw;
-  min-height: 100vh;
   background-color: ${props => props.theme.colors.primary};
 `;
 

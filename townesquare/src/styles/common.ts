@@ -17,6 +17,10 @@ export const ColoredContainer = styled.div`
   background-color: ${props => props.theme.colors.primary};
 `;
 
+export const Wrapper = styled.div<{padding?: string}>`
+  padding: ${props => props.padding ?? '0'};
+`;
+
 export const Row = styled.div<{
   gap?: string;
   align?: string;
@@ -35,7 +39,7 @@ export const Col = styled.div<{gap?: string, pl?: string, pr?: string, items?: s
   display: grid;
   grid-auto-flow: column;
   grid-gap: ${props => props.gap ?? '1rem'};
-  align-items: center;
+  align-items: ${props => props.align ?? 'start'};
   padding-left: ${props => props.pl};
   padding-right: ${props => props.pl};
   justify-content: ${props => props.justify ?? 'start'};

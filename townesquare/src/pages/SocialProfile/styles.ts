@@ -3,45 +3,6 @@ import FormGroup from "@mui/material/FormGroup"
 import Input from "@mui/material/Input";
 import { Row } from "../../styles/common";
 
-// export const Layout = styled.div`
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   height: 100%;
-//   width: 100%;
-//   justify-content: start;
-//   justify-items: center;
-
-//   .profile-header {
-
-//     .bottom-div {
-//       position: fixed;
-//       bottom: 2%;
-//       right: 3%;
-
-//       .edit-profile-buttons {
-//         cursor: pointer;
-//         position: sticky;
-//         right: 0;
-//         bottom: 0;
-//         background: transparent;
-//         padding:.5rem 1rem 1rem 1rem;
-//         border-radius: ${props => props.theme.radii.default};
-//         transition: all 0.1s ease-in-out;
-
-//         &:hover {
-//           background: #d6d7db24;
-//         }
-
-//         p {
-//           color: ${props => props.theme.colors.textPrimary};
-//         }
-//       }
-//     }
-//   }
-
-
-// `;
-
 export const CoverPhotoWrapper = styled.div<{imgUrl?: string}>`
   cursor: pointer;
   width: 100%;
@@ -51,7 +12,7 @@ export const CoverPhotoWrapper = styled.div<{imgUrl?: string}>`
   height: 100%;
   min-height: 300px;
   max-height: 300px;
-  background: ${({ theme }) => theme.colors.cardOverlay};
+  background: transparent;
   border-radius: ${props => props.theme.radii.default};
   background-image: url(${props => props.imgUrl ?? "none"});
   position: relative;
@@ -233,26 +194,6 @@ export const UsernameInfoBox = styled(Row)`
       outline: none;
       box-shadow: none;
     }
-  }
-`;
-
-export const CopiedTooltip = styled.div`
-  width: 100px;
-  height: 80px;
-  background: ${props => props.theme.colors.card};
-  border-radius: ${props => props.theme.radii.small};
-  margin: 1rem;
-  display: grid;
-  grid-template-rows: 1fr;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
-  transform: translateY(60px);
-
-  p {
-    color: ${props => props.theme.colors.textPrimary};
-    font-size: 14px;
   }
 `;
 

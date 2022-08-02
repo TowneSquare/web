@@ -1,26 +1,18 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { shortenAddress } from "../../utils/utils";
-import { Blur,
-    ProfileAvatar, 
-    CopiedTooltip,
-     CoverPhotoWrapper, 
-     InfoBox, 
-     InfoItem, 
-      UsernameInfoBox,
-       FollowInfo 
-    } from "./styles"
-import { Col, Row } from "../../styles/common";
-import Page from "../../components/Foundation/Page";
 import { useTheme } from "@emotion/react";
+import { shortenAddress } from "../../utils/utils";
+import { CoverPhotoWrapper } from "./styles"
+import { Row } from "../../styles/common";
+import Page from "../../components/Foundation/Page";
+import ProfileCard from "../../components/ProfileCard";
+import { dummyProfile } from "./constants";
 
 const SocialProfile = () => {
   const location = useLocation();
   const theme = useTheme()
-  const [coverPhoto, setCoverPhoto] = useState<string>();
 //   const [profileImg, setProfileImg] = useState<string>();
   const [displayAddress, setDisplayAddress] = useState<string>('');
-  const [showCopied, setShowCopied] = useState(false);
 
   useEffect(() => {
     const path = location.pathname.split('/');
@@ -28,49 +20,13 @@ const SocialProfile = () => {
     setDisplayAddress(shortenAddress(profileAccount));
   }, [location.pathname])
 
-  const fallbackCopyTextToClipboard = (text: string) => {
-    const elem = document.createElement('textarea')
-    elem.value = text
-
-    document.body.appendChild(elem)
-    elem.select()
-    document.execCommand('copy')
-    document.body.removeChild(elem)
-    
-  }
-
-  const copyTextToClipboard = (text: string) => {
-    if (!navigator.clipboard) {
-      fallbackCopyTextToClipboard(text)
-      return
-    }
-    navigator.clipboard
-      .writeText(text)
-      .then(() => {
-        setShowCopied(true);
-      })
-      .catch((err) => {
-        
-        console.error('Async: Could not copy text: ', err)
-      })
-      .finally(() => {
-        setTimeout(() => {
-          setShowCopied(false);
-        }, 3000);
-      })
-  }
-
   return (
     <Page className="profile-layout">
         <Row items="center">
           <CoverPhotoWrapper className="cover-photo-container">
-            <div />
+            <ProfileCard data={dummyProfile}/>
           </CoverPhotoWrapper>
-          <Row items="center" style={{transform: 'translateY(-60px)'}}>
-            <ProfileAvatar className="circle-avatar">
-              {coverPhoto && <img src={coverPhoto} alt="profile-avatar" />}
-              <Blur className="blur-profileimg"/>
-            </ProfileAvatar>
+          {/* <Row items="center">
             <FollowInfo className="follow-info">
               <InfoItem>
                 <p className="row-item-title">Followers</p>
@@ -82,7 +38,6 @@ const SocialProfile = () => {
               </InfoItem>
             </FollowInfo>
               <InfoBox className="info-box">
-                {/* <Row id="admin-action-edit" className="profile-actions"> */}
                   <UsernameInfoBox className="username-info">
                     <Col align="center">
                       <p className="username">User123</p>
@@ -108,7 +63,7 @@ const SocialProfile = () => {
                     <p>Hello! This is user's bio. </p>
                   </div>
               </InfoBox>
-          </Row>
+          </Row> */}
         </Row>
     </Page>
   )

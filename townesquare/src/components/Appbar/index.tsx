@@ -126,8 +126,8 @@ const Appbar = ({handleMobileMenu, onThemeToggle, isDarkMode}: {
             </div>
             <ThemeToggle onClick={onThemeToggle}>
         
-                {isDarkMode && <DarkmodeIcon />}
-                {!isDarkMode && <LightmodeIcon />}
+                {isDarkMode && <LightmodeIcon />}
+                {!isDarkMode && <DarkmodeIcon />}
             </ThemeToggle>
             <div style={{position: 'relative'}}>
                 {

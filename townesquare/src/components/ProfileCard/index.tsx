@@ -1,6 +1,7 @@
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import React from 'react';
+import useMatchBreakpoints from '../../hooks/useMatchBreakpoints';
 import { Col, Row, Wrapper } from '../../styles/common';
 import { Profile } from '../../types/profile';
 import { shortenAddress } from '../../utils/utils';
@@ -9,6 +10,7 @@ import { CopiedTooltip } from '../Tooltip';
 
 const ProfileCard = ({data}: {data: Profile}) => {
     const theme = useTheme();
+    const { isMobile } = useMatchBreakpoints();
     const [showCopied, setShowCopied] = React.useState(false);
     
   const fallbackCopyTextToClipboard = (text: string) => {
@@ -48,7 +50,7 @@ const ProfileCard = ({data}: {data: Profile}) => {
                 <Col>
                     <Row 
                         className="profile-left-col"
-                        gap={`${theme.spacing[3]}px`} 
+                        gap={`${isMobile ? theme.spacing[2] : theme.spacing[3]}px`} 
                         items="center" 
                         style={{width: '160px'}}
                         >
@@ -56,29 +58,29 @@ const ProfileCard = ({data}: {data: Profile}) => {
                             <img src={data.avatarUrl ?? "./logo.png"} alt="profile-avatar" />
                         </ProfileAvatar>
                         <AddressWrapper onClick={() => copyTextToClipboard(data.address)}>
-                            <Text bold fontSize="18px">{shortenAddress(data.address)}</Text>
+                            <Text bold fontSize={isMobile ? "14px" : "18px"}>{shortenAddress(data.address)}</Text>
                             {showCopied && 
                                 <CopiedTooltip>
                                     <Text>Copied!</Text>
                                 </CopiedTooltip>}
                         </AddressWrapper>
                         <Row items="center">
-                            <Text bold textAlign="center">
+                            <Text bold textAlign="center" fontSize={isMobile ? "11px" : "12px"}>
                                 TowneSquare Collection
                             </Text>
-                            {data.isCreator && <Text>Creator NFT</Text>}
-                            {data.isFounder && <Text>Founder NFT</Text>}
+                            {data.isCreator && <Text fontSize={isMobile ? "11px" : "12px"}>Creator NFT</Text>}
+                            {data.isFounder && <Text fontSize={isMobile ? "11px" : "12px"}>Founder NFT</Text>}
                         </Row>
                     </Row>
 
-                    <Row className="profile-right-col" gap={`${theme.spacing[3]}px`}>
+                    <Row className="profile-right-col" gap={`${isMobile ? theme.spacing[2] : theme.spacing[3]}px`}>
                         <Row className="memberships" gap={`${theme.spacing[1]}px`}>
-                            <Text bold fontSize="18px" style={{marginLeft: `${theme.spacing[1]}px`}}>
+                            <Text bold fontSize={isMobile ? "14px" : "18px"} style={{marginLeft: `${theme.spacing[1]}px`}}>
                                 DAO Membership
                             </Text>
                             {data.DAOs.map(dao => (
                                 <DAOMembership>
-                                    <Text fontSize="12px">
+                                    <Text fontSize={isMobile ? "10px" : "12px"}>
                                         {`${dao.name} - 
                                             ${dao.since > 12 
                                                 ? `${(dao.since - (dao.since % 12)) / 12}yr ` + `${dao.since % 12}`
@@ -90,19 +92,19 @@ const ProfileCard = ({data}: {data: Profile}) => {
                         </Row>
 
                         <Row className="profile-collections">
-                            <Text bold fontSize="18px">
+                            <Text bold fontSize={isMobile ? "14px" : "18px"}>
                                 NFT Collections
                             </Text>
                             <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)'}}>
                                 {data.collections.map(collection => (
-                                    <Text>{collection.name}</Text>
+                                    <Text fontSize={isMobile ? "11px" : "12px"}>{collection.name}</Text>
                                 ))}
                             </div>
-                            <Text bold fontSize="18px">
+                            <Text bold fontSize={isMobile ? "14px" : "18px"}>
                                 Credentials
                             </Text>
                             <Row>
-                                {data.credentials.map(cred => (<Text>{cred}</Text>))}
+                                {data.credentials.map(cred => (<Text fontSize={isMobile ? "11px" : "12px"}>{cred}</Text>))}
                             </Row>
                         </Row>
                     </Row>

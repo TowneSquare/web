@@ -1,11 +1,20 @@
 import styled from "@emotion/styled";
+import React from "react";
 import { TextProps } from "./types";
 
 const getFontSize = ({ fontSize, small }: TextProps) => {
     return small ? "12px" : fontSize || "0.875rem";
   };
 
-const Text = styled.div<TextProps>`
+const Text: React.FC<TextProps> = ({children, ...props}) => {
+  return (
+    <StyledText {...props}>
+      {children}
+    </StyledText>
+  )
+}
+
+const StyledText = styled.div<TextProps>`
     font-family: 'Montserrat', sans-serif;
     font-size: ${getFontSize};
     font-weight: ${({ bold }) => (bold ? 800 : 500)};

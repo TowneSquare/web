@@ -6,7 +6,7 @@ import { ContentMarketplace } from '../../components/landing/components/ContentM
 import { Rewards } from '../../components/landing/components/Rewards';
 import { Ecosystem } from '../../components/landing/components/Ecosystem';
 import LandingPageData from './../../data/landing_page.json'
-import LandingTop from './../../components/landing/components/LandingTop'
+import Page from '../../components/Foundation/Page';
 
 
 
@@ -17,14 +17,23 @@ const LandingPage = () => {
     }, []);
 
     return (
-        <div>
-          <LandingTop />
+        <Page>
+          <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+
+          <script
+            src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+
+          <script
+            src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"></script>
+            
+
+          <script>var Alert = ReactBootstrap.Alert;</script>
           <Header data={landingPageData} />
           <Profile data={landingPageData} />
           <ContentMarketplace data={landingPageData} />
           <Rewards data={landingPageData} />
           <Ecosystem data={landingPageData} />
-        </div>
+        </Page>
     );
 }
 

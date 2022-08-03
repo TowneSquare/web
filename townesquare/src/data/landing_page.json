@@ -2,5 +2,18 @@
     "Header": {
       "title": "Web 3 Social Network for Everyone",
       "paragraph": "Monetize your content and earn rewards by socialising natively on Web 3"
+    },
+    "Profile": {
+      "title": "Social profile, done Web3 natively",
+      "paragraph": "Own your social profile powered by your Web3 history, DAO memberships, NFT collections, at your own choice."
+    },
+    "Marketplace": {
+      "title": "Content NFT Marketplace",
+      "paragraph": "Tokenize your Web 3 content and sell it in our content marketplace",
+      "Cards": {
+        "card1": "Link your Twitter profile to your TowneSquare profile",
+        "card2": "Select the tweet content you want to monetize and make into NFT",
+        "card3": "Auction and sell it on TowneSquare’s NFT marketplace"
+      }
     }
 }

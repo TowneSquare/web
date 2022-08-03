@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home'
 import SocialProfile from './pages/SocialProfile'
 import LandingPage from './pages/LandingPage'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

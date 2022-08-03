@@ -1,17 +1,24 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
+
 import { Link } from 'react-router-dom';
+
 import styled from '@emotion/styled';
 import {
-    Dehaze as MenuIcon,
-    DarkMode as DarkmodeIcon,
-    LightMode as LightmodeIcon,
+  DarkMode as DarkmodeIcon,
+  Dehaze as MenuIcon,
+  LightMode as LightmodeIcon,
 } from '@mui/icons-material';
 
 import useMatchBreakpoints from '../../hooks/useMatchBreakpoints';
-import { Text } from '../Foundation';
 import useStore from '../../state/store';
-import { Post } from '../../types/post';
 import { baseColors } from '../../styles/colors';
+import { Post } from '../../types/post';
+import { Text } from '../Foundation';
 import SearchBar from '../Searchbar';
 
 type SearchResultType = {
@@ -139,7 +146,7 @@ const Appbar = ({handleMobileMenu, onThemeToggle, isDarkMode}: {
                         ) 
                         : (
                             <NavButtons>
-                                <Link className="menu-item" to="/">
+                                <Link className="menu-item" to="/marketplace">
                                     <Text color={baseColors.primary} bold>Marketplace</Text>
                                 </Link>
                                 <Link className="menu-item" to="/profile">

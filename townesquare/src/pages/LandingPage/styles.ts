@@ -1,9 +1,11 @@
 import styled from '@emotion/styled';
-import { Text } from "../../components/Foundation"
-import { Button } from "../../components/Foundation/Button"
-import Col from 'react-bootstrap/Col';
-import { Container } from 'react-bootstrap';
-import ProfileCard from './../../components/ProfileCard'
+import { Text } from "../../components/Foundation";
+import { Button } from "../../components/Foundation/Button";
+import { 
+  Container,
+  Col,
+} from "../../../node_modules/react-bootstrap/esm/index";
+import ProfileCard from './../../components/ProfileCard';
 
 export const ColouredContainer = styled(Container)<{background?: string}>`
   max-width: 100%;

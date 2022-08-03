@@ -1,4 +1,3 @@
-import { Container } from '../../styles/common';
 import '../../App.css';
 import Page from '../../components/Foundation/Page';
 import LandingPage from '../LandingPage';

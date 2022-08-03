@@ -1,9 +1,10 @@
-import styled from "@emotion/styled";
-import FormGroup from "@mui/material/FormGroup"
-import Input from "@mui/material/Input";
-import { Row } from "../../styles/common";
+import styled from '@emotion/styled';
+import FormGroup from '@mui/material/FormGroup';
+import Input from '@mui/material/Input';
 
-export const CoverPhotoWrapper = styled.div<{imgUrl?: string}>`
+import { Row } from '../../styles/common';
+
+export const CoverPhotoWrapper = styled.div<{ imgUrl?: string }>`
   width: 100%;
   min-width: calc(100vw - 50px);
   max-width: calc(100vw - 50px);
@@ -43,8 +44,8 @@ export const CoverPhotoWrapper = styled.div<{imgUrl?: string}>`
     object-fit: cover;
   }
   `;
-  
-  export const Blur = styled.div<{w?: string, h?: string}>`
+
+export const Blur = styled.div<{ w?: string, h?: string }>`
   height: ${props => props.h ?? '100%'};
   width: ${props => props.w ?? '100%'};
   background: rgb(0,0,0, 0.3);
@@ -53,7 +54,7 @@ export const CoverPhotoWrapper = styled.div<{imgUrl?: string}>`
   image-blend-mode: overlay, normal;
   filter: blur(4px);
   `;
-  
+
 export const ProfileAvatar = styled.div`
   cursor: pointer;
   width: 100%;
@@ -139,8 +140,8 @@ export const GridWrap = styled.div`
   width: 100%;
   padding: 1rem;
   `;
-  
-  export const InfoItem = styled.div`
+
+export const InfoItem = styled.div`
   display: grid;
   grid-auto-flow: row;
   width: 160px;
@@ -201,7 +202,7 @@ export const EditForm = styled(FormGroup)`
   background: ${props => props.theme.colors.card};
 `;
 
-export const EditAction = styled.div<{color?: string, size?: number}>`
+export const EditAction = styled.div<{ color?: string, size?: number }>`
   cursor: pointer;
   position: absolute;
   bottom: 1rem;
@@ -229,7 +230,7 @@ export const EditAction = styled.div<{color?: string, size?: number}>`
   }
 `;
 
-export const EditProfileIcon = styled.div<{bg?: string, hoverColor?: string}>`
+export const EditProfileIcon = styled.div<{ bg?: string, hoverColor?: string }>`
   curser: pointer;
   border-radius: ${props => props.theme.radii.circle};
   height: 35px;

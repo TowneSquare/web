@@ -10,15 +10,7 @@ interface CardProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDiv
     borderRadius?: string;
 }
 
-const Card: React.FC<CardProps> = ({height, width, maxWidth, background,borderRadius, boxShadow, children}, props) => {
-    return (
-        <StyledCard height={height ?? '100%'} width={width ?? '100%'} maxWidth={maxWidth} boxShadow={boxShadow} borderRadius={borderRadius} background={background} {...props}>
-            {children}
-        </StyledCard>
-    )
-}
-
-const StyledCard = styled.div<CardProps>`
+const Card = styled.div<CardProps>`
     width: ${({ width }) => width};
     height:  ${({height }) => height};
     max-width: ${props => props.maxWidth ?? '100%'};

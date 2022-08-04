@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import SocialProfile from './pages/SocialProfile'
 import LandingPage from './pages/LandingPage'
 import Marketplace from './pages/Marketplace'
+import Feed from './pages/Feed'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/profile" element={<SocialProfile />} />
           <Route path="/welcome" element={<LandingPage />} />
           <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/feed" element={<Feed />} />
         </Routes>
       </BrowserRouter>
   );

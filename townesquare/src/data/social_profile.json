@@ -1,0 +1,26 @@
+{
+  "Account": {
+    "avatar": "/noimage.png",
+    "account_name": "Account Name",
+    "wallet": "Wallet Address",
+    "domain": "Domain Name Linked",
+    "profile_link": "",
+    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim magna in vestibulum malesuada. Proin rhoncus tempor ipsum in vulputate. Etiam et nisi egestas, sagittis nulla sed, gravida nunc. Proin.",
+    "DaoMemberships": [
+      {
+        "avatar": "/dao.svg",
+        "label": "MonkeDAO"
+      },
+      {
+        "avatar": "/dao.svg",
+        "label": "MonkeDAO"
+      },
+      {
+        "avatar": "/dao.svg",
+        "label": "MonkeDAO"
+      }
+    ],
+    "nft_collections": ["StepN", "SMB", "DeganApe"],
+    "credentials": "Raydium RAYdiator"
+  }
+}

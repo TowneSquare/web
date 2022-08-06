@@ -4,12 +4,13 @@ export interface SectionDetails {
   description: string;
 }
 
-interface EcosystemSection {
+interface SectionData {
   title: string;
   details: SectionDetails[];
 }
 
-export interface EcosystemData {
+export interface LandingData {
     title: string;
-    sections: EcosystemSection[];
+    sections: SectionData[];
+    description?: string;
 }

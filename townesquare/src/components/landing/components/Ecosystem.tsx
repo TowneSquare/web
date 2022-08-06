@@ -5,9 +5,9 @@ import useMatchBreakpoints from "../../../hooks/useMatchBreakpoints"
 import { Col, Container, Row, Wrapper } from "../../../styles/common"
 import { Text, Title } from "../../Foundation"
 import { BgGradEllipse } from "../../svgs"
-import { EcosystemData, SectionDetails } from "../../../data/types"
+import { LandingData, SectionDetails } from "../../../data/types"
 
-export const Ecosystem = ({data}: { data: EcosystemData}) => {
+export const Ecosystem = ({data}: { data: LandingData}) => {
   const { isMobile, isTablet } = useMatchBreakpoints()
   const theme = useTheme();
 

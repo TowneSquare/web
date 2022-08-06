@@ -19,21 +19,21 @@
     "Rewards": {
       "title": "Earn rewards while socializing",
       "description": "TowneSquare introduces 4 types of NFTs to offer the optimal Social-2-Earn experience",
-      "nfts": [
+      "sections": [
         {
-          "title": "Creator NFT",
+          "title": "Creator",
           "description": "Earn rewards by publishing and interacting with content"
         },
         {
-          "title": "Founder NFT",
+          "title": "Founder",
           "description": "Access AMA space on TowneSquare and make project announcements to the community"
         },
         {
-          "title": "Advertiser NFT",
+          "title": "Advertiser",
           "description": "Publish advertisements on TowneSquare"
         },
         {
-          "title": "Streamer NFT",
+          "title": "Streamer",
           "description": "Stream content and earn rewards"
         }
       ]

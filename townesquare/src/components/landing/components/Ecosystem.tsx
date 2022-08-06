@@ -5,13 +5,13 @@ import useMatchBreakpoints from "../../../hooks/useMatchBreakpoints"
 import { Col, Container, Row, Wrapper } from "../../../styles/common"
 import { Text, Title } from "../../Foundation"
 import { BgGradEllipse } from "../../svgs"
-import { EcosystemData, EcosystemDetails } from "../../../data/types"
+import { EcosystemData, SectionDetails } from "../../../data/types"
 
 export const Ecosystem = ({data}: { data: EcosystemData}) => {
   const { isMobile, isTablet } = useMatchBreakpoints()
   const theme = useTheme();
 
-  const mobileDetailsView = (data: EcosystemDetails[]) => {
+  const mobileDetailsView = (data: SectionDetails[]) => {
     return (
       <Row justify="space-evenly" items="center" gap={`${theme.spacing[5]}px`}>
         {data.map(entry => (
@@ -130,9 +130,4 @@ const SectionTitleBox = styled(Container)<{isMobile: boolean}>`
   width: 100%;
   min-width: ${props => props.isMobile ? 'unset' : 'calc(100vw / 1.5)'};
   max-width: ${props => props.isMobile ? 'unset' : '1166px'};
-`;
-
-const BgWrapper = styled.div`
-  position: relative;
-
 `;

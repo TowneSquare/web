@@ -16,6 +16,28 @@
         "card3": "Auction and sell it on TowneSquare’s NFT marketplace"
       }
     },
+    "Rewards": {
+      "title": "Earn rewards while socializing",
+      "description": "TowneSquare introduces 4 types of NFTs to offer the optimal Social-2-Earn experience",
+      "nfts": [
+        {
+          "title": "Creator NFT",
+          "description": "Earn rewards by publishing and interacting with content"
+        },
+        {
+          "title": "Founder NFT",
+          "description": "Access AMA space on TowneSquare and make project announcements to the community"
+        },
+        {
+          "title": "Advertiser NFT",
+          "description": "Publish advertisements on TowneSquare"
+        },
+        {
+          "title": "Streamer NFT",
+          "description": "Stream content and earn rewards"
+        }
+      ]
+    },
     "Ecosystem":  {
       "title": "Fully integrated with a suite of ecosystem tools",
       "sections": [

@@ -1,12 +1,12 @@
 
-export interface EcosystemDetails {
+export interface SectionDetails {
   title: string;
   description: string;
 }
 
 interface EcosystemSection {
   title: string;
-  details: EcosystemDetails[];
+  details: SectionDetails[];
 }
 
 export interface EcosystemData {

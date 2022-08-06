@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import styled from '@emotion/styled';
 import useMatchBreakpoints from '../../../hooks/useMatchBreakpoints';
 // import Text from '../Text';
 // import DropdownMenu from '../../DropdownMenu';
 // import Footer from '../../Footer';
 // import Button from '@mui/material/Button';
-import styled from '@emotion/styled';
 import Appbar from '../../Appbar';
 import { ThemeProvider } from '@emotion/react';
 import { dark, light } from '../../../styles/Theme.styled';
@@ -13,6 +13,7 @@ import useStore from '../../../state/store';
 
 const Page: React.FC<React.HTMLAttributes<HTMLDivElement>>  = ({children}) => {
     const navigate = useNavigate()
+    const store = useStore();
     const { isMobile } = useMatchBreakpoints()
     const [showMobileMenu, setShowMobileMenu] = useState(false);
     // TODO: Set up to use useTheme() from @emotion/react
@@ -51,7 +52,7 @@ const Page: React.FC<React.HTMLAttributes<HTMLDivElement>>  = ({children}) => {
         setShowMobileMenu(false)
         navigate(to)
     }
-    const store = useStore();
+    
     const handleToggleTheme = () => {
         store.setIsDark();
     }

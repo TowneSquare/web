@@ -4,12 +4,12 @@ import { ThemeProvider } from '@emotion/react';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { light } from './styles/Theme.styled';
+import { dark } from './styles/Theme.styled';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={light}>
+    <ThemeProvider theme={dark}>
       <App />
     </ThemeProvider>
   </React.StrictMode>

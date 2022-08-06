@@ -45,7 +45,7 @@ const ProfileCard = ({data}: {data: Profile}) => {
   }
 
     return (
-        <Card background={theme.colors.secondaryLight}>
+        <Card background={theme.colors.overlay}>
             <Wrapper padding="1rem">
                 <Col>
                     <Row 
@@ -124,7 +124,7 @@ export const ProfileAvatar = styled.div`
     max-height: 140px;
     border-radius: ${props => props.theme.radii.default};
     overflow: hidden;
-    background: ${props => props.theme.colors.primaryLight};
+    background: ${props => props.theme.colors.overlay};
     display:grid;
     grid-template-rows: 1fr;
     justify-content: center;

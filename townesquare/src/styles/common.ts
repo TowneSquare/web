@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const Container = styled.div<{background?: string}>`
-  width: 100vw;
+  width: 100%;
   background: ${props => props.background ?? 'transparent'};
 `;
 

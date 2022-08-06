@@ -18,7 +18,7 @@ type State = {
 
 const useStore = create<State>((set) => ({
     posts: [],
-    isDark: false,
+    isDark: true,
   errors: {
     postError: null,
     nftError: null,

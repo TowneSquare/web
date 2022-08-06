@@ -21,7 +21,7 @@ const SearchBar = ({
   )
 
     return (
-        <Card height="45px" style={{cursor: 'pointer'}} background={theme.colors.primaryLight} boxShadow="none" >
+        <Card height="45px" style={{cursor: 'pointer'}} background={theme.colors.overlay} boxShadow="none" >
             <SearchBarWrapper >
                 <Input 
                     type="text"

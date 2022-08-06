@@ -1,6 +1,37 @@
 import styled from "@emotion/styled";
 
-export const Title = styled.h1`
-    color: ${props => props.theme.colors.textPrimary};
-    font-size: 32px;
+// export const Title = styled.h1`
+//     color: ${props => props.theme.colors.textPrimary};
+//     font-size: 32px;
+// `;
+
+import React from "react";
+import { TextProps } from "./types";
+
+const getFontSize = ({ fontSize, scale }: TextProps) => {
+    return scale === 'sm' ? "38px"
+        : scale === 'md' ? "75px"
+        : scale === 'lg' ? '104px' 
+        : fontSize || "75px"
+  };
+
+const Text: React.FC<TextProps> = ({children, ...props}) => {
+  return (
+    <StyledText {...props}>
+      {children}
+    </StyledText>
+  )
+}
+
+const StyledText = styled.div<TextProps>`
+    font-family: 'Outfit', sans-serif;;
+    font-size: ${getFontSize};
+    font-weight: ${({ bold }) => (bold ? 700 : 600)};
+    line-height: ${({ scale }) => scale == 'sm' ? '140%' : '120%'};
+    color: ${({ color, theme }) => color ?? theme.colors.textPrimary};
+    text-align: ${({ textAlign }) => textAlign ?? 'center'};
+    text-shadow: ${({ scale }) => scale === 'sm' ? 'none' : '2px 4px 12px rgba(255, 0, 184, 0.65)'};
+    ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
 `;
+
+export default Text

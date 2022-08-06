@@ -1,0 +1,1 @@
+export { default as BgGradEllipse } from './BgGradEllipse';

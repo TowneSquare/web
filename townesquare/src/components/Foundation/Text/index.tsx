@@ -15,7 +15,7 @@ const Text: React.FC<TextProps> = ({children, ...props}) => {
 }
 
 const StyledText = styled.div<TextProps>`
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Outfit', sans-serif;;
     font-size: ${getFontSize};
     font-weight: ${({ bold }) => (bold ? 800 : 500)};
     line-height: 1.75;

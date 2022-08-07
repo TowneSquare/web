@@ -19,6 +19,9 @@ interface BoxProps {
   flexWrap?: string;
   rowGap?: string;
   columnGap?: string;
+  position?: string;
+  top?: string;
+  left?: string;
 
   ml?: string;
   mr?: string;
@@ -48,6 +51,9 @@ export const Box = styled.div<BoxProps>`
   flex-wrap: ${props => props.flexWrap};
   row-gap: ${props => props.rowGap};
   column-gap: ${props => props.columnGap};
+  position: ${props => props.position};
+  top: ${props => props.top};
+  left: ${props => props.left};
 
   margin-left: ${props => props.ml};
   margin-right: ${props => props.mr};

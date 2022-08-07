@@ -7,6 +7,7 @@ import Page from "../../components/Foundation/Page";
 import Navbar from "../../components/SocialProfile/Navbar";
 import Profile from "../../components/SocialProfile/Profile";
 import { dummyProfile } from "./constants";
+import Wallet from "../../components/SocialProfile/Wallet";
 
 const SocialProfile = () => {
   const location = useLocation();
@@ -36,8 +37,8 @@ const SocialProfile = () => {
           mb="171px"
         >
           <Navbar isProfile={isProfile} setIsProfile={setIsProfile} />
-          <Profile data={dummyProfile} />
-
+          {isProfile && <Profile data={dummyProfile} />}
+          {!isProfile && <Wallet data={dummyProfile} />}
           {/* <Row items="center">
             <CoverPhotoWrapper className="cover-photo-container">
               <ProfileCard data={dummyProfile} />

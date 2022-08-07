@@ -94,8 +94,8 @@ const Page: React.FC<React.HTMLAttributes<HTMLDivElement>>  = ({children}) => {
 
 const StyledPage = styled.div`
     width: 100%;
-    height: 100vh;
-    background: #fff; 
+    height: 100%;
+    background: ${({ theme }) => theme.colors.bg}; 
 `
 const BodyWrapper = styled.div`
     @media(max-width: 638px) {

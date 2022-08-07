@@ -15,7 +15,7 @@ export const Ecosystem = ({data}: { data: LandingData}) => {
     return (
       <Row justify="space-evenly" items="center" gap={`${theme.spacing[5]}px`}>
         {data.map(entry => (
-          <DetailBlock>
+          <DetailBlock key={entry.title}>
             <Row align="center" justify="center" gap={`${theme.spacing[4]}px`}>
               <Title scale="sm">
                 {entry.title}
@@ -30,7 +30,7 @@ export const Ecosystem = ({data}: { data: LandingData}) => {
     )
   }
     return (
-      <Container background={theme.colors.bg} >
+      <Container  style={{position: 'relative'}}>
         <ContentWrapper>
           <Row items="center" gap="112px">
             <TitleWrapper isMobile={isMobile || isTablet}>
@@ -67,37 +67,24 @@ export const Ecosystem = ({data}: { data: LandingData}) => {
               ))}
             </Row>
           </Row>
+        </ContentWrapper>
+        <GradientBg>
           <div className="bg-icon-top">
               <BgGradEllipse />
             </div>
             <div className="bg-icon-bottom">
               <BgGradEllipse />
             </div>
-        </ContentWrapper>
+        </GradientBg>
       </Container>
     )
 }
 
 const ContentWrapper = styled(Wrapper)`
   padding: 150px 0;
-  width: 100%;
   display: flex;
   justify-content: center;
-  position: relative;
-  
-  .bg-icon-top {
-    position: absolute;
-    top: 0;
-    left: -60%;
-    z-index: 0;
-  }
-  .bg-icon-bottom {
-    position: absolute;
-    bottom: -10%;
-    right: -40%;
-    transform: rotate3d(1, 1, 1, 1deg);
-    z-index: 0;
-  }
+  overflow: hidden;
 
   > * {
     z-index: 1;
@@ -130,4 +117,39 @@ const SectionTitleBox = styled(Container)<{isMobile: boolean}>`
   width: 100%;
   min-width: ${props => props.isMobile ? 'unset' : 'calc(100vw / 1.5)'};
   max-width: ${props => props.isMobile ? 'unset' : '1166px'};
+`;
+
+const GradientBg = styled.div`
+  
+  .bg-icon-top {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    svg {
+      transform: translateX(-40%);
+    }
+    @media(min-width: 1024px) {
+      svg {
+        width: 100%;
+        transform: translateX(-40%);
+      }
+    }
+
+  }
+  .bg-icon-bottom {
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+    transform: rotate3d(1, 1, 1, 1deg);
+    z-index: 0;
+    svg {
+      transform: translateX(20%);
+    }
+    @media(min-width: 1024px) {
+      svg {
+        width: 100%;
+        transform: translateX(20%);
+      }
+    }
+  }
 `;

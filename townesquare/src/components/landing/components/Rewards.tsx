@@ -32,14 +32,14 @@ export const Rewards = ({data}: {data: LandingData}) => {
   }
 
     return (
-      <Container background={theme.colors.bg}>
+      <Container style={{position: 'relative'}}>
         <ContentWrapper>
-          <Row gap="136px" style={{maxWidth: '1600px', margin: '0 16px'}}>
-            <Row>
+          <Row gap="136px">
+            <Row style={{padding: '32px'}} items="center">
               <Title scale={isMobile || isTablet ? "md" : "lg"} bold>
                 {data.title}
               </Title>
-              <Title scale="sm" fontWeight={400}>
+              <Title scale="sm" fontWeight={400} style={{maxWidth: '843px'}}>
                 {data.description}
               </Title>
             </Row>
@@ -47,7 +47,7 @@ export const Rewards = ({data}: {data: LandingData}) => {
             <Cards isMobile={isMobile || isTablet}>
               {Object.values(data.sections).map((section, i) => (
                 section.details.map((detail, j) => (
-                <Row key={`rewards-section-${i}${i}`} items="center" gap="8px">
+                <Row key={`rewards-section-${i}${j}`} items="center" gap="8px">
                   <NFTCard>
                     <DetailWrapper>
                       <Col gap="40px" align="center" items="center">
@@ -65,30 +65,19 @@ export const Rewards = ({data}: {data: LandingData}) => {
               ))}
             </Cards>
           </Row>
-        <div className="bg-icon">
-          <BgGradEllipse />
-        </div>
         </ContentWrapper>
+        <GradientBg>
+          <BgGradEllipse />
+        </GradientBg>
       </Container>
     )
 }
 
 const ContentWrapper = styled(Wrapper)`
-  padding: 128px 32px;
+  padding: 128px 0;
   width: 100%;
   display: flex;
   justify-content: center;
-  position: relative;
-  
-  .bg-icon {
-    position: absolute;
-    bottom: 0;
-    z-index: 0;
-
-    @media(min-width: 1024px) {
-      bottom: -18%;
-    }
-  }
   
   > * {
     z-index: 1;
@@ -100,6 +89,7 @@ const Cards = styled.div<{isMobile: boolean}>`
   grid-gap: ${({ theme }) => `${theme.spacing[3]}px`};
   grid-template-columns: ${({isMobile}) => isMobile ? 'unset' : 'repeat(2, 1fr)'};
   grid-template-rows: ${({isMobile}) => isMobile ? 'repeat(4, 1fr)' : 'unset'};
+  padding: 0 32px;
 `;
 
 const NFTCard = styled(Card)`
@@ -116,4 +106,19 @@ const DetailWrapper = styled.div`
   padding: 30px 40px;
   display: flex;
   height: 100%;
+`;
+
+const GradientBg = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
+  
+  @media(min-width: 1024px) {
+      bottom: -25%;
+      
+      svg {
+        width: 100%;
+      }
+    }
 `;

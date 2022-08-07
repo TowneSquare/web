@@ -1,15 +1,13 @@
 import { Colors, ElevationShadows } from './types'
 
 export const baseColors = {
-  primary: '#b73ed5',
-  secondary: "#a5ecff",
-  tertiary: '#63e77f'
+  primary: '#78519C',
+  secondary: "#B899C8",
+  tertiary: '#9FBBE2'
 }
 
 export const lightColors: Colors = {
     ...baseColors,
-    primaryLight:  "#b73ed52b",
-    secondaryLight: "#61dafb21",
     textPrimary: "#000000de",
     textSecondary: "#505363",
     textDisabled: "#393B3B",
@@ -19,6 +17,7 @@ export const lightColors: Colors = {
     blue: "#00B4C9",
     green: "#388e3c",
     card: "#b73ed5",
+    overlay: "#221C3E99",
     gradient: "linear-gradient(117deg, #eef2f3, #222832)",
     bg: "#eef2f3",
     buttonSurface: "#03b2cb",
@@ -29,9 +28,7 @@ export const lightColors: Colors = {
 
 export const darkColors: Colors = {
     ...baseColors,
-    primaryLight:  "#b73ed52b",
-    secondaryLight: "#005f78b0",
-    textPrimary: "#fff",
+    textPrimary: "#F2F0FF",
     textSecondary: "#878a9b",
     textHighlight: '#14a1c1',
     textDisabled: "#393B3B",
@@ -39,11 +36,12 @@ export const darkColors: Colors = {
     red: "#d32f2f",
     blue: "#00B4C9",
     green: "#388e3c",
-    card: "#111722",
+    card: "#221C3EE5",
+    overlay: "#221C3E99",
     gradient: "linear-gradient(117deg, #111722, #222832)",
-    bg: "#0A0E17",
-    buttonSurface: "#007994",
-    buttonText: "",
+    bg: "#1E1E1E",
+    buttonSurface: "linear-gradient(117deg, #0368FF, #5899FF)",
+    buttonText: "#F2F0FF",
     border: "#00B4C9",
     disabled: "#eef2f3",
 }

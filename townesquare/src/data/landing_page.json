@@ -15,5 +15,71 @@
         "card2": "Select the tweet content you want to monetize and make into NFT",
         "card3": "Auction and sell it on TowneSquare’s NFT marketplace"
       }
+    },
+    "Rewards":  {
+      "title": "Earn rewards while socializing",
+      "description": "TowneSquare introduces 4 types of NFTs to offer the optimal Social-2-Earn experience",
+      "sections": [
+        {
+          "title": "Solana",
+          "details": [
+            {
+              "title": "Creator",
+              "description": "Earn rewards by publishing and interacting with content"
+            },
+            {
+              "title": "Founder",
+              "description": "Access AMA space on TowneSquare and make project announcements to the community"
+            },
+            {
+              "title": "Advertiser",
+              "description": "Publish advertisements on TowneSquare"
+            },
+            {
+              "title": "Streamer",
+            "description": "Stream content and earn rewards"
+            }
+          ]
+        }
+      ]
+    },
+    "Ecosystem":  {
+      "title": "Fully integrated with a suite of ecosystem tools",
+      "sections": [
+        {
+          "title": "Solana",
+          "details": [
+            {
+              "title": "Solana Pay",
+              "description": "Integrated with Solana Pay to enable social transactions in Web3 and real-world settings"
+            },
+            {
+              "title": "Metaplex",
+              "description": "Access to NFT-related data is made possible with integrations with Metaplex to enrich Web3 social experience"
+            },
+            {
+              "title": "Grape",
+              "description": "Integrated with Grapes Network to enable DAO-based profiling for TowneSquare users"
+            }
+          ]
+        },
+        {
+          "title": "Aptos",
+          "details": [
+            {
+              "title": "Aptosphere",
+              "description": "TowneSquare integrates with Aptosphere for profiling social credentials and on-chain data"
+            },
+            {
+              "title": "Names.Aptos",
+              "description": "Fully compatible with using Aptos Name Service as part of user's social profile"
+            },
+            {
+              "title": "Aptos Ape Society",
+              "description": "Aptos Ape Society members are able to display their community membership ono their social profile on TowneSquare"
+            }
+          ]
+        }
+      ]
     }
 }

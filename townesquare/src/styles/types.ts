@@ -35,9 +35,7 @@ export type Radii = {
 
 export type Colors = {
   primary: string;
-  primaryLight: string;
   secondary: string;
-  secondaryLight: string;
   tertiary: string;
   textPrimary: string;
   textSecondary: string;
@@ -49,6 +47,7 @@ export type Colors = {
   green: string;
   bg: string;
   card: string;
+  overlay: string;
   gradient: string;
   buttonSurface: string;
   buttonText: string;

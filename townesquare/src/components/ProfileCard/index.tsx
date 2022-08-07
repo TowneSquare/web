@@ -45,7 +45,7 @@ const ProfileCard = ({data}: {data: Profile}) => {
   }
 
     return (
-        <Card background={theme.colors.secondaryLight}>
+        <Card background={theme.colors.overlay}>
             <Wrapper padding="1rem">
                 <Col>
                     <Row 
@@ -78,8 +78,8 @@ const ProfileCard = ({data}: {data: Profile}) => {
                             <Text bold fontSize={isMobile ? "14px" : "18px"} style={{marginLeft: `${theme.spacing[1]}px`}}>
                                 DAO Membership
                             </Text>
-                            {data.DAOs.map(dao => (
-                                <DAOMembership>
+                            {data.DAOs.map((dao, i) => (
+                                <DAOMembership key={`dao-${i}`}>
                                     <Text fontSize={isMobile ? "10px" : "12px"}>
                                         {`${dao.name} - 
                                             ${dao.since > 12 
@@ -97,14 +97,14 @@ const ProfileCard = ({data}: {data: Profile}) => {
                             </Text>
                             <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)'}}>
                                 {data.collections.map(collection => (
-                                    <Text fontSize={isMobile ? "11px" : "12px"}>{collection.name}</Text>
+                                    <Text key={`${collection.id}`} fontSize={isMobile ? "11px" : "12px"}>{collection.name}</Text>
                                 ))}
                             </div>
                             <Text bold fontSize={isMobile ? "14px" : "18px"}>
                                 Credentials
                             </Text>
                             <Row>
-                                {data.credentials.map(cred => (<Text fontSize={isMobile ? "11px" : "12px"}>{cred}</Text>))}
+                                {data.credentials.map(cred => (<Text key={`${cred}`} fontSize={isMobile ? "11px" : "12px"}>{cred}</Text>))}
                             </Row>
                         </Row>
                     </Row>
@@ -124,7 +124,7 @@ export const ProfileAvatar = styled.div`
     max-height: 140px;
     border-radius: ${props => props.theme.radii.default};
     overflow: hidden;
-    background: ${props => props.theme.colors.primaryLight};
+    background: ${props => props.theme.colors.overlay};
     display:grid;
     grid-template-rows: 1fr;
     justify-content: center;

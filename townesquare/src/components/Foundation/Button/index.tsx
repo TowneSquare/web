@@ -24,3 +24,5 @@ p {
   color: inherit;
 }
 `;
+
+export default Button;

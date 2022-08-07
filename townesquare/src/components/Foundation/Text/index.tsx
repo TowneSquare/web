@@ -6,16 +6,8 @@ const getFontSize = ({ fontSize, small }: TextProps) => {
     return small ? "12px" : fontSize || "0.875rem";
   };
 
-const Text: React.FC<TextProps> = ({children, ...props}) => {
-  return (
-    <StyledText {...props}>
-      {children}
-    </StyledText>
-  )
-}
-
-const StyledText = styled.div<TextProps>`
-    font-family: 'Montserrat', sans-serif;
+const Text = styled.div<TextProps>`
+    font-family: 'Outfit', sans-serif;;
     font-size: ${getFontSize};
     font-weight: ${({ bold }) => (bold ? 800 : 500)};
     line-height: 1.75;

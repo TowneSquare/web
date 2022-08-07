@@ -7,6 +7,7 @@ import { Rewards } from '../../components/landing/components/Rewards';
 import { Ecosystem } from '../../components/landing/components/Ecosystem';
 import LandingPageData from './../../data/landing_page.json'
 import Page from '../../components/Foundation/Page';
+import { LandingData } from '../../data/types';
 
 
 
@@ -31,8 +32,8 @@ const LandingPage = () => {
           <Header data={landingPageData} />
           <Profile data={landingPageData} />
           <ContentMarketplace data={landingPageData} />
-          <Rewards data={landingPageData} />
-          <Ecosystem data={landingPageData} />
+          <Rewards data={LandingPageData["Rewards"] as LandingData} />
+          <Ecosystem data={LandingPageData["Ecosystem"] as LandingData} />
         </Page>
     );
 }

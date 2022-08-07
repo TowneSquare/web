@@ -16,25 +16,30 @@
         "card3": "Auction and sell it on TowneSquare’s NFT marketplace"
       }
     },
-    "Rewards": {
+    "Rewards":  {
       "title": "Earn rewards while socializing",
       "description": "TowneSquare introduces 4 types of NFTs to offer the optimal Social-2-Earn experience",
       "sections": [
         {
-          "title": "Creator",
-          "description": "Earn rewards by publishing and interacting with content"
-        },
-        {
-          "title": "Founder",
-          "description": "Access AMA space on TowneSquare and make project announcements to the community"
-        },
-        {
-          "title": "Advertiser",
-          "description": "Publish advertisements on TowneSquare"
-        },
-        {
-          "title": "Streamer",
-          "description": "Stream content and earn rewards"
+          "title": "Solana",
+          "details": [
+            {
+              "title": "Creator",
+              "description": "Earn rewards by publishing and interacting with content"
+            },
+            {
+              "title": "Founder",
+              "description": "Access AMA space on TowneSquare and make project announcements to the community"
+            },
+            {
+              "title": "Advertiser",
+              "description": "Publish advertisements on TowneSquare"
+            },
+            {
+              "title": "Streamer",
+            "description": "Stream content and earn rewards"
+            }
+          ]
         }
       ]
     },

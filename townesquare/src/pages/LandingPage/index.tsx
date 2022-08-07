@@ -32,7 +32,7 @@ const LandingPage = () => {
           <Header data={landingPageData} />
           <Profile data={landingPageData} />
           <ContentMarketplace data={landingPageData} />
-          <Rewards data={landingPageData} />
+          <Rewards data={LandingPageData["Rewards"] as LandingData} />
           <Ecosystem data={LandingPageData["Ecosystem"] as LandingData} />
         </Page>
     );

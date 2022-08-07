@@ -9,7 +9,7 @@ export const ContentMarketplace = (props) => {
   const { isMobile } = useMatchBreakpoints()
   const theme = useTheme();
     return (
-      <ColouredContainer class="p-4" background={theme.isDark ? "#000000c4": "#a8caffc4"} >
+      <ColouredContainer className="p-4" background={theme.isDark ? "#000000c4": "#a8caffc4"} >
           <Row style={{margin: '0 16px'}}>
             <Col>
               <TextTitle fontSize={isMobile ? "32px" : "40px"}>

@@ -4,13 +4,13 @@ export interface SectionDetails {
   description: string;
 }
 
-interface SectionData {
+interface Section {
   title: string;
   details: SectionDetails[];
 }
 
 export interface LandingData {
     title: string;
-    sections: SectionData[];
+    sections: Section[];
     description?: string;
 }

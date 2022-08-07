@@ -1,10 +1,4 @@
 import styled from "@emotion/styled";
-
-// export const Title = styled.h1`
-//     color: ${props => props.theme.colors.textPrimary};
-//     font-size: 32px;
-// `;
-
 import React from "react";
 import { TextProps } from "./types";
 
@@ -15,18 +9,10 @@ const getFontSize = ({ fontSize, scale }: TextProps) => {
         : fontSize || "75px"
   };
 
-const Text: React.FC<TextProps> = ({children, ...props}) => {
-  return (
-    <StyledText {...props}>
-      {children}
-    </StyledText>
-  )
-}
-
-const StyledText = styled.div<TextProps>`
+const Title = styled.div<TextProps>`
     font-family: 'Outfit', sans-serif;;
     font-size: ${getFontSize};
-    font-weight: ${({ bold }) => (bold ? 700 : 600)};
+    font-weight: ${({ bold, fontWeight }) => fontWeight ? fontWeight : bold ? 700 : 600};
     line-height: ${({ scale }) => scale == 'sm' ? '140%' : '120%'};
     color: ${({ color, theme }) => color ?? theme.colors.textPrimary};
     text-align: ${({ textAlign }) => textAlign ?? 'center'};
@@ -34,4 +20,4 @@ const StyledText = styled.div<TextProps>`
     ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
 `;
 
-export default Text
+export default Title

@@ -33,7 +33,7 @@ export const Row = styled.div<{
 export const Col = styled.div<{gap?: string, pl?: string, pr?: string, items?: string, justify?: string,align?: string}>`
   display: grid;
   grid-auto-flow: column;
-  grid-gap: ${props => props.gap ?? '1rem'};
+  grid-gap: ${props => props.gap ?? '8px'};
   align-items: ${props => props.align ?? 'start'};
   padding-left: ${props => props.pl};
   padding-right: ${props => props.pl};

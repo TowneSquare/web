@@ -39,8 +39,8 @@ export const Ecosystem = ({data}: { data: LandingData}) => {
               </Title>
             </TitleWrapper>
             <Row gap={`${theme.spacing[5]}px`} style={{padding: isMobile || isTablet ? `0 ${theme.spacing[5]}px` :  '0'}}>
-              {Object.values(data.sections).map(section => (
-                <Row gap={`${theme.spacing[4]}px`} style={{marginBottom: '16px'}}>
+              {Object.values(data.sections).map((section, i) => (
+                <Row key={`section-${i}`} gap={`${theme.spacing[4]}px`} style={{marginBottom: '16px'}}>
                   <SectionTitleBox isMobile={isMobile || isTablet}>
                     <Title scale="sm">
                       {section.title}
@@ -49,8 +49,8 @@ export const Ecosystem = ({data}: { data: LandingData}) => {
                   {isMobile || isTablet
                     ? (mobileDetailsView(section.details))
                     : <Col justify="space-between" gap={`${theme.spacing[8]}px`}>
-                        {section.details.map(entry => (
-                          <DetailBlock>
+                        {section.details.map((entry, j) => (
+                          <DetailBlock key={`details-${i}${j}`}>
                             <Row align="center" justify="center" gap="65px">
                               <Title scale="sm">
                                 {entry.title}

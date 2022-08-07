@@ -93,7 +93,7 @@ const ContentWrapper = styled(Wrapper)`
   }
   .bg-icon-bottom {
     position: absolute;
-    bottom: 0;
+    bottom: -10%;
     right: -40%;
     transform: rotate3d(1, 1, 1, 1deg);
     z-index: 0;

@@ -1,5 +1,8 @@
 import React from "react";
 import { Flex, Text } from "../../../pages/SocialProfile/styles";
+import Balances from "./Balances";
+import Commands from "./Commands";
+import Inventory from "./Inventory";
 import MultiChain from "./MultiChain";
 
 interface Props {
@@ -38,6 +41,9 @@ const Wallet: React.FC<Props> = ({ data }) => {
         </Text>
       </Flex>
       <MultiChain data={data} />
+      <Commands />
+      <Balances data={data} />
+      <Inventory data={data} />
     </Flex>
   );
 };

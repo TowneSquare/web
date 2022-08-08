@@ -49,17 +49,6 @@ const MultiChain: React.FC<Props> = ({ data }) => {
           </ChainSelect>
         </Flex>
       </Flex>
-      {/* <Select
-        labelId="demo-simple-select-label"
-        id="demo-simple-select"
-        value={age}
-        label="Age"
-        onChange={handleChange}
-      >
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem>
-      </Select> */}
 
       <Flex mt="10px" ml="16px">
         <Text fontSize="10px" fontWeight="400" color="#B5B3BC">
@@ -77,6 +66,7 @@ const ChainSelect = styled.select`
   border: none;
   background: transparent;
   color: white;
+  cursor: pointer;
   &:focus-visible {
     outline: none;
   }

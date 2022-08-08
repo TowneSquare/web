@@ -97,4 +97,38 @@ export const dummyProfile = {
   credentials: ["Raydium RAYdiator", "2022 is gonna be SOL Cool"],
   aboutme:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim magna in vestibulum malesuada. Proin rhoncus tempor ipsum in vulputate. Etiam et nisi egestas, sagittis nulla sed, gravida nunc. Proin.",
+  balances: [
+    {
+      symbol: "SOLANA",
+      change: "-5.2%",
+      amount: 112.3343,
+      usd: 4895.30
+    },
+    {
+      symbol: "SPEECH",
+      change: "-5.2%",
+      amount: 112.3343,
+      usd: 4895.30
+    },
+    {
+      symbol: "USDC",
+      change: "-5.2%",
+      amount: 112.3343,
+      usd: 4895.30
+    },
+  ],
+  inventory: [
+    {
+      label: "Socials",
+      mark: 0
+    },
+    {
+      label: "Tweets",
+      mark: 0
+    },
+    {
+      label: "Others",
+      mark: 0
+    },
+  ]
 };

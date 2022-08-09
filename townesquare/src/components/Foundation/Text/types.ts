@@ -29,6 +29,7 @@ export interface TextProps extends React.DetailedHTMLProps<React.HTMLAttributes<
     font?: Font
     color?: string;
     fontSize?: string;
+    fontWeight?: number;
     bold?: boolean;
     small?: boolean;
     scale?: Scale;

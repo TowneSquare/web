@@ -19,6 +19,7 @@ const spacing: Spacing = [0, 4, 8, 16, 24, 32, 48, 64, 96, 128];
 const radii = {
     default: "10px",
     small: "8px",
+    large: "32px",
     circle: "50%",
     };
 

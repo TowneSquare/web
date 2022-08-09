@@ -16,6 +16,8 @@ export const ColouredContainer = styled(Container)<{background?: string}>`
 export const InfoContainer = styled(Col)`
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
 `
 
 export const TextTitle = styled(Text)`
@@ -86,13 +88,12 @@ export const CoverPhotoLandingWrapper = styled.div<{imgUrl?: string}>`
   max-width: calc(100vw - 50px);
   margin: 2rem 0rem 2rem 0rem;
   height: 100%;
-  min-height: 300px;
-  max-height: 300px;
   background: transparent;
-  border-radius: ${props => props.theme.radii.default};
+  border-radius: ${props => props.theme.radii.large};
   background-image: url(${props => props.imgUrl ?? "none"});
   position: relative;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.64);
+  border: 4px solid #5899FF;
 
   .edit-action {
     position: absolute;
@@ -109,8 +110,6 @@ export const CoverPhotoLandingWrapper = styled.div<{imgUrl?: string}>`
   @media(min-width: 638px) {
     min-width: calc(100vw - 200px);
     max-width: calc(100vw - 200px);
-    min-height: 400px;
-    max-height: 400px;
   }
   
   img {

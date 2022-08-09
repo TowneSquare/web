@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom';
 
 import styled from '@emotion/styled';
 import {
-  DarkMode as DarkmodeIcon,
-  Dehaze as MenuIcon,
+    Dehaze as MenuIcon,
+    DarkMode as DarkmodeIcon,
   LightMode as LightmodeIcon,
 } from '@mui/icons-material';
 
@@ -19,7 +19,10 @@ import useStore from '../../state/store';
 import { baseColors } from '../../styles/colors';
 import { Post } from '../../types/post';
 import { Text } from '../Foundation';
-import SearchBar from '../Searchbar';
+// import SearchBar from '../Searchbar';
+import { Col } from '../../styles/common';
+import { LogoRoundIcon } from '../svgs';
+import { useTheme } from '@emotion/react';
 
 type SearchResultType = {
     posts: Array<Post>
@@ -30,6 +33,7 @@ const Appbar = ({handleMobileMenu, onThemeToggle, isDarkMode}: {
     isDarkMode?: boolean
 }) => {
     const store = useStore();
+    const theme = useTheme();
     const searchbarRef = useRef(null);
     const { isMobile } = useMatchBreakpoints();
     const [searchKey, setSearchKey] = useState('')
@@ -120,43 +124,45 @@ const Appbar = ({handleMobileMenu, onThemeToggle, isDarkMode}: {
     return (
         <HeaderWrapper>
             <LogoWrapper to="/">
-                <img width={isMobile ? '35px' : '50px'} src='./logo.png' alt="social-logo" />
+                <LogoRoundIcon />
             </LogoWrapper>
-            <div ref={searchbarRef} style={{minWidth: '200px', maxWidth: '500px', position: 'relative'}}>
+            <div />
+            {/* TODO: Add back in search bar later */}
+            {/* <div ref={searchbarRef} style={{minWidth: '200px', maxWidth: '500px', position: 'relative'}}>
                 <SearchBar changeHandler={changeHandler}/>
-                {/* { 
+                { 
                     (searchResults.posts.length > 0)
                         && showResults
                         ? (<SearchResults searchResults={searchResults}/>)
                         : (<></>)
-                } */}
-            </div>
-            <ThemeToggle onClick={onThemeToggle}>
-        
-                {isDarkMode && <LightmodeIcon />}
-                {!isDarkMode && <DarkmodeIcon />}
-            </ThemeToggle>
-            <div style={{position: 'relative'}}>
-                {
-                    isMobile 
-                        ? (
-                            <NavButtons onClick={toggleMobileMenu}>
-                                <MenuIcon />
-                            </NavButtons>
-                        ) 
-                        : (
-                            <NavButtons>
-                                <Link className="menu-item" to="/marketplace">
-                                    <Text color={baseColors.primary} bold>Marketplace</Text>
-                                </Link>
-                                <Link className="menu-item" to="/profile">
-                                    <Text color={baseColors.primary} bold>Profile</Text>
-                                </Link>
-                            </NavButtons>
-                        )
                 }
-            </div>
-           
+            </div> */}
+            <Col gap="32px">
+                <ThemeToggle onClick={onThemeToggle}>
+                    {isDarkMode && <LightmodeIcon />}
+                    {!isDarkMode && <DarkmodeIcon />}
+                </ThemeToggle>
+                <div style={{position: 'relative'}}>
+                    {
+                        isMobile 
+                            ? (
+                                <NavButtons onClick={toggleMobileMenu}>
+                                    <MenuIcon />
+                                </NavButtons>
+                            ) 
+                            : (
+                                <NavButtons>
+                                    <Link className="menu-item" to="/marketplace">
+                                        <Text color={baseColors.primary} bold>Marketplace</Text>
+                                    </Link>
+                                    <Link className="menu-item" to="/profile">
+                                        <Text color={baseColors.primary} bold>Profile</Text>
+                                    </Link>
+                                </NavButtons>
+                            )
+                    }
+                </div>
+            </Col>
         </HeaderWrapper>
     )
 }
@@ -165,11 +171,11 @@ const HeaderWrapper = styled.div`
     width: 100vw;
     height: 80px;
     display: grid;
-    grid-template-columns: auto 1fr auto auto;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     grid-gap: 16px;
     justify-content: space-between;
-    background: #fff;
+    background: ${({theme}) => theme.colors.bg};
     z-index: 50;
     position: fixed;
     top:0;
@@ -180,7 +186,7 @@ const HeaderWrapper = styled.div`
 `;
 
 const LogoWrapper = styled(Link)`
-    padding: 16px;
+    padding: 16px 48px;
     display: grid;
     grid-auto-flow: column;
     justify-content: start;
@@ -190,8 +196,14 @@ const LogoWrapper = styled(Link)`
     }
 `;
 
+/** TODO: remove `display: none` later */
 const ThemeToggle = styled.div`
+    display: none;
     cursor: pointer;
+
+    svg {
+        color: ${props => props.theme.colors.primary};
+    }
 `;
 
 const NavButtons = styled.div`
@@ -209,6 +221,8 @@ const NavButtons = styled.div`
     svg {
         width: 25px;
         height: 25px;
+        margin-right: 48px;
+        color: ${props => props.theme.colors.primary};
     }
 
     @media(max-width: 638px) {

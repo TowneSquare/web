@@ -45,13 +45,12 @@ const ProfileCard = ({data}: {data: Profile}) => {
   }
 
     return (
-        <Card background={theme.colors.overlay}>
+        <Card background={theme.colors.overlay} borderRadius={theme.radii.large}>
             <Wrapper padding="1rem">
                 <Col>
                     <Row 
                         className="profile-left-col"
                         gap={`${isMobile ? theme.spacing[2] : theme.spacing[3]}px`} 
-                        items="center" 
                         style={{width: '160px'}}
                         >
                         <ProfileAvatar className="circle-avatar">
@@ -64,31 +63,35 @@ const ProfileCard = ({data}: {data: Profile}) => {
                                     <Text>Copied!</Text>
                                 </CopiedTooltip>}
                         </AddressWrapper>
-                        <Row items="center">
-                            <Text bold textAlign="center" fontSize={isMobile ? "11px" : "12px"}>
+                        <Row gap={`${theme.spacing[4]}px`}>
+                            <Text bold fontSize={isMobile ? "16px" : "18px"}>
                                 TowneSquare Collection
                             </Text>
-                            {data.isCreator && <Text fontSize={isMobile ? "11px" : "12px"}>Creator NFT</Text>}
-                            {data.isFounder && <Text fontSize={isMobile ? "11px" : "12px"}>Founder NFT</Text>}
+                            <div>
+                                {data.isCreator && <Text fontWeight={400} fontSize={isMobile ? "12px" : "14px"}>Creator NFT</Text>}
+                                {data.isFounder && <Text fontWeight={400} fontSize={isMobile ? "12px" : "14px"}>Founder NFT</Text>}
+                            </div>
                         </Row>
                     </Row>
-
+                   
                     <Row className="profile-right-col" gap={`${isMobile ? theme.spacing[2] : theme.spacing[3]}px`}>
                         <Row className="memberships" gap={`${theme.spacing[1]}px`}>
                             <Text bold fontSize={isMobile ? "14px" : "18px"} style={{marginLeft: `${theme.spacing[1]}px`}}>
                                 DAO Membership
                             </Text>
-                            {data.DAOs.map((dao, i) => (
-                                <DAOMembership key={`dao-${i}`}>
-                                    <Text fontSize={isMobile ? "10px" : "12px"}>
-                                        {`${dao.name} - 
-                                            ${dao.since > 12 
-                                                ? `${(dao.since - (dao.since % 12)) / 12}yr ` + `${dao.since % 12}`
-                                                : dao.since
-                                                } months`}
-                                    </Text>
-                                </DAOMembership>
-                            ))}
+                            <MembershipWrapper>
+                                {data.DAOs.map((dao, i) => (
+                                    <BorderedWrapper key={`dao-${i+1}`} className={`dao-item-${i+1}`}>
+                                        <Text fontSize={isMobile ? "10px" : "12px"}>
+                                            {`${dao.name} - 
+                                                ${dao.since > 12 
+                                                    ? `${(dao.since - (dao.since % 12)) / 12}yr ` + `${dao.since % 12}`
+                                                    : dao.since
+                                                    } months`}
+                                        </Text>
+                                    </BorderedWrapper>
+                                ))}
+                            </MembershipWrapper>
                         </Row>
 
                         <Row className="profile-collections">
@@ -97,14 +100,20 @@ const ProfileCard = ({data}: {data: Profile}) => {
                             </Text>
                             <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)'}}>
                                 {data.collections.map(collection => (
-                                    <Text key={`${collection.id}`} fontSize={isMobile ? "11px" : "12px"}>{collection.name}</Text>
+                                    <BorderedWrapper>
+                                        <Text key={`${collection.id}`} fontSize={isMobile ? "11px" : "12px"}>{collection.name}</Text>
+                                    </BorderedWrapper>
                                 ))}
                             </div>
                             <Text bold fontSize={isMobile ? "14px" : "18px"}>
                                 Credentials
                             </Text>
                             <Row>
-                                {data.credentials.map(cred => (<Text key={`${cred}`} fontSize={isMobile ? "11px" : "12px"}>{cred}</Text>))}
+                                {data.credentials.map(cred => (
+                                    <BorderedWrapper>
+                                        <Text key={`${cred}`} fontSize={isMobile ? "11px" : "12px"}>{cred}</Text>
+                                    </BorderedWrapper>
+                                        ))}
                             </Row>
                         </Row>
                     </Row>
@@ -122,7 +131,7 @@ export const ProfileAvatar = styled.div`
     max-width: 140px;
     min-height: 140px;
     max-height: 140px;
-    border-radius: ${props => props.theme.radii.default};
+    border-radius: ${props => props.theme.radii.small};
     overflow: hidden;
     background: ${props => props.theme.colors.overlay};
     display:grid;
@@ -144,11 +153,19 @@ export const ProfileAvatar = styled.div`
     }
 `;
 
-const DAOMembership = styled.div`
-    border-radius: ${props => props.theme.radii.default};
+const MembershipWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+`;
+
+const BorderedWrapper = styled.div`
+    border-radius: ${props => props.theme.radii.small};
     border: 1px solid ${props => props.theme.colors.textPrimary};
     padding: ${props => `${props.theme.spacing[0]}px ${props.theme.spacing[3]}px`};
+    margin: ${props => `${props.theme.spacing[1]}px ${props.theme.spacing[0]}px`};
     text-align: start;
+    width: fit-content;
 `;
 
 const AddressWrapper = styled.div`

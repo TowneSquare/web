@@ -9,7 +9,7 @@ const getFontSize = ({ fontSize, small }: TextProps) => {
 const Text = styled.div<TextProps>`
     font-family: 'Outfit', sans-serif;;
     font-size: ${getFontSize};
-    font-weight: ${({ bold }) => (bold ? 800 : 500)};
+    font-weight: ${({ fontWeight, bold }) => fontWeight ?? (bold ? 800 : 500)};
     line-height: 1.75;
     word-break: ${({ breakWords }) => breakWords ? 'break-word' : 'unset'};
     color: ${({ color, theme }) => color ?? theme.colors.textPrimary};

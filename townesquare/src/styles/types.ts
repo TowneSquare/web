@@ -29,6 +29,7 @@ export type ZIndices = {
 
 export type Radii = {
   small: string;
+  large: string;
   default: string;
   circle: string;
 };

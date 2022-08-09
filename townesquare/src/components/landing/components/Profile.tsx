@@ -1,0 +1,68 @@
+import { useTheme } from "@emotion/react"
+import styled from "@emotion/styled";
+import useMatchBreakpoints from "../../../hooks/useMatchBreakpoints"
+import {  ColouredContainer, 
+          CoverPhotoLandingWrapper, 
+          ProfileCardMain } from "../../../pages/LandingPage/styles";
+import { dummyProfile } from "../../../pages/SocialProfile/constants";
+import { Col, Row, Wrapper } from "../../../styles/common";
+import { Text, Title } from "../../Foundation";
+
+export const Profile = (props) => {
+  const { isMobile, isTablet } = useMatchBreakpoints()
+  const theme = useTheme();
+    return (
+      <ColouredContainer background={theme.colors.bg} >
+        <ContentWrapper>
+          {isTablet || isMobile ? (
+            <Row>
+              <Row gap={`${theme.spacing[5]}px`} style={{paddingLeft: `${theme.spacing[6]}px`}}>
+                <Title scale="md" textAlign="left">
+                  {props.data.Profile ? props.data.Profile.title : 'Loading'}
+                </Title>
+                <Text fontSize="25px">
+                  {props.data.Profile ? props.data.Profile.paragraph : 'Loading'}
+                </Text>
+              </Row>
+              <Row items="end">
+                <ProfileCardWrapper>
+                  <CoverPhotoLandingWrapper className="cover-photo-container">
+                    <ProfileCardMain data={dummyProfile}/>
+                  </CoverPhotoLandingWrapper>
+                </ProfileCardWrapper>
+              </Row>
+            </Row>
+          ) : (<Col>
+            <Row gap={`${theme.spacing[5]}px`} style={{paddingLeft: `${theme.spacing[7]}px`}}>
+              <Title scale="md" textAlign="left"  style={{minWidth: '690px'}}>
+                {props.data.Profile ? props.data.Profile.title : 'Loading'}
+              </Title>
+              <Text fontSize="25px">
+                {props.data.Profile ? props.data.Profile.paragraph : 'Loading'}
+              </Text>
+            </Row>
+            <ProfileCardWrapper>
+              <CoverPhotoLandingWrapper className="cover-photo-container">
+                <ProfileCardMain data={dummyProfile}/>
+              </CoverPhotoLandingWrapper>
+            </ProfileCardWrapper>
+          </Col>)}
+        </ContentWrapper>
+      </ColouredContainer>
+    )
+}
+// #0368FF
+const ContentWrapper = styled(Wrapper)`
+  padding: 128px 0;
+  > * {
+    z-index: 1;
+  }
+`;
+
+const ProfileCardWrapper = styled.div`
+  width: 100%;
+  min-width: 630px;
+  max-width: 630px;
+  overflow: hidden;
+  transform: translateX(10%);
+`;

@@ -16,6 +16,8 @@ export const ColouredContainer = styled(Container)<{background?: string}>`
 export const InfoContainer = styled(Col)`
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
 `
 
 export const TextTitle = styled(Text)`

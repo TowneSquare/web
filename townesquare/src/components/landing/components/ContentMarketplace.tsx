@@ -121,25 +121,25 @@ const ContentCard = styled(Card)`
 const GradientBg = styled.div`
   .bg-icon-right {
       position: absolute;
-      top: 150%;
+      top: 240%;
       right: -70%;
     }
   
     .bg-icon-left {
       position: absolute;
-      top: 280%;
+      top: 340%;
       left: -70%;
     }
   @media(min-width: 1024px) {
     .bg-icon-right {
     position: absolute;
-    top: 120%;
+    top: 200%;
     right: -50%;
   }
 
   .bg-icon-left {
     position: absolute;
-    top: 160%;
+    top: 220%;
     left: -40%;
   }
   }

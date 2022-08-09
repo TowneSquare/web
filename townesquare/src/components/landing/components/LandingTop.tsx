@@ -1,15 +1,18 @@
 import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
-import { ImageStyle } from '../../../pages/LandingPage/styles';
-import { NavLink } from 'react-router-dom';
+// import { ImageStyle } from '../../../pages/LandingPage/styles';
+// import { NavLink } from 'react-router-dom';
+import { useTheme } from '@emotion/react';
+import { Container } from '../../../styles/common';
 
 function LandingTop() {
+    const theme = useTheme();
+
     return (
         <Navbar bg="dark" variant="dark">
-            <Container>
+            <Container background={theme.colors.bg}>
                 <Row>
-                    <Navbar.Brand>
+                    {/* <Navbar.Brand>
                         <div className="col-md-2">
                             <ImageStyle
                             alt=""
@@ -20,11 +23,11 @@ function LandingTop() {
                             </ImageStyle>{' '}
                         </div>
                         <div className="col-md-10">
-                            <NavLink>
+                            <NavLink to="/">
                                 TowneSquare
                             </NavLink>
                         </div>
-                    </Navbar.Brand>
+                    </Navbar.Brand> */}
                 </Row>
             </Container>
         </Navbar>

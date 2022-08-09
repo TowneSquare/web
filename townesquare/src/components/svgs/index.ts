@@ -1,5 +1,6 @@
 export { default as BgGradCircle } from './BgGradCircle';
 export { default as BgGradEllipse } from './BgGradEllipse';
+export { default as LogoRoundIcon } from './LogoRound';
 export { default as PlusIcon } from './Plus';
 export { default as SelectIcon } from './SelectIcon';
 export { default as SocialAccessIcon } from './SocialAccess';

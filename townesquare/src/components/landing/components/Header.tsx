@@ -1,9 +1,9 @@
 import { useTheme } from "@emotion/react"
 import useMatchBreakpoints from "../../../hooks/useMatchBreakpoints"
-import { BlueButton, ButtonContainer, ColouredContainer, TextParagraph, TextTitle, WhiteButton } from "../../../pages/LandingPage/styles";
+import { BlueButton, ButtonContainer, ColouredContainer, WhiteButton, ContentWrapper } from "../../../pages/LandingPage/styles";
 import styled from "@emotion/styled";
 import { BgGradCircle } from "../../svgs";
-import { Col, Row, Wrapper } from "../../../styles/common";
+import { Col, Row } from "../../../styles/common";
 import { Title } from "../../Foundation";
 
 
@@ -36,17 +36,6 @@ export const Header = (props) => {
       </ColouredContainer>
     )
 }
-
-const ContentWrapper = styled(Wrapper)`
-  padding: 128px 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  
-  > * {
-    z-index: 1;
-  }
-`;
 
 const GradientBg = styled.div`
   position: absolute;

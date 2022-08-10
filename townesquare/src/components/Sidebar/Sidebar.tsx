@@ -1,10 +1,10 @@
 import React from "react";
 import SidebarOption from './SidebarOption';
-import HomeIcon from "@material-ui/icons/Home";
-import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
-import PermIdentityIcon from "@material-ui/icons/PermIdentity";
-import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import HomeIcon from "@mui/icons-material/Home";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 const Sidebar = () => {
     return (

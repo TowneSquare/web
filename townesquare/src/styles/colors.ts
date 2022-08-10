@@ -39,7 +39,7 @@ export const darkColors: Colors = {
     card: "#221C3EE5",
     overlay: "#221C3E99",
     gradient: "linear-gradient(117deg, #111722, #222832)",
-    bg: "#1E1E1E",
+    bg: "#221C3E",
     buttonSurface: "linear-gradient(117deg, #0368FF, #5899FF)",
     buttonText: "#F2F0FF",
     border: "#00B4C9",

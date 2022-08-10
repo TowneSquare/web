@@ -6,6 +6,8 @@ import { Col, Container, Row, Wrapper } from "../../../styles/common"
 import { Text, Title } from "../../Foundation"
 import { BgGradEllipse } from "../../svgs"
 import { LandingData, SectionDetails } from "../../../data/types"
+import { BlueButton, ButtonContainer, WhiteButton } from "../../../pages/LandingPage/styles";
+
 
 export const Ecosystem = ({data}: { data: LandingData}) => {
   const { isMobile, isTablet } = useMatchBreakpoints()
@@ -68,6 +70,10 @@ export const Ecosystem = ({data}: { data: LandingData}) => {
             </Row>
           </Row>
         </ContentWrapper>
+        <ButtonContainer style={{width: '100%'}}>
+          <BlueButton>App Coming Soon</BlueButton>
+          <WhiteButton>Read Docs</WhiteButton>
+        </ButtonContainer>
         <GradientBg>
           <div className="bg-icon-top">
               <BgGradEllipse />

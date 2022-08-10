@@ -5,7 +5,19 @@ import {
   Container,
   Col,
 } from "../../../node_modules/react-bootstrap/esm/index";
+import { Wrapper } from "../../styles/common";
 import ProfileCard from './../../components/ProfileCard';
+
+export const ContentWrapper = styled(Wrapper)`
+  padding: 128px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+  > * {
+    z-index: 1;
+  }
+`;
 
 export const ColouredContainer = styled(Container)<{background?: string}>`
   max-width: 100%;
@@ -55,26 +67,24 @@ export const MainButtons = styled(Button)`
 `
 
 export const BlueButton = styled(MainButtons)`
-  color: white;
-  background-color: blue;
-  border-color: blue;
-  border-style: solid;
-  &:hover {
-    color: blue;
-    background-color: white;
-    border-color: blue;
-  }
+  background: linear-gradient(45deg, #0368FF 0%, #5899FF 100%);
+  border-radius: 8px;
+  // border-color: blue;
+  // border-style: solid;
+  // &:hover {
+  //   background: linear-gradient(90deg, #5899FF 100%, #0368FF 0%);
+  // }
 `
 
 export const WhiteButton = styled(MainButtons)`
-  color: black;
-  background-color: white;
-  border-color: black;
-  border-style: solid;
+  background: rgba(140, 116, 255, 0.18);
+
+  /* Message/Modal */
+  border: 1px solid #3C384D;
+  border-radius: 8px;
   &:hover {
-    color: white;
-    background-color: black;
-    border-color: black;
+    background: white;
+    color: black;
   }
 `
 

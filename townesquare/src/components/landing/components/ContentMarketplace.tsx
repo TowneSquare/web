@@ -107,8 +107,13 @@ const ContentWrapper = styled(Wrapper)`
 
 const ContentCard = styled(Card)`
   display: flex;
-  border-radius: ${props => props.theme.radii.default};
-  background: ${props => props.theme.colors.overlay};
+  // border-radius: ${props => props.theme.radii.default};
+  // background: ${props => props.theme.colors.overlay};
+  background: rgba(34, 28, 62, 0.6);
+
+  /* Background */
+  border: 1px solid #221C3E;
+  border-radius: 10px;
   align-items: start;
   justify-content: center;
   height: 100%;

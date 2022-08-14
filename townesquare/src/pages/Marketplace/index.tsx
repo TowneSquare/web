@@ -1,43 +1,41 @@
-import Page from "../../components/Foundation/Page";
-import { Text } from "../../components/Foundation";
-import useMatchBreakpoints from "../../hooks/useMatchBreakpoints";
-import { Layout, Step, StepContent } from "./styles";
+import '../../App.css';
+import styled from '@emotion/styled';
+import Page from '../../components/Foundation/Page';
+import { Footer } from '../../components/Foundation/Footer';
+import { Title } from '../../components/Foundation';
 
-const Marketplace = () => {
-  const { isMobile } = useMatchBreakpoints();
-  return (
-    <Page className="profile-layout">
-      <Layout mt="100px">
-        <Text fontSize={isMobile ? "40px" : "60px"} textAlign="center">
-          Content NFT Marketplace
-        </Text>
-      </Layout>
-      <Layout mt="40px">
-        <Text fontSize={isMobile ? "20px" : "30px"} textAlign="center">
-          Tokenize your Web 3 content and sell it in our content marketplace
-        </Text>
-      </Layout>
-      <Layout mt="50px">
-        <Step direction={isMobile ? "column" : "row"}>
-          <StepContent>
-            <Text fontSize={isMobile ? "15px" : "20px"} textAlign="center">
-              Link your Twitter profile to your TowneSquare profile
-            </Text>
-          </StepContent>
-          <StepContent>
-            <Text fontSize={isMobile ? "15px" : "20px"} textAlign="center">
-              Select the tweet content you want to monetize and make into NFT
-            </Text>
-          </StepContent>
-          <StepContent>
-            <Text fontSize={isMobile ? "15px" : "20px"} textAlign="center">
-              Auction and sell it on TowneSquare’s NFT marketplace
-            </Text>
-          </StepContent>
-        </Step>
-      </Layout>
-    </Page>
-  );
-};
+const PrivacyPolicy = () => {
+    return (
+        <Page>
+            <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
 
-export default Marketplace;
+            <script
+            src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+
+            <script
+            src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"></script>
+            
+            <script>var Alert = ReactBootstrap.Alert;</script>
+            <CenteredTitle>
+                <CenteredSpan>
+                    Marketplace coming soon!
+                </CenteredSpan>
+            </CenteredTitle>
+            <Footer></Footer>
+        </Page>
+    );
+}
+
+const CenteredTitle = styled(Title)`
+    height: 80vh; 
+    text-align: center;
+    line-height: 80vh;
+`
+
+const CenteredSpan = styled.span`
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+`
+
+export default PrivacyPolicy;

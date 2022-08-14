@@ -33,7 +33,7 @@ export const Ecosystem = ({data}: { data: LandingData}) => {
   }
     return (
       <Container  style={{position: 'relative'}}>
-        <ContentWrapper>
+        <ContentWrapper style={{position: 'relative', zIndex: '2'}}>
           <Row items="center" gap="112px">
             <TitleWrapper isMobile={isMobile || isTablet}>
               <Title scale={isMobile || isTablet ? 'md' : 'lg'}>
@@ -70,21 +70,26 @@ export const Ecosystem = ({data}: { data: LandingData}) => {
             </Row>
           </Row>
         </ContentWrapper>
-        <ButtonContainer style={{width: '100%'}}>
+        <ButtonContainer style={{ width: '100%' }}>
           <BlueButton>App Coming Soon</BlueButton>
-          <WhiteButton>Read Docs</WhiteButton>
+          <WhiteButton><LinkFooter href="https://docs.townesquare.xyz/townesquare-whitepaper/">Read Docs</LinkFooter></WhiteButton>
         </ButtonContainer>
         <GradientBg>
           <div className="bg-icon-top">
               <BgGradEllipse />
             </div>
-            <div className="bg-icon-bottom">
+            <div className="bg-icon-bottom" style={{zIndex:1}}>
               <BgGradEllipse />
             </div>
         </GradientBg>
       </Container>
     )
 }
+
+const LinkFooter = styled.a`
+  color: inherit;
+  text-decoration: none;
+`
 
 const ContentWrapper = styled(Wrapper)`
   padding: 150px 0;
@@ -130,14 +135,14 @@ const GradientBg = styled.div`
   .bg-icon-top {
     position: absolute;
     top: 0;
-    z-index: 0;
+    z-index: -1;
     svg {
       transform: translateX(-40%);
     }
     @media(min-width: 1024px) {
       svg {
         width: 100%;
-        transform: translateX(-40%);
+        transform: translateX(-20%);
       }
     }
 
@@ -147,14 +152,13 @@ const GradientBg = styled.div`
     bottom: -10%;
     right: 0;
     transform: rotate3d(1, 1, 1, 1deg);
-    z-index: 0;
     svg {
       transform: translateX(20%);
     }
     @media(min-width: 1024px) {
       svg {
-        width: 100%;
-        transform: translateX(20%);
+        width: 90%;
+        transform: translateX(10%);
       }
     }
   }

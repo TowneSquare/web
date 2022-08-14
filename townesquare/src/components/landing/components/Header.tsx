@@ -25,7 +25,7 @@ export const Header = (props) => {
             <Col>
               <ButtonContainer style={{width: '100%'}}>
                 <BlueButton>App Coming Soon</BlueButton>
-                <WhiteButton>Read Docs</WhiteButton>
+                <WhiteButton><LinkFooter href="https://docs.townesquare.xyz/townesquare-whitepaper/">Read Docs</LinkFooter></WhiteButton>
               </ButtonContainer>
             </Col>
           </Row>
@@ -36,6 +36,11 @@ export const Header = (props) => {
       </ColouredContainer>
     )
 }
+
+const LinkFooter = styled.a`
+  color: inherit;
+  text-decoration: none;
+`
 
 const GradientBg = styled.div`
   position: absolute;

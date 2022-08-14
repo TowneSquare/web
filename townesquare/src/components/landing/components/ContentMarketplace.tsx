@@ -138,8 +138,8 @@ const GradientBg = styled.div`
   @media(min-width: 1024px) {
     .bg-icon-right {
     position: absolute;
-    top: 200%;
-    right: -50%;
+    top: 150%;
+    right: -10%;
   }
 
   .bg-icon-left {

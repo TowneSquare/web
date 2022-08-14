@@ -142,7 +142,7 @@ const GradientBg = styled.div`
     @media(min-width: 1024px) {
       svg {
         width: 100%;
-        transform: translateX(-40%);
+        transform: translateX(-20%);
       }
     }
 
@@ -157,8 +157,8 @@ const GradientBg = styled.div`
     }
     @media(min-width: 1024px) {
       svg {
-        width: 100%;
-        transform: translateX(20%);
+        width: 90%;
+        transform: translateX(10%);
       }
     }
   }

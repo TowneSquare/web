@@ -64,6 +64,7 @@ export const ButtonContainer = styled(Col)`
 export const MainButtons = styled(Button)`
   padding: 15px 30px 15px 30px;
   margin: 15px;
+  z-index: 10;
 `
 
 export const BlueButton = styled(MainButtons)`

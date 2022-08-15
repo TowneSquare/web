@@ -75,6 +75,10 @@ export const BlueButton = styled(MainButtons)`
   // &:hover {
   //   background: linear-gradient(90deg, #5899FF 100%, #0368FF 0%);
   // }
+
+  &:disabled {
+    opacity: 0.4;
+  }
 `
 
 export const WhiteButton = styled(MainButtons)`
@@ -91,6 +95,7 @@ export const WhiteButton = styled(MainButtons)`
 
 export const ProfileCardMain = styled(ProfileCard)`
   height: 100%;
+  max-width: 720px;
 `
 
 export const CoverPhotoLandingWrapper = styled.div<{imgUrl?: string}>`

@@ -7,6 +7,8 @@ import { Profile } from '../../types/profile';
 import { shortenAddress } from '../../utils/utils';
 import { Card, Text } from '../Foundation';
 import { CopiedTooltip } from '../Tooltip';
+const pfp = require('../../assets/images/cryptoApePFP.png');
+
 
 const ProfileCard = ({data}: {data: Profile}) => {
     const theme = useTheme();
@@ -45,7 +47,7 @@ const ProfileCard = ({data}: {data: Profile}) => {
   }
 
     return (
-        <Card background={theme.colors.overlay} borderRadius={theme.radii.large}>
+        <Card background={'#2F2F2F'} borderRadius={theme.radii.large}>
             <Wrapper padding="1rem">
                 <Col>
                     <Row 
@@ -54,7 +56,7 @@ const ProfileCard = ({data}: {data: Profile}) => {
                         style={{width: '160px'}}
                         >
                         <ProfileAvatar className="circle-avatar">
-                            <img src={data.avatarUrl ?? "./logo.png"} alt="profile-avatar" />
+                            <img src={data.avatarUrl ?? pfp} alt="profile-avatar" />
                         </ProfileAvatar>
                         <AddressWrapper onClick={() => copyTextToClipboard(data.address)}>
                             <Text bold fontSize={isMobile ? "14px" : "18px"}>{shortenAddress(data.address)}</Text>

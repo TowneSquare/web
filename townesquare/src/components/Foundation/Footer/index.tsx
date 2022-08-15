@@ -20,7 +20,7 @@ export const Footer = (props) => {
                         <a href="https://mobile.twitter.com/TowneSquarexyz">
                           <BsTwitter size={30} style={{ color: '#F2F0FF', paddingRight: "8px"}} />
                         </a>
-                        <a href="https://discord.gg/2BWvwPSAWW">
+                        <a href="https://discord.com/">
                           <BsDiscord size={30} style={{ color: '#F2F0FF', paddingRight: "8px"}}/>
                         </a>   
                         <a href="https://medium.com/">

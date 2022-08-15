@@ -70,12 +70,12 @@ export const Ecosystem = ({data}: { data: LandingData}) => {
             </Row>
           </Row>
         </ContentWrapper>
-        <ButtonContainer style={{ width: '100%' }}>
+        <ButtonContainer style={{ width: '100%', marginBottom: 128 }}>
           <BlueButton>App Coming Soon</BlueButton>
           <WhiteButton><LinkFooter href="https://docs.townesquare.xyz/townesquare-whitepaper/">Read Docs</LinkFooter></WhiteButton>
         </ButtonContainer>
         <GradientBg>
-          <div className="bg-icon-top">
+          <div className="bg-icon-top" style={{zIndex:1}}>
               <BgGradEllipse />
             </div>
             <div className="bg-icon-bottom" style={{zIndex:1}}>
@@ -118,7 +118,7 @@ const TitleWrapper = styled(Wrapper)<{isMobile: boolean}>`
 `;
 
 const SectionTitleBox = styled(Container)<{isMobile: boolean}>`
-  background: ${props => props.theme.colors.card};
+  background: ${props => props.theme.colors.overlay};
   border-radius: ${props => props.theme.radii.default};
   height: 113px;
   display: grid;
@@ -134,7 +134,7 @@ const GradientBg = styled.div`
   
   .bg-icon-top {
     position: absolute;
-    top: 0;
+    top: 5%;
     z-index: -1;
     svg {
       transform: translateX(-40%);
@@ -142,7 +142,7 @@ const GradientBg = styled.div`
     @media(min-width: 1024px) {
       svg {
         width: 100%;
-        transform: translateX(-20%);
+        transform: translateX(-40%);
       }
     }
 

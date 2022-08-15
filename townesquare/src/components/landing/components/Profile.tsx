@@ -17,7 +17,7 @@ export const Profile = (props) => {
         <ContentWrapper>
           {isTablet || isMobile ? (
             <Row>
-              <Row gap={`${theme.spacing[5]}px`} style={{paddingLeft: `${theme.spacing[6]}px`}}>
+              <Row gap={`${theme.spacing[5]}px`} style={{paddingLeft: `${theme.spacing[6]}px`, zIndex: 100}}>
                 <Title scale="md" textAlign="left">
                   {props.data.Profile ? props.data.Profile.title : 'Loading'}
                 </Title>
@@ -70,7 +70,10 @@ const ProfileCardWrapper = styled.div`
 const ProfileCol = styled(Col)`
   max-width: 1440px;
   margin: auto;
-`
+  > * {
+    z-index: 100;
+  }
+    `
 
 const ProfileRow = styled(Row)`
   @media (min-width:1440px) {

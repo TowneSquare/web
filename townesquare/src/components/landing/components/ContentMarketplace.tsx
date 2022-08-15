@@ -127,25 +127,25 @@ const GradientBg = styled.div`
   .bg-icon-right {
       position: absolute;
       top: 240%;
-      right: -70%;
+      right: 0%;
     }
   
     .bg-icon-left {
       position: absolute;
-      top: 340%;
-      left: -70%;
+      top: 140%;
+      left: 0%;
     }
   @media(min-width: 1024px) {
     .bg-icon-right {
     position: absolute;
-    top: 150%;
-    right: -10%;
+    top: 120%;
+    right: -20%;
   }
 
   .bg-icon-left {
     position: absolute;
-    top: 220%;
-    left: -40%;
+    top: 160%;
+    left: -20%;
   }
   }
 `;

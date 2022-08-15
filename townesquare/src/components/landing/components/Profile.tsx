@@ -35,10 +35,10 @@ export const Profile = (props) => {
             </Row>
           ) : (<ProfileCol>
             <ProfileRow gap={`${theme.spacing[5]}px`} style={{paddingLeft: `${theme.spacing[7]}px`, marginTop: `${theme.spacing[7]}px`}}>
-              <Title scale="md" textAlign="left"  style={{minWidth: '690px'}}>
+              <Title scale="md" textAlign="left" style={{minWidth: '690px'}}>
                 {props.data.Profile ? props.data.Profile.title : 'Loading'}
               </Title>
-              <Text fontSize="25px">
+              <Text fontSize="25px" textAlign="left">
                 {props.data.Profile ? props.data.Profile.paragraph : 'Loading'}
               </Text>
             </ProfileRow>
@@ -75,7 +75,7 @@ const ProfileCol = styled(Col)`
 const ProfileRow = styled(Row)`
   @media (min-width:1440px) {
     > * {
-      text-align: center;
+      text-align: center !important;
     }
   }
 `

@@ -95,6 +95,7 @@ export const WhiteButton = styled(MainButtons)`
 
 export const ProfileCardMain = styled(ProfileCard)`
   height: 100%;
+  max-width: 720px;
 `
 
 export const CoverPhotoLandingWrapper = styled.div<{imgUrl?: string}>`

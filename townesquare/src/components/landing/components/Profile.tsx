@@ -11,6 +11,7 @@ import { Text, Title } from "../../Foundation";
 export const Profile = (props) => {
   const { isMobile, isTablet } = useMatchBreakpoints()
   const theme = useTheme();
+  console.log(isMobile, isTablet)
     return (
       <ColouredContainer background={theme.colors.bg} >
         <ContentWrapper>
@@ -32,21 +33,21 @@ export const Profile = (props) => {
                 </ProfileCardWrapper>
               </Row>
             </Row>
-          ) : (<Col>
-            <Row gap={`${theme.spacing[5]}px`} style={{paddingLeft: `${theme.spacing[7]}px`}}>
+          ) : (<ProfileCol>
+            <ProfileRow gap={`${theme.spacing[5]}px`} style={{paddingLeft: `${theme.spacing[7]}px`, marginTop: `${theme.spacing[7]}px`}}>
               <Title scale="md" textAlign="left"  style={{minWidth: '690px'}}>
                 {props.data.Profile ? props.data.Profile.title : 'Loading'}
               </Title>
               <Text fontSize="25px">
                 {props.data.Profile ? props.data.Profile.paragraph : 'Loading'}
               </Text>
-            </Row>
+            </ProfileRow>
             <ProfileCardWrapper>
               <CoverPhotoLandingWrapper className="cover-photo-container">
                 <ProfileCardMain data={dummyProfile}/>
               </CoverPhotoLandingWrapper>
             </ProfileCardWrapper>
-          </Col>)}
+          </ProfileCol>)}
         </ContentWrapper>
       </ColouredContainer>
     )
@@ -63,6 +64,18 @@ const ProfileCardWrapper = styled.div`
   width: 100%;
   min-width: 630px;
   max-width: 630px;
-  overflow: hidden;
   transform: translateX(10%);
 `;
+
+const ProfileCol = styled(Col)`
+  max-width: 1440px;
+  margin: auto;
+`
+
+const ProfileRow = styled(Row)`
+  @media (min-width:1440px) {
+    > * {
+      text-align: center;
+    }
+  }
+`

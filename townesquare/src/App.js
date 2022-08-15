@@ -20,9 +20,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<SocialProfile />} />
+          {/* <Route path="/profile" element={<SocialProfile />} /> */}
           <Route path="/welcome" element={<LandingPage />} />
-          <Route path="/marketplace" element={<Marketplace />} />
+          {/* <Route path="/marketplace" element={<Marketplace />} /> */}
           <Route path="/feed" element={<Feed />} />
           <Route path="/termsofservice" element={<TermsOfService />} />
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />

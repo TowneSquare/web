@@ -8,3 +8,4 @@ export { default as SocialAdvertiseIcon } from './SocialAdvertise';
 export { default as SocialRewardsIcon } from './SocialRewards';
 export { default as SocialStreamIcon } from './SocialStream';
 export { default as TransferIcon } from './Transfer';
+export { default as TwitterLogo } from './TwitterLogo';

@@ -16,13 +16,14 @@ import {
 
 import useMatchBreakpoints from '../../hooks/useMatchBreakpoints';
 import useStore from '../../state/store';
-import { baseColors } from '../../styles/colors';
+import { baseColors, lightColors, darkColors } from '../../styles/colors';
 import { Post } from '../../types/post';
 import { Text } from '../Foundation';
 // import SearchBar from '../Searchbar';
 import { Col } from '../../styles/common';
-import { LogoRoundIcon } from '../svgs';
+import { LogoRoundIcon, TwitterLogo } from '../svgs';
 import { useTheme } from '@emotion/react';
+import { BlueButton, WhiteButton } from "../../pages/LandingPage/styles";
 
 type SearchResultType = {
     posts: Array<Post>
@@ -120,6 +121,8 @@ const Appbar = ({handleMobileMenu, onThemeToggle, isDarkMode}: {
         setShowResults(false)
         handleMobileMenu!()
     }
+
+    const colors = isDarkMode ? darkColors : lightColors;
       
     return (
         <HeaderWrapper>
@@ -152,12 +155,10 @@ const Appbar = ({handleMobileMenu, onThemeToggle, isDarkMode}: {
                             ) 
                             : (
                                 <NavButtons>
-                                    <Link className="menu-item" to="/marketplace">
-                                        <Text color={baseColors.primary} bold>Marketplace</Text>
-                                    </Link>
-                                    <Link className="menu-item" to="/profile">
-                                        <Text color={baseColors.primary} bold>Profile</Text>
-                                    </Link>
+                                        <LinkText href="https://twitter.com/TowneSquarexyz" rel="noopener noreferrer" target="_blank"><TwitterButton><TwitterLogo /></TwitterButton></LinkText>
+                                    <BlueButton className="menu-item" disabled={true}>
+                                        <Text color={colors.textPrimary} bold>GO TO APP</Text>
+                                    </BlueButton>
                                 </NavButtons>
                             )
                     }
@@ -211,7 +212,6 @@ const NavButtons = styled.div`
     grid-auto-flow: column;
     align-items: center;
     justify-content: space-between;
-    grid-gap: 64px;
     margin-right: 48px;
 
     .menu-item {
@@ -221,8 +221,8 @@ const NavButtons = styled.div`
     svg {
         width: 25px;
         height: 25px;
-        margin-right: 48px;
         color: ${props => props.theme.colors.primary};
+    
     }
 
     @media(max-width: 638px) {
@@ -248,5 +248,23 @@ const NavButtons = styled.div`
         }
     }
 `;
+
+const TwitterButton = styled(WhiteButton)`
+
+    &:hover {
+        svg{
+            path {
+                    fill: ${props => props.theme.colors.bg};
+                    transition: fill ease-in-out 0.2s;
+                }
+            }
+        }
+    }
+`
+
+const LinkText = styled.a`
+  color: inherit;
+  text-decoration: none;
+`
 
 export default Appbar;

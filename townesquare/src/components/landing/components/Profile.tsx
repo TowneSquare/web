@@ -16,15 +16,16 @@ export const Profile = (props) => {
       <ColouredContainer background={theme.colors.bg} >
         <ContentWrapper>
           {isTablet || isMobile ? (
+            <>
+             <Row gap={`${theme.spacing[5]}px`} style={{paddingLeft: isMobile || isTablet ? '0' : `${theme.spacing[6]}px`, zIndex: 1}}>
+             <Title scale="md" textAlign="left">
+               {props.data.Profile ? props.data.Profile.title : 'Loading'}
+             </Title>
+             <Text fontSize="25px">
+               {props.data.Profile ? props.data.Profile.paragraph : 'Loading'}
+             </Text>
+           </Row>
             <Row>
-              <Row gap={`${theme.spacing[5]}px`} style={{paddingLeft: `${theme.spacing[6]}px`, zIndex: 100}}>
-                <Title scale="md" textAlign="left">
-                  {props.data.Profile ? props.data.Profile.title : 'Loading'}
-                </Title>
-                <Text fontSize="25px">
-                  {props.data.Profile ? props.data.Profile.paragraph : 'Loading'}
-                </Text>
-              </Row>
               <Row items="end">
                 <ProfileCardWrapper>
                   <CoverPhotoLandingWrapper className="cover-photo-container">
@@ -33,6 +34,7 @@ export const Profile = (props) => {
                 </ProfileCardWrapper>
               </Row>
             </Row>
+            </>
           ) : (<ProfileCol>
             <ProfileRow gap={`${theme.spacing[5]}px`} style={{paddingLeft: `${theme.spacing[7]}px`, marginTop: `${theme.spacing[7]}px`}}>
               <Title scale="md" textAlign="left" style={{minWidth: '690px'}}>
@@ -71,7 +73,7 @@ const ProfileCol = styled(Col)`
   max-width: 1440px;
   margin: auto;
   > * {
-    z-index: 100;
+    z-index: 1;
   }
     `
 

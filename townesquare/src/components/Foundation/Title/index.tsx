@@ -3,10 +3,11 @@ import React from "react";
 import { TextProps } from "./types";
 
 const getFontSize = ({ fontSize, scale }: TextProps) => {
-    return scale === 'sm' ? "38px"
-        : scale === 'md' ? "75px"
+    return fontSize || 
+        scale === 'sm' ? "36px"
+        : scale === 'md' ? "70px"
         : scale === 'lg' ? '104px' 
-        : fontSize || "75px"
+        : "75px"
   };
 
 const Title = styled.div<TextProps>`

@@ -187,13 +187,16 @@ const HeaderWrapper = styled.div`
 `;
 
 const LogoWrapper = styled(Link)`
-    padding: 16px 48px;
+    padding: 16px 24px;
     display: grid;
     grid-auto-flow: column;
     justify-content: start;
-    svg {
-        
+    svg { 
         text-align: left;
+    }
+
+    @media(min-width: 1024px) {
+        padding: 16px 48px;
     }
 `;
 

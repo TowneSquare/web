@@ -20,7 +20,7 @@ export const ContentWrapper = styled(Wrapper)`
 `;
 
 export const ColouredContainer = styled(Container)<{background?: string}>`
-  max-width: 100%;
+  max-width: 100vw;
   background: ${props => props.background ?? 'transparent'};
   padding-bottom: 20px;
 `;

@@ -7,6 +7,7 @@ import {
 } from "../../../node_modules/react-bootstrap/esm/index";
 import { Wrapper } from "../../styles/common";
 import ProfileCard from './../../components/ProfileCard';
+import Layout from '../../styles/layouts';
 
 export const ContentWrapper = styled(Wrapper)`
   padding: 128px 0;
@@ -20,7 +21,6 @@ export const ContentWrapper = styled(Wrapper)`
 `;
 
 export const ColouredContainer = styled(Container)<{background?: string}>`
-  max-width: 100vw;
   background: ${props => props.background ?? 'transparent'};
   padding-bottom: 20px;
 `;
@@ -135,3 +135,12 @@ export const CoverPhotoLandingWrapper = styled.div<{imgUrl?: string}>`
     object-fit: cover;
   }
   `;
+
+export const ProfileAssetWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+
+  @media(max-width: 1223px) {
+    margin-top: ${props => props.theme.spacing[5]}px;
+  }
+`;

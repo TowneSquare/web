@@ -171,5 +171,8 @@ const ColouredFooterContainer = styled(Container)<{background?: string}>`
   width: 100%;
   max-width: 100%;
   background: ${props => props.background ?? '#221C3E'};
-  padding-bottom: 20px;
+  padding: 50px;
+  -webkit-box-shadow:0 0 20px #312553; 
+  -moz-box-shadow: 0 0 20px #312553; 
+  box-shadow:0 0 20px #312553;
 `;

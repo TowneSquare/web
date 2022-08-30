@@ -1,5 +1,4 @@
 
-import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { LandingData } from "../../../data/types";
 import useMatchBreakpoints from "../../../hooks/useMatchBreakpoints"
@@ -9,7 +8,6 @@ import { BgGradEllipse, SocialAccessIcon, SocialAdvertiseIcon, SocialRewardsIcon
 
 export const Rewards = ({data}: {data: LandingData}) => {
   const { isMobile, isTablet } = useMatchBreakpoints();
-  const theme = useTheme();
 
   const CardIcon = ({name}: {name: string})  => {
     let icon;

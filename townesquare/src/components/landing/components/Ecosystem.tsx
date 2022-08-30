@@ -6,7 +6,7 @@ import { Col, Container, Row, Wrapper } from "../../../styles/common"
 import { Text, Title } from "../../Foundation"
 import { BgGradEllipse } from "../../svgs"
 import { LandingData, SectionDetails } from "../../../data/types"
-import { BlueButton, ButtonContainer, WhiteButton } from "../../../pages/LandingPage/styles";
+import { GradientButton, ButtonContainer, WhiteButton } from "../../../pages/LandingPage/styles";
 
 
 export const Ecosystem = ({data}: { data: LandingData}) => {
@@ -71,7 +71,7 @@ export const Ecosystem = ({data}: { data: LandingData}) => {
           </Row>
         </ContentWrapper>
         <ButtonContainer style={{ width: '100%', marginBottom: 128 }}>
-          <BlueButton>App Coming Soon</BlueButton>
+          <GradientButton>App Coming Soon</GradientButton>
           <WhiteButton><LinkFooter href="https://docs.townesquare.xyz/townesquare-whitepaper/">Read Docs</LinkFooter></WhiteButton>
         </ButtonContainer>
         <GradientBg>

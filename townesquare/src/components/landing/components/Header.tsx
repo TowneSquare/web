@@ -1,6 +1,6 @@
 import { useTheme } from "@emotion/react"
 import useMatchBreakpoints from "../../../hooks/useMatchBreakpoints"
-import { BlueButton, ButtonContainer, ColouredContainer, WhiteButton, ContentWrapper } from "../../../pages/LandingPage/styles";
+import { ButtonContainer, ColouredContainer, WhiteButton, ContentWrapper, GradientButton } from "../../../pages/LandingPage/styles";
 import styled from "@emotion/styled";
 import { BgGradCircle } from "../../svgs";
 import { Col, Row } from "../../../styles/common";
@@ -24,7 +24,7 @@ export const Header = (props) => {
             </Row>
             <Col>
               <ButtonContainer style={{width: '100%'}}>
-                <BlueButton>App Coming Soon</BlueButton>
+                <GradientButton>App Coming Soon</GradientButton>
                 <WhiteButton><LinkFooter href="https://docs.townesquare.xyz/townesquare-whitepaper/">Read Docs</LinkFooter></WhiteButton>
               </ButtonContainer>
             </Col>

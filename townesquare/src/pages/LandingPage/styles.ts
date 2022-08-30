@@ -7,7 +7,6 @@ import {
 } from "../../../node_modules/react-bootstrap/esm/index";
 import { Wrapper } from "../../styles/common";
 import ProfileCard from './../../components/ProfileCard';
-import Layout from '../../styles/layouts';
 
 export const ContentWrapper = styled(Wrapper)`
   padding: 128px 0;
@@ -90,7 +89,12 @@ export const WhiteButton = styled(MainButtons)`
   &:hover {
     background: white;
     color: black;
-  }
+  }  
+`
+
+export const GradientButton = styled(MainButtons)`
+  background: linear-gradient(135deg, #0368FF 0%, #FF3E95 100%);
+
 `
 
 export const ProfileCardMain = styled(ProfileCard)`

@@ -18,16 +18,16 @@ export const Footer = (props) => {
                   <Col className="col-md-2 mt-md-0 mt-3" style={{ justifyContent: "left", display: "inline-block" }}>
                       <TextTitleFooter>Follow us on</TextTitleFooter>
                         <a href="https://mobile.twitter.com/TowneSquarexyz">
-                          <BsTwitter size={30} style={{ color: '#F2F0FF', paddingRight: "8px"}} />
+                          <BsTwitter size={30} style={{ color: '#F2F0FF', paddingRight: "8px", marginRight: "8px"}} />
                         </a>
                         <a href="https://discord.com/">
-                          <BsDiscord size={30} style={{ color: '#F2F0FF', paddingRight: "8px"}}/>
+                          <BsDiscord size={30} style={{ color: '#F2F0FF', paddingRight: "8px", margin: "8px"}}/>
                         </a>   
                         <a href="https://medium.com/">
-                          <BsMedium size={30} style={{ color: '#F2F0FF', paddingRight: "8px"}}/>
+                          <BsMedium size={30} style={{ color: '#F2F0FF', paddingRight: "8px", margin: "8px"}}/>
                         </a>   
                         <a href="https://telegram.org/">
-                          <FaTelegramPlane size={30} style={{ color: '#F2F0FF' }} />
+                          <FaTelegramPlane size={30} style={{ color: '#F2F0FF', paddingRight: "8px", marginLeft: "8px" }} />
                         </a>   
                   </Col>
 
@@ -96,12 +96,12 @@ export const Footer = (props) => {
                   </Col>
 
                   <Col className="col-md-2 mb-md-0 mb-3">
-                    <div style={{ textAlign: "right"}}>
+                    <div style={{ textAlign: "right", marginBottom: "16px"}}>
                       <LogoRoundIcon />
                     </div>
-                    <TextTitleFooter style={{ fontSize: "18px", textAlign: "right" }}>
+                    <CopyrightText style={{ fontSize: "18px", textAlign: "right" }}>
                       ©TownSquare2022
-                    </TextTitleFooter>
+                    </CopyrightText>
                   </Col>
               </Row>
           </div>
@@ -126,9 +126,22 @@ const TextTitleFooter = styled(Text)`
   text-shadow: 2px 4px 12px rgba(255, 0, 184, 0.65);
 `;
 
+const CopyrightText = styled(Text)`
+  font-family: 'Outfit';
+  font-style: normal;
+  font-size: 24px;
+  line-height: 140%;
+
+  /* identical to box height, or 34px */
+
+  /* Text/Primary */
+  color: #F2F0FF;
+`
+
 const LinkFooter = styled.a`
   color: inherit;
   text-decoration: none;
+  line-height: 2;
 `
 
 const FooterSubheading = styled.h5`

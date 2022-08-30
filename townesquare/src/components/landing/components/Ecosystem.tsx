@@ -6,7 +6,7 @@ import { Col, Container, Row, Wrapper } from "../../../styles/common"
 import { Text, Title } from "../../Foundation"
 import { BgGradEllipse } from "../../svgs"
 import { LandingData, SectionDetails } from "../../../data/types"
-import { BlueButton, ButtonContainer, WhiteButton } from "../../../pages/LandingPage/styles";
+import { GradientButton, ButtonContainer, WhiteButton } from "../../../pages/LandingPage/styles";
 
 
 export const Ecosystem = ({data}: { data: LandingData}) => {
@@ -22,7 +22,7 @@ export const Ecosystem = ({data}: { data: LandingData}) => {
               <Title scale="sm">
                 {entry.title}
               </Title>
-              <Text fontSize="20px" textAlign="center">
+              <Text fontSize="20px" textAlign="center" fontWeight={400}>
                 {entry.description}
               </Text>
             </Row>
@@ -42,7 +42,7 @@ export const Ecosystem = ({data}: { data: LandingData}) => {
             </TitleWrapper>
             <Row gap={`${theme.spacing[5]}px`} style={{padding: isMobile || isTablet ? `0 ${theme.spacing[5]}px` :  '0'}}>
               {Object.values(data.sections).map((section, i) => (
-                <Row key={`section-${i}`} gap={`${theme.spacing[4]}px`} style={{marginBottom: '16px'}}>
+                <Row key={`section-${i}`} gap={`${theme.spacing[6]}px`} style={{marginBottom: '16px'}}>
                   <SectionTitleBox isMobile={isMobile || isTablet}>
                     <Title scale="sm">
                       {section.title}
@@ -50,14 +50,14 @@ export const Ecosystem = ({data}: { data: LandingData}) => {
                   </SectionTitleBox>
                   {isMobile || isTablet
                     ? (mobileDetailsView(section.details))
-                    : <Col justify="space-between" gap={`${theme.spacing[8]}px`}>
+                    : <Col justify="space-between" gap={`${theme.spacing[4]}px`}>
                         {section.details.map((entry, j) => (
                           <DetailBlock key={`details-${i}${j}`}>
-                            <Row align="center" justify="center" gap="65px">
+                            <Row align="center" justify="center" gap="32px">
                               <Title scale="sm">
                                 {entry.title}
                               </Title>
-                              <Text fontSize="28px" textAlign="center">
+                              <Text fontSize="28px" textAlign="center" style={{maxWidth: "90%", margin: "auto", fontWeight: "400"}}>
                                 {entry.description}
                               </Text>
                             </Row>
@@ -71,7 +71,7 @@ export const Ecosystem = ({data}: { data: LandingData}) => {
           </Row>
         </ContentWrapper>
         <ButtonContainer style={{ width: '100%', marginBottom: 128 }}>
-          <BlueButton>App Coming Soon</BlueButton>
+          <GradientButton>App Coming Soon</GradientButton>
           <WhiteButton><LinkFooter href="https://docs.townesquare.xyz/townesquare-whitepaper/">Read Docs</LinkFooter></WhiteButton>
         </ButtonContainer>
         <GradientBg>
@@ -105,10 +105,10 @@ const ContentWrapper = styled(Wrapper)`
 const DetailBlock = styled.div`
   width: 100%;
   min-width: 300px;
-  max-width: 80%;
+  max-width: 90%;
   @media(min-width: 1024px) {
     min-width: 298px;
-    max-width: 298px;
+    max-width: 364px;
   }
 `;
 
@@ -128,6 +128,7 @@ const SectionTitleBox = styled(Container)<{isMobile: boolean}>`
   width: 100%;
   min-width: ${props => props.isMobile ? 'unset' : 'calc(100vw / 1.5)'};
   max-width: ${props => props.isMobile ? 'unset' : '1166px'};
+  border: 1px solid #8C74FF2E;
 `;
 
 const GradientBg = styled.div`

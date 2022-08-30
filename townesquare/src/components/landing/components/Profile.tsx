@@ -22,10 +22,10 @@ export const Profile = (props) => {
           {isTablet || isMobile ? (
             <>
              <Row gap={`${theme.spacing[5]}px`} style={{paddingLeft: isMobile || isTablet ? '0' : `${theme.spacing[6]}px`, zIndex: 1, position: 'relative'}}>
-             <Title scale="md" textAlign="left">
+             <Title scale="md" textAlign="center">
                {props.data.Profile ? props.data.Profile.title : 'Loading'}
              </Title>
-             <Text fontSize="25px">
+             <Text fontSize="25px" textAlign="center">
                {props.data.Profile ? props.data.Profile.paragraph : 'Loading'}
              </Text>
            </Row>
@@ -42,10 +42,10 @@ export const Profile = (props) => {
             </>
           ) : (<ProfileCol justify="space-around">
             <ProfileRow gap={`${theme.spacing[5]}px`} style={{marginTop: `172px`, maxWidth: '756px'}}>
-              <Title scale="lg" textAlign="left" style={{minWidth: '690px', fontSize: '74px'}}>
+              <Title scale="lg" textAlign={"left"} style={{minWidth: '690px', fontSize: '74px'}}>
                 {props.data.Profile ? props.data.Profile.title : 'Loading'}
               </Title>
-              <Text fontSize="25px" textAlign="left">
+              <Text fontSize="25px" textAlign={"left"}>
                 {props.data.Profile ? props.data.Profile.paragraph : 'Loading'}
               </Text>
             </ProfileRow>
@@ -91,7 +91,7 @@ const ProfileCol = styled(Col)`
 const ProfileRow = styled(Row)`
   @media (min-width:1440px) {
     > * {
-      text-align: center !important;
+      // text-align: center !important;
     }
   }
 `

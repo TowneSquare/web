@@ -1,5 +1,4 @@
 
-import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { LandingData } from "../../../data/types";
 import useMatchBreakpoints from "../../../hooks/useMatchBreakpoints"
@@ -9,7 +8,6 @@ import { BgGradEllipse, SocialAccessIcon, SocialAdvertiseIcon, SocialRewardsIcon
 
 export const Rewards = ({data}: {data: LandingData}) => {
   const { isMobile, isTablet } = useMatchBreakpoints();
-  const theme = useTheme();
 
   const CardIcon = ({name}: {name: string})  => {
     let icon;
@@ -36,7 +34,7 @@ export const Rewards = ({data}: {data: LandingData}) => {
         <ContentWrapper>
           <Row gap="136px">
             <Row style={{padding: '32px'}} items="center">
-              <Title scale={isMobile || isTablet ? "md" : "lg"} bold>
+              <Title scale="md" bold style={{fontSize: "75px", maxWidth: "867px", marginBottom: '32px'}}>
                 {data.title}
               </Title>
               <Title scale="sm" fontWeight={400} style={{maxWidth: '843px'}}>

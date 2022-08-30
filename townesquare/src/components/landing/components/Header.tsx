@@ -105,16 +105,19 @@ const GradientBg = styled.div`
 const BackgroundImageContainer = styled.div`
     position: absolute;
     top: 10%;
-    left: -200px;
-    width: 1000vw;
+    left: 40%;
+    transform: translatex(-50%);
+    width: 100%;
 `
 
 const BgRowLeft = styled.div`
     margin-right: 196px;
+    width: 1000vw;
 `
 
 const BgRowRight = styled.div`
     margin: 50px 0px 50px 196px;
+    width: 1000vw;
 `
 
 const BackgroundImages = styled.img`

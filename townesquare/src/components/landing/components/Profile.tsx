@@ -34,7 +34,7 @@ export const Profile = (props) => {
                 {/* <CoverPhotoLandingWrapper className="cover-photo-container">
                   <ProfileCardMain data={dummyProfile}/> */}
                   <ProfileAssetWrapper>
-                    <img src={profileAsset} />
+                    <img src={profileAsset} draggable="false" />
                   </ProfileAssetWrapper>
                 {/* </CoverPhotoLandingWrapper> */}
               </ProfileCardWrapper>
@@ -53,7 +53,7 @@ export const Profile = (props) => {
               {/* <CoverPhotoLandingWrapper className="cover-photo-container">
                   <ProfileCardMain data={dummyProfile}/> */}
                   <ProfileAssetWrapper>
-                    <img src={profileAsset} />
+                    <img src={profileAsset} draggable="false" />
                   </ProfileAssetWrapper>
               {/* </CoverPhotoLandingWrapper> */}
             </ProfileCardWrapper>

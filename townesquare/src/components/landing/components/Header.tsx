@@ -54,28 +54,28 @@ export const Header = (props) => {
           </GradientBg>
           <BackgroundImageContainer>
             <BgRowLeft>
-              <BackgroundImages src={header_00}/>
-              <BackgroundImages src={header_01}/>
-              <BackgroundImages src={header_02}/>
-              <BackgroundImages src={header_03}/>
-              <BackgroundImages src={header_04}/>
-              <BackgroundImages src={header_05}/>
+              <BackgroundImages src={header_00} draggable="false" />
+              <BackgroundImages src={header_01} draggable="false" />
+              <BackgroundImages src={header_02} draggable="false" />
+              <BackgroundImages src={header_03} draggable="false" />
+              <BackgroundImages src={header_04} draggable="false" />
+              <BackgroundImages src={header_05} draggable="false" />
             </BgRowLeft>
             <BgRowRight>
-              <BackgroundImages src={header_10}/>
-              <BackgroundImages src={header_11}/>
-              <BackgroundImages src={header_12}/>
-              <BackgroundImages src={header_13}/>
-              <BackgroundImages src={header_14}/>
-              <BackgroundImages src={header_15}/>
+              <BackgroundImages src={header_10} draggable="false" />
+              <BackgroundImages src={header_11} draggable="false" />
+              <BackgroundImages src={header_12} draggable="false" />
+              <BackgroundImages src={header_13} draggable="false" />
+              <BackgroundImages src={header_14} draggable="false" />
+              <BackgroundImages src={header_15} draggable="false" />
             </BgRowRight>
             <BgRowLeft>
-              <BackgroundImages src={header_20}/>
-              <BackgroundImages src={header_21}/>
-              <BackgroundImages src={header_22}/>
-              <BackgroundImages src={header_23}/>
-              <BackgroundImages src={header_24}/>
-              <BackgroundImages src={header_25}/>
+              <BackgroundImages src={header_20} draggable="false" />
+              <BackgroundImages src={header_21} draggable="false" />
+              <BackgroundImages src={header_22} draggable="false" />
+              <BackgroundImages src={header_23} draggable="false" />
+              <BackgroundImages src={header_24} draggable="false" />
+              <BackgroundImages src={header_25} draggable="false" />
             </BgRowLeft>
           </BackgroundImageContainer>
       </ColouredContainer>

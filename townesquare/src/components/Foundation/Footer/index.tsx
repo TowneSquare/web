@@ -20,7 +20,7 @@ export const Footer = (props) => {
                         <a href="https://mobile.twitter.com/TowneSquarexyz">
                           <BsTwitter size={30} style={{ color: '#F2F0FF', paddingRight: "8px", marginRight: "8px"}} />
                         </a>
-                        <a href="https://discord.com/">
+                        <a href="https://discord.gg/yMRmqFzrDW">
                           <BsDiscord size={30} style={{ color: '#F2F0FF', paddingRight: "8px", margin: "8px"}}/>
                         </a>   
                         <a href="https://medium.com/">
@@ -53,7 +53,7 @@ export const Footer = (props) => {
                           </LinkFooter>
                         </FooterInfo>
                         <FooterInfo>
-                          <LinkFooter href="https://discord.gg/2BWvwPSAWW">
+                          <LinkFooter href="https://discord.gg/yMRmqFzrDW">
                             Discord
                           </LinkFooter>
                         </FooterInfo>
@@ -79,7 +79,7 @@ export const Footer = (props) => {
                           </LinkFooter>
                         </FooterInfo>
                         <FooterInfo>
-                          <LinkFooter href="https://github.com/d2Dreamer/TowneSquare/tree/main">
+                          <LinkFooter href="https://github.com/TowneSquare">
                             Github
                           </LinkFooter>
                         </FooterInfo>

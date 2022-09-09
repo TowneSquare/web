@@ -100,7 +100,7 @@ export const Footer = (props) => {
                       <LogoRoundIcon />
                     </div>
                     <CopyrightText style={{ fontSize: "18px", textAlign: "right" }}>
-                      ©TownSquare2022
+                      ©TowneSquare 2022
                     </CopyrightText>
                   </Col>
               </Row>

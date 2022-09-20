@@ -34,10 +34,10 @@ export const Header = (props) => {
         <ContentWrapper>
           <Row gap={`${theme.spacing[7]}px`} items="center">
             <Row gap={`${theme.spacing[5]}px`} items="center">
-              <Title scale={isMobile || isTablet ? "md" : "lg"} style={{maxWidth: '872px'}}>
+              <Title scale={isMobile ? "sm" : isTablet ? "md" : "lg"} style={{maxWidth: '872px'}}>
                 {props.data.Header ? props.data.Header.title : 'Loading'}
               </Title>
-              <Title scale="sm" style={{maxWidth: '702px'}}>
+              <Title scale={isMobile ? "xs":"sm"}style={{maxWidth: '702px', paddingLeft:"4rem", paddingRight:"4rem"}}>
                 {props.data.Header ? props.data.Header.paragraph : 'Loading'}
               </Title>
             </Row>

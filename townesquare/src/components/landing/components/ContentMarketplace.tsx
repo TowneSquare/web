@@ -45,10 +45,10 @@ export const ContentMarketplace = (props) => {
         <ContentWrapper>
           <Row items="center" gap="112px">
             <Row gap="32px" style={{maxWidth: '813px'}}>
-              <Title scale={isMobile || isTablet ? "md" : "lg"}>
+              <Title scale={isMobile ? "sm": isTablet ? "md" : "lg"}>
                 {props.data.Marketplace ? props.data.Marketplace.title : 'Loading'}
               </Title>
-              <Title scale="sm" style={{maxWidth: '750px'}}>
+              <Title scale={isMobile?"xs":"sm"} style={{maxWidth: '750px'}}>
                 {props.data.Marketplace ? props.data.Marketplace.paragraph : 'Loading'}
               </Title>
             </Row>

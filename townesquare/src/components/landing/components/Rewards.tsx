@@ -34,10 +34,10 @@ export const Rewards = ({data}: {data: LandingData}) => {
         <ContentWrapper>
           <Row gap="136px">
             <Row style={{padding: '32px'}} items="center">
-              <Title scale="md" bold style={{fontSize: "75px", maxWidth: "867px", marginBottom: '32px'}}>
+            <Title scale={isMobile ? "sm" : isTablet ? "md" : "lg"} style={{maxWidth: '872px', marginBottom:'32px'}}>
                 {data.title}
               </Title>
-              <Title scale="sm" fontWeight={400} style={{maxWidth: '843px'}}>
+              <Title scale="xs" fontWeight={400} style={{maxWidth: '843px'}}>
                 {data.description}
               </Title>
             </Row>

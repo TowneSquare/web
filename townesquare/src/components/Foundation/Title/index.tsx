@@ -4,11 +4,12 @@ import { TextProps } from "./types";
 
 const getFontSize = ({ fontSize, scale }: TextProps) => {
     return fontSize || 
-        scale === 'sm' ? "36px"
+        scale === 'xs' ? "25px"
+        : scale === 'sm' ? "35px"
         : scale === 'md' ? "70px"
         : scale === 'lg' ? '104px' 
         : "75px"
-  };
+    };
 
 const Title = styled.div<TextProps>`
     font-family: 'Outfit', sans-serif;;

@@ -21,14 +21,14 @@ export const Profile = (props) => {
         <ContentWrapper>
           {isTablet || isMobile ? (
             <>
-             <Row gap={`${theme.spacing[5]}px`} style={{paddingLeft: isMobile || isTablet ? '0' : `${theme.spacing[6]}px`, zIndex: 1, position: 'relative'}}>
-             <Title scale="md" textAlign="center">
-               {props.data.Profile ? props.data.Profile.title : 'Loading'}
-             </Title>
-             <Text fontSize="25px" textAlign="center">
-               {props.data.Profile ? props.data.Profile.paragraph : 'Loading'}
-             </Text>
-           </Row>
+            <Row gap={`${theme.spacing[5]}px`} style={{paddingLeft: isMobile || isTablet ? '0' : `${theme.spacing[6]}px`, zIndex: 1, position: 'relative'}}>
+              <Title scale={isMobile ? "sm":"md"} textAlign="center">
+                {props.data.Profile ? props.data.Profile.title : 'Loading'}
+              </Title>
+              <Title scale={isMobile ? "xs":"sm"}style={{maxWidth: '702px', paddingLeft:"4rem", paddingRight:"4rem"}}>
+                {props.data.Profile ? props.data.Profile.paragraph : 'Loading'}
+              </Title>
+            </Row>
             <Row items="end">
               <ProfileCardWrapper>
                 {/* <CoverPhotoLandingWrapper className="cover-photo-container">

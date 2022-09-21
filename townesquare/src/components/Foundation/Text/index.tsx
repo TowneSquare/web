@@ -13,6 +13,7 @@ const Text = styled.div<TextProps>`
     line-height: 1.75;
     word-break: ${({ breakWords }) => breakWords ? 'break-word' : 'unset'};
     color: ${({ color, theme }) => color ?? theme.colors.textPrimary};
+    padding: '';
     text-align: ${({ textAlign }) => textAlign ?? 'start'};
     ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
 `;

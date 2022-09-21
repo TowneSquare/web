@@ -36,7 +36,7 @@ export const Ecosystem = ({data}: { data: LandingData}) => {
         <ContentWrapper style={{position: 'relative', zIndex: '2'}}>
           <Row items="center" gap="112px">
             <TitleWrapper isMobile={isMobile || isTablet}>
-              <Title scale={isMobile || isTablet ? 'md' : 'lg'}>
+              <Title scale={isMobile? "sm" : isTablet ? 'md' : 'lg'}>
                 {data.title}
               </Title>
             </TitleWrapper>

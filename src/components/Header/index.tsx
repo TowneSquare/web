@@ -1,29 +1,62 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { BsTwitter, BsGithub } from "react-icons/bs";
 import { images } from '../../constants/images';
-import { ScrollTrigger, Tween } from 'react-gsap';
+
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function Header() {
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    gsap.to("#header", {
+      scrollTrigger: {
+        trigger: "#home",
+        start: "top top+=-1830px",
+        end: "top top+=-2050px",
+        scrub: true,
+      },
+      opacity: 0,
+    });
+
+    ScrollTrigger.create({
+      trigger: "#home",
+      start: "top top+=-2300px",
+      end: "top top+=-2800px",
+      onUpdate: (self) => {
+        if (headerRef.current != null && (headerRef.current as any).style != null)
+          (headerRef.current as any).style.opacity = self.progress;
+      },
+    });
+    ScrollTrigger.refresh();
+  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.scrollY;
+      console.log("position=", position)
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div
-      className="w-full px-6 py-4 z-20 fixed flex justify-between"
+      className="w-full px-6 py-4 z-20 fixed flex justify-between bg-red" id="header" ref={headerRef}
     >
       <div className="flex gap-2 items-center">
         <img className="w-6 md:w-8 lg:w-12 h-6 md:h-8 lg:h-12" src={images.logo} alt="logo" />
-        <ScrollTrigger start="0px" end="800px" scrub={0.5}>
-          <Tween from={{
-            opacity: 1
-          }} to={{
-            opacity: 0
-          }}
-          >
-            <span
-              className="font-[Urbanist] text-[22px] md:text-[35px] lg:text-[42px] font-bold text-white"
-            >
-              TowneSquare
-            </span>
-          </Tween>
-        </ScrollTrigger>
+        <span
+          className="font-[Urbanist] text-[22px] md:text-[35px] lg:text-[42px] font-bold text-white"
+        >
+          TowneSquare
+        </span>
+
       </div>
       <div className="flex gap-4 md:gap-8 items-center">
         <div className="w-6 md:w-8 h-6 md:h-8">

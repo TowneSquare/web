@@ -17,6 +17,7 @@ const Home = () => {
     <div
       className="relative bg-black"
       onMouseMove={(e) => onMouseMove(e)}
+      id="home"
     >
       <div className="absolute z-0 w-full  hidden lg:block">
         <img src="/images/home/left_web.svg" alt="background" className="top-0 left-0" />

@@ -39,7 +39,7 @@ function Header() {
         <button
           className="hidden md:block px-6 py-2 text-[18px] text-black font-semibold bg-white hover:bg-[#CCCCCC] active:bg-[#AAAAAA] rounded-full cursor-pointer"
         >
-          Get early access
+          Join waitlist
         </button>
       </div>
     </div>

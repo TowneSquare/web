@@ -10,7 +10,7 @@ function Header() {
     >
       <div className="flex gap-2 items-center">
         <img className="w-6 md:w-8 lg:w-12 h-6 md:h-8 lg:h-12" src={images.logo} alt="logo" />
-        <ScrollTrigger start="0px" end="800px" scrub={0.5}>
+        <ScrollTrigger start="0px" end="220px" scrub={0.5}>
           <Tween from={{
             opacity: 1
           }} to={{

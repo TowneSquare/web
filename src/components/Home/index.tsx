@@ -33,6 +33,7 @@ const Home = () => {
       <div className="pt-24 lg:pt-32 pb-8 lg:pb-48 relative z-10">
         <div className="flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-8 lg:gap-32 items-center justify-center px-4">
           <div className="flex flex-col gap-6 max-w-[800px] md:pr-10 lg:pr-0">
+            <div></div>
             <span className="text-[40px] md:text-[48px] lg:text-[56px] font-bold">
               <span className="text-[#00EEFD]">The Web3 ”everything” app</span>
               <br />you have been waiting for

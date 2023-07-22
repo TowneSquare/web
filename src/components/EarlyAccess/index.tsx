@@ -5,7 +5,7 @@ import Waitlist from '../Waitlist';
 
 function EarlyAccess() {
   return (
-    <div className="early-access component" data-component="Early">
+    <div id='earlyAccessDiv' className="early-access component" data-component="Early">
       <div className='z-50 bg-black'>
         <div className='relative max-md:hidden'>
           <img src='/images/early_left.svg' alt="left" className='absolute top-[0px] z-0' />

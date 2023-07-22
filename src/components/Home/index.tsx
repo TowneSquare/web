@@ -23,6 +23,7 @@ const Home: React.FC<HeaderProps> = ({ clickWaitlist }) => {
         className="relative bg-black"
         onMouseMove={(e) => onMouseMove(e)}
         data-component="Home"
+        id="homeDiv"
       >
         <div className="absolute z-0 hidden w-full lg:block">
           <img src="/images/home/left_web.svg" alt="background" className="top-0 left-0" />

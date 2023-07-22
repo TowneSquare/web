@@ -40,7 +40,7 @@ function Vision() {
   });
 
   return (
-    <div className="h-full bg-black bg-right-bottom bg-no-repeat bg-contain scroll-smooth lg:bg-vision-bg">
+    <div id="visionDiv" className="h-full bg-black bg-right-bottom bg-no-repeat bg-contain scroll-smooth lg:bg-vision-bg">
       <div className="h-[550vh]">
         <ScrollTrigger start="800px" end="900px" scrub={0.5}>
           <div className="sticky sticky_2 overflow-hidden top-0 h-[100vh]">

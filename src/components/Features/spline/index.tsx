@@ -35,7 +35,7 @@ function Splin() {
   }, []);
 
   return (
-    <div ref={ref1} className="w-[130vw] h-[130vh] overflow-hidden absolute bg-[#5E409E]	" style={{ left: "10vw", top: "100vh", transform: "translate(0px, 0vh)" }}>
+    <div ref={ref1} className="w-[130vw] h-[130vh] overflow-hidden absolute bg-[#5E409E] rounded-3xl" style={{ left: "10vw", top: "100vh", transform: "translate(0px, 0vh)" }}>
       <Spline1 />
       <Spline2 />
       <Spline3 />

@@ -23,12 +23,10 @@ function Vision() {
       percentage = value < 0 ? 0 : value > 400 ? 400 : value;
       console.log(window.scrollY, offSetTop, window.innerWidth, window.innerHeight, percentage)
     }
-
     // const intro = document.querySelector(".intro")?.parentElement?.offsetWidth;
     // if (intro !== undefined) {
     //   setFirst(intro * 2);
     // }
-  
     scrollSection?.setAttribute(
       "style",
       `transform:translate3d(${-percentage}vw, 0, 0)`
@@ -41,8 +39,8 @@ function Vision() {
 
   return (
     <div id="visionDiv" className="h-full bg-black bg-right-bottom bg-no-repeat bg-contain scroll-smooth lg:bg-vision-bg">
-      <div className="h-[550vh]">
-        <ScrollTrigger start="800px" end="900px" scrub={0.5}>
+      <div className="h-[600vh]">
+        <ScrollTrigger start="800px" end="1200px" scrub={0.5}>
           <div className="sticky sticky_2 overflow-hidden top-0 h-[100vh]">
             <Tween
               from={{
@@ -83,8 +81,8 @@ function Vision() {
               </div>
             </Tween>
 
-            <div className="relative scroll_section h-[100%] w-[700vw] will-change-transform flex">
-              <div className="bg-no-repeat bg-cover bg-L3" data-component="Introduction">
+            <div className="relative scroll_section h-[100%] w-[600vw] will-change-transform flex">
+              <div className="bg-no-repeat bg-cover bg-L3">
                 <div className="relative flex items-center justify-center w-screen h-screen text-white bg-black left-100 lg:bg-transparent font-Outfit">
                   <div className="flex items-center justify-center h-full">
                     <div className="flex flex-col items-center justify-center intro">

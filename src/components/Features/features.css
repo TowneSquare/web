@@ -5,3 +5,11 @@
 .features-wrapper .scrollmagic-pin-spacer:first-child {
   /* padding-bottom: 1300px !important; */
 }
+
+.scroll-margin-features {
+  scroll-margin: 235px;
+}
+
+.space-squiggle {
+  padding-top: 10px;
+}

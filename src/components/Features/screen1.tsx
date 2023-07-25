@@ -79,7 +79,7 @@ function Screen1() {
           <img src={images.logo} alt="logo" className="w-12 h-12" />
           <h2 className="text-[40px] font-bold">Townsquare</h2>
         </div>
-        <img src="/images/financial_img.png" alt="sign" className="self-center" />
+        <img src="/images/financial_img.png" alt="sign" className="self-center space-squiggle" />
       </div>
       <img ref={ref2} src="/images/features/feed.svg" alt='feature1' className="absolute w-[300px] self-center  -translate-x-1/2 -translate-y-1/2"
         style={{ left: `50vw`, top: `60vh` }}

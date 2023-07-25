@@ -34,7 +34,7 @@ function Features() {
   }, []);
 
   return (
-    <div className="features component bg-black hidden md:block lg:block" id="feature" data-component="Features">
+    <div className="features component bg-black hidden md:block lg:block overflow-hidden" id="feature" data-component="Features">
       <Controller>
         <Scene duration={5000} pin offset={`${offset}px`}>
           <div className="w-full relative">

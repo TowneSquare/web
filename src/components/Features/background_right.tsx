@@ -22,9 +22,10 @@ function BackgroundRight() {
 
   return (
     <>
-      <img ref={ref1} src="/images/features/right_web.svg" alt='feature1' className="absolute"
+      <img ref={ref1} src="/images/features/right_web.svg" alt='feature1' className="absolute bg-cover"
         style={{ right: "0", top: "-600px" }}
       />
+     
     </>
   )
 }

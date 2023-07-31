@@ -69,8 +69,10 @@ const Home: React.FC<HeaderProps> = ({ clickWaitlist }) => {
                   className="px-2 md:px-4 lg:px-6 h-12 flex items-center text-[18px] text-white font-semibold  hover:bg-[#FFFFFF33] active:bg-[#FFFFFF66] border-2 border-white rounded-full whitespace-nowrap"
                 >
                   Follow us on
-                  <BsTwitter
-                    size={38}
+                  <img src="/images/twitter.svg"
+                  alt="Twitter logo"
+                  width={38}
+                  height={38}
                     style={{
                       color: "#009EF7",
                       paddingLeft: "8px",

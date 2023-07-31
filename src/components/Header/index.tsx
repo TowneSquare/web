@@ -32,8 +32,10 @@ const Header: React.FC<HeaderProps> = ({ clickWaitlist }) => {
       <div className="flex gap-4 md:gap-8 items-center">
         <div className="w-6 md:w-8 h-6 md:h-8">
           <a href="https://twitter.com/TowneSquarexyz">
-            <BsTwitter
-              size="auto"
+          <img src="/images/twitter.svg"
+                  alt="Twitter logo"
+                  width={34}
+                  height={34}
               style={{
                 color: "#F2F0FF",
               }}

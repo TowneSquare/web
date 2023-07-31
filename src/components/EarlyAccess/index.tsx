@@ -32,7 +32,15 @@ function EarlyAccess() {
             <p className="text-[20px] text-center text-white font-Outfit font-bold">Find out more about Townesquare</p>
             <div className='flex justify-center pt-6 space-x-8'>
               <a href='https://twitter.com/TowneSquarexyz' target="_blank" rel="noreferrer">
-                <img src="/images/twitter.svg" alt="twitter_image"/>
+                <img src="/images/twitter.svg" alt="twitter_image"
+                width={33}
+                height={33}
+                style={{
+                  paddingTop: '1.33px',
+                 
+                }}
+                
+                />
               </a>
               <a href='https://github.com/TowneSquare' target="_blank" rel="noreferrer">
                 <img src="/images/github.svg" alt="github_image"/>

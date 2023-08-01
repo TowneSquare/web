@@ -207,6 +207,7 @@ function Vision() {
                     <div className="py-4">
                       <h1 className="md:text-[40px] text-[30px] font-bold">Identity freedom</h1>
                       <img
+                        className='w-full h-auto'
                         src="/images/financial_img.svg"
                         alt="financial_image"
                       />

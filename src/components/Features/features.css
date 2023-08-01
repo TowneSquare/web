@@ -4,8 +4,9 @@
 }
 
 .features-wrapper > .scrollmagic-pin-spacer:first-child {
-  padding-bottom: 300px !important;
-
+  padding-bottom: 1300px !important;
+  height: 5000px !important;
+  min-height: 5000px !important;
 }
 
 .scroll-margin-features {

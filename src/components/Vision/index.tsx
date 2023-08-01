@@ -197,9 +197,9 @@ function Vision() {
                 <div className="flex flex-col items-center justify-center w-screen h-screen px-2 text-white font-Outfit lg:flex-row md:flex-row">
                   <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
                     <img
-                      className="w-full h-auto"
-                      src="/images/identity_freedom.svg"
-                      alt="identity_freedom"
+                      className="w-full"
+                      src="/images/informational_freedom.svg"
+                      alt="financial_freedom"
                     />
                   </div>
                   <div>

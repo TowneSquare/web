@@ -42,13 +42,18 @@ const Waitlist: React.FC<Props> = ({ isModel, onClose }) => {
         setIsComplete(false);
     };
 
+     const handleClose = () => {
+        onClose?.()
+        setEmail(' ')
+    }
+
   return (
     <div className="w-8/12 py-20 bg-gray-500 border border-white rounded-md bg-opacity-40 backdrop-blur-2xl">
         {
             isModel ?
             <div className='absolute top-1 right-4'>
                 <button
-                    onClick={onClose}
+                    onClick={handleClose}
                     className="bg-transparent text-white text-[50px] leading-none p-1 rounded-full"
                 >
                     <span className="font-thin">×</span>

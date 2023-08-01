@@ -24,12 +24,12 @@ function Features() {
   }, []);
 
   return (
-    <div className="features-wrapper component bg-black hidden md:block lg:block" id="feature" data-component="Features">
+    <div className="hidden bg-black features-wrapper component md:block lg:block" id="feature" data-component="Features">
       <Controller>
         <Scene duration={5000} pin offset={`${offset}px`}>
           <div className="relative w-full">
             <BackgroundRight />
-            <div className="w-full h-[100vh] relative overflow-hidden">
+            <div className="w-full h-[100vh] relative overflow-hidden ">
               <Screen1 />
               <Screen2 />
               <Screen3 />

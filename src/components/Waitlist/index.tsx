@@ -57,7 +57,7 @@ const Waitlist: React.FC<Props> = ({ isModel, onClose }) => {
             :
             null
         }
-        <p className="text-[32px] text-center text-white font-Outfit font-bold">Be among the first to try out Townesquare</p>
+        <p className="text-[32px] text-center text-white font-Outfit font-bold">Be among the first to try out TowneSquare</p>
         <p className="text-[18px] text-center text-white font-Outfit pt-4">We’ll send you an invite to try out TowneSquare as soon as we’re ready.<br/>No spam, no junk mail or other mumbo-jumbo, pinky promise!</p>
         <div>
             <div className='flex justify-center space-x-6 pt-14'>

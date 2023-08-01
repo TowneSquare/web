@@ -76,7 +76,7 @@ function Screen1() {
         <h1 className="text-3xl  font-semibold text-center">Introducing</h1>
         <div className="flex gap-4 self-center items-center">
           <img src={images.logo} alt="logo" className="w-12 h-12" />
-          <h2 className="text-[40px] font-bold">Townsquare</h2>
+          <h2 className="text-[40px] font-bold">TowneSquare</h2>
         </div>
         <img src="/images/financial_img.png" alt="sign" className="self-center space-squiggle" />
       </div>

@@ -44,7 +44,7 @@ function Text2() {
 
   return (
     <img ref={ref1} src="/images/text_any.svg" alt='spline1' className="fixed"
-      style={{ left: "-50%", bottom: "20%" }}
+      style={{ left: "-50%", bottom: "15%"}}
     />
   )
 }

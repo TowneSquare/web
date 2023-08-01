@@ -16,7 +16,7 @@ module.exports = {
       'L3': "url('../public/images/L3.svg')",
       'L5': "url('../public/images/L5.svg')",
       'L6': "url('../public/images/L6.svg')",
-        'L7': "url('../public/images/L7.svg')",
+      'L7': "url('../public/images/L7.svg')",
     }
   },
   plugins: [],

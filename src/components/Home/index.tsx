@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { images } from '../../constants/images';
-import { BsTwitter } from 'react-icons/bs';
 
 type HeaderProps = {
   clickWaitlist: () => void;
@@ -66,20 +65,16 @@ const Home: React.FC<HeaderProps> = ({ clickWaitlist }) => {
                 >
                   Join waitlist
                 </button>
-                <button
-                  className="px-2 md:px-4 lg:px-6 h-12 flex items-center text-[18px] text-white font-semibold  hover:bg-[#FFFFFF33] active:bg-[#FFFFFF66] border-2 border-white rounded-full whitespace-nowrap"
-                >
-                  Follow us on
-                  <BsTwitter
-                    size={38}
-                    style={{
-                      color: "#009EF7",
-                      paddingLeft: "8px",
-                      paddingRight: "8px",
-                    }}
-                  />
-                  <span className="hidden lg:block">Twitter</span>
-                </button>
+                <a href='https://twitter.com/townesquarexyz'>
+                  <button
+                    className="px-2 md:px-4 lg:px-6 h-12 flex items-center text-[18px] text-white font-semibold  hover:bg-[#FFFFFF33] active:bg-[#FFFFFF66] border-2 border-white rounded-full whitespace-nowrap"
+                  >
+                    
+                    Follow us on
+                    <img src="/images/twitter-header.svg" alt="twitter_image"/>
+                    <span className="hidden lg:block">Twitter</span>
+                  </button>
+                </a>
               </div>
             </div>
             <div className="flex items-center justify-center min-w-[300px] relative">

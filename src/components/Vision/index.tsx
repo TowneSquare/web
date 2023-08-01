@@ -198,7 +198,7 @@ function Vision() {
                   <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
                     <img
                       className="w-full"
-                      src="/images/informational_freedom.svg"
+                      src="/images/Identity_freedom.svg"
                       alt="financial_freedom"
                     />
                   </div>

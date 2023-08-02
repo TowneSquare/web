@@ -51,10 +51,10 @@ export const Footer = (props: any) => {
           <div className="flex flex-col space-y-3">
             <div className="text-sm font-bold text-white font-Outfit">Legal</div>
             <div className="text-[#CCCCCC] text-sm font-Outfit flex flex-col space-y-2">
-              <a href="/termsofservice" target="_blank">Terms of Service</a>
-              <a href="/legal" target="_blank">Legal</a>
+              <Link to="/TermsOfService">Terms of Service</Link>
+              <Link to="/">Legal</Link>
               {/* <a href="/privacypolicy" target="_blank">Privacy Policy</a> */}
-              <Link to="/PrivacyPolicy">Privacy Policy</Link>
+              <Link to="/">Privacy Policy</Link>
             </div>
           </div>
           <div className="flex flex-col space-y-3">

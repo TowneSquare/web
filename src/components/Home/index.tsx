@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { images } from '../../constants/images';
-import { BsTwitter } from 'react-icons/bs';
 
 type HeaderProps = {
   clickWaitlist: () => void;
@@ -23,6 +22,7 @@ const Home: React.FC<HeaderProps> = ({ clickWaitlist }) => {
         className="relative bg-black"
         onMouseMove={(e) => onMouseMove(e)}
         data-component="Home"
+        id="homeDiv"
       >
         <div className="absolute z-0 hidden w-full lg:block">
           <img src="/images/home/left_web.svg" alt="background" className="top-0 left-0" />
@@ -71,7 +71,7 @@ const Home: React.FC<HeaderProps> = ({ clickWaitlist }) => {
                   >
                     
                     Follow us on
-                    <img src="/images/twitter.svg" alt="twitter_image"/>
+                    <img src="/images/twitter-header.svg" alt="twitter_image"/>
                     <span className="hidden lg:block">Twitter</span>
                   </button>
                 </a>

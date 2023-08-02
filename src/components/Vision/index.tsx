@@ -21,7 +21,6 @@ function Vision() {
     if (offSetTop !== undefined) {
       value = ((window.scrollY - offSetTop) / window.innerHeight) * 100;
       percentage = value < 0 ? 0 : value > 400 ? 400 : value;
-      console.log(window.scrollY, offSetTop, window.innerWidth, window.innerHeight, percentage)
     }
     // const intro = document.querySelector(".intro")?.parentElement?.offsetWidth;
     // if (intro !== undefined) {
@@ -38,9 +37,9 @@ function Vision() {
   });
 
   return (
-    <div className="h-full bg-black bg-right-bottom bg-no-repeat bg-contain scroll-smooth lg:bg-vision-bg">
-      <div className="h-[600vh]">
-        <ScrollTrigger start="800px" end="1200px" scrub={0.5}>
+    <div id="visionDiv" className="h-full bg-black bg-right-bottom bg-no-repeat bg-contain scroll-smooth lg:bg-vision-bg">
+      <div className="h-[550vh]">
+        <ScrollTrigger start="800px" end="900px" scrub={0.5}>
           <div className="sticky sticky_2 overflow-hidden top-0 h-[100vh]">
             <Tween
               from={{
@@ -195,7 +194,7 @@ function Vision() {
               </div>
               <div className="bg-no-repeat bg-cover bg-L7" data-component="Vision">
                 <div className="flex flex-col items-center justify-center w-screen h-screen px-2 text-white font-Outfit lg:flex-row md:flex-row">
-                  <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
+                   <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
                     <img
                       className="w-full"
                       src="/images/Identity_freedom.svg"

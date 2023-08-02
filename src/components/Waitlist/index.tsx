@@ -18,7 +18,7 @@ const Waitlist: React.FC<Props> = ({ isModel, onClose }) => {
             email
         })
         .then(response => {
-            console.log(response)
+            // console.log(response)
             if(response?.data.success) {
                 setIsComplete(true);
                 setEmail('');

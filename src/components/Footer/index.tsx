@@ -1,5 +1,5 @@
 import React from "react";
-import { BsTwitter, BsGithub } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";

@@ -38,12 +38,12 @@ function Screen4() {
     <div ref={ref1} className="absolute flex items-center gap-[75px] -translate-x-1/2 -translate-y-1/2"
       style={{ left: "150vw", top: `50vh`, minWidth: "1000px" }}
     >
-      <img src="/images/features/feature4.svg" alt='feature4' className="min-w-[300px]" />
-      <div>
-        <h1 className="text-[40px] leading-[50px] font-bold">
+      <img src="/images/features/feature4.svg" alt='feature4' className="min-w-[316px]" />
+      <div className="feature-contextual-title-left-padding">
+        <h1 className="contextual-title">
           An all-in-one DM system
         </h1>
-        <p className="text-[22px] leading-[34px] font-[400] mt-4">
+        <p className="townesquare-text-base">
           Your user profile on TowneSquare is an identity system that seamlessly connects on-chain credentials, NFT membership, and other verifiable experiences to enable new use cases such as ticketing, reward drops, and authentication services.
         </p>
       </div>

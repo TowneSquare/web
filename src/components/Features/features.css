@@ -2,7 +2,46 @@
   background:black;
   width: 100%;
 }
+
 .features-wrapper > .scrollmagic-pin-spacer:first-child {
   padding-bottom: 300px !important;
 
+}
+
+.scroll-margin-features {
+  scroll-margin: 235px;
+}
+
+.space-squiggle {
+  padding-top: 10px;
+}
+
+.townesquare-text-base {
+  font-family: Outfit;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+.contextual-title {
+  font-family: Outfit;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px; 
+  padding-bottom: 16px;
+}
+
+.phone-padding-screen2 {
+  position: relative;
+  left: 45px;
+}
+
+.feature-text-seperator {
+  min-height: 32px;
+}
+
+.feature-contextual-title-left-padding {
+  padding-left: 25px;
 }

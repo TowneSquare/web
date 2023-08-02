@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsTwitter, BsGithub, BsGit } from "react-icons/bs";
+import { BsGithub, BsGit } from "react-icons/bs";
 import { images } from '../../constants/images';
 import { ScrollTrigger, Tween } from 'react-gsap';
 
@@ -32,12 +32,7 @@ const Header: React.FC<HeaderProps> = ({ clickWaitlist }) => {
       <div className="flex gap-4 md:gap-8 items-center">
         <div className="w-6 md:w-8 h-6 md:h-8">
           <a href="https://twitter.com/TowneSquarexyz">
-            <BsTwitter
-              size="auto"
-              style={{
-                color: "#F2F0FF",
-              }}
-            />
+            <img src="/images/twitter.svg" alt="twitter_image"/>
           </a>
         </div>
         <div className="w-6 md:w-8 h-6 md:h-8">

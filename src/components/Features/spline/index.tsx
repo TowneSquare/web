@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Spline1 from './spline1';
 import Spline2 from './spline2';
@@ -41,12 +41,30 @@ function Splin() {
       onUpdate: (self) => {
         if (ref1.current != null && (ref1.current as any).style != null) {
           let node = ref1.current as any;
-          node.style.clipPath = `polygon(
+          let numPoint = 10;
+          const r = 24;
+
+          let clipPath = `polygon(
             calc(30vw + ${10 * self.progress}vw) 0, 
-            calc(130vw - ${10 * self.progress}vw) 0,
-            calc(130vw - ${10 * self.progress}vw) 100%,
-            calc(30vw + ${10 * self.progress}vw) 100%
-          )`;
+            calc(130vw - ${10 * self.progress}vw) 0, `;
+
+          for (let i = 0; i < numPoint; i++) {
+            let offsetX = r * Math.cos(i * 90.0 / numPoint / 180.0 * Math.PI);
+            let offsetY = r * Math.sin(i * 90.0 / numPoint / 180.0 * Math.PI);
+            clipPath += `
+            calc(130vw - ${10 * self.progress}vw - ${r}px + ${offsetX}px) calc(100% - ${r}px + ${offsetY}px),`;
+          }
+          for (let i = 0; i < numPoint; i++) {
+            let offsetX = r * Math.cos((90 - i * 90.0 / numPoint) / 180.0 * Math.PI);
+            let offsetY = r * Math.sin((90 - i * 90.0 / numPoint) / 180.0 * Math.PI);
+            clipPath += `
+            calc(30vw + ${10 * self.progress}vw + ${r}px - ${offsetX}px) calc(100% - ${r}px + ${offsetY}px)`;
+            if (i < numPoint - 1)
+              clipPath += ",";
+          }
+          clipPath += ")";
+
+          node.style.clipPath = clipPath;
         }
       },
     });

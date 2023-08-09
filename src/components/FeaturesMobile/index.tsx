@@ -39,7 +39,7 @@ function FeaturesMobile() {
     >
       <Controller>
         <Scene duration={800} pin offset={150}>
-          <div className="w-full h-[800px]">
+          <div className="w-full h-[24px]">
             <Screen1 />
           </div>
         </Scene>

@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Controller, Scene } from 'react-scrollmagic';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import "./features.css";
 import Splin from './spline';
 import Screen1 from './screen1';
@@ -13,8 +11,6 @@ import Screen6 from './screen6';
 import Screen7 from './screen7';
 import Screen8 from './screen8';
 import BackgroundRight from './background_right';
-gsap.registerPlugin(ScrollTrigger);
-
 
 function Features() {
   const [offset, setOffset] = useState(700);

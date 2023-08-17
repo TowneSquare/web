@@ -33,7 +33,7 @@ function Vision() {
       className="h-full bg-black bg-right-bottom bg-no-repeat bg-contain scroll-smooth lg:bg-vision-bg"
     >
       <div className="h-[750vh] md:h-[550vh]">
-        <ScrollTrigger start="900px" end="1600px" markers scrub={0.5}>
+        <ScrollTrigger start="900px" end="1600px" scrub={0.5}>
           <div className="sticky sticky_2 overflow-hidden top-0 h-[100vh]">
             <Tween
               from={{

@@ -124,9 +124,21 @@ const Home: React.FC<HeaderProps> = ({ clickWaitlist }) => {
                 }}
               />
               <div className="relative min-w-[316px]">
-                <img src="/images/home/index/layout_1x.webp" alt='layout' className="min-w-[316px]"/>
+                <picture>
+                  <source
+                    srcSet="/images/home/index/layout_1x.webp"
+                    type="image/webp"
+                  />
+                  <img srcSet="/images/home/index/layout_1x.webp" alt='layout' className="min-w-[316px]"/>
+                </picture>
                 <div className="hide-scrollbar absolute inset-0 mt-[114px] mb-[54px] mx-[10px] overflow-x-hidden overflow-y-scroll z-10">
-                  <img src="/images/home/index/content_1x.webp" alt='layout' className="w-full" />
+                  <picture>
+                    <source
+                      srcSet="/images/home/index/content_1x.webp"
+                      type="image/webp"
+                    />
+                    <img srcSet="/images/home/index/content_1x.webp" alt="content" className="w-full"/>
+                  </picture>
                 </div>
                 <div className="absolute inset-0 mt-[545px] ml-[245px] mr-[10px] z-20">
                   <img src="/images/home/index/plus.svg" alt='layout' className="w-full"/>

@@ -133,11 +133,13 @@ function Vision() {
               <div className="bg-no-repeat bg-cover bg-L5" data-component="Vision">
                 <div className="flex flex-col items-center justify-center w-[150vw] px-[25vw] md:px-2 md:w-screen h-screen text-white financial z-100 font-Outfit lg:flex-row md:flex-row">
                   <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
-                    <img
-                      className="w-full"
-                      src="/images/financial_freedom.svg"
-                      alt="financial_freedom"
-                    />
+                    <picture>
+                      <source
+                        srcSet="/images/financial_freedom_1x.webp"
+                        type="image/webp"
+                      />
+                      <img srcSet="/images/financial_freedom_1x.webp" alt='financial_freedom' className="min-w-[316px]"/>
+                    </picture>
                   </div>
                   <div>
                     <p className="py-2 font-light">With TowneSquare you get</p>
@@ -160,11 +162,13 @@ function Vision() {
               <div className="bg-no-repeat bg-cover bg-L6" data-component="Vision">
                 <div className="flex flex-col items-center justify-center w-[150vw] px-[25vw] md:px-2 md:w-screen h-screen  text-white font-Outfit lg:flex-row md:flex-row">
                   <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
-                    <img
-                      className="w-full"
-                      src="/images/informational_freedom.svg"
-                      alt="financial_freedom"
-                    />
+                    <picture>
+                      <source
+                        srcSet="/images/informational_freedom_1x.webp"
+                        type="image/webp"
+                      />
+                      <img srcSet="/images/informational_freedom_1x.webp" alt='informational_freedom' className="min-w-[316px]"/>
+                    </picture>
                   </div>
                   <div>
                     <p className="py-2 font-light">With TowneSquare you get</p>
@@ -189,11 +193,13 @@ function Vision() {
               <div className="bg-no-repeat bg-cover bg-L7" data-component="Vision">
                 <div className="flex flex-col items-center justify-center w-[150vw] px-[25vw] md:px-2 md:w-screen h-screen text-white font-Outfit lg:flex-row md:flex-row">
                    <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
-                    <img
-                      className="w-full"
-                      src="/images/Identity_freedom.svg"
-                      alt="financial_freedom"
-                    />
+                    <picture>
+                      <source
+                        srcSet="/images/identity_freedom_1x.webp"
+                        type="image/webp"
+                      />
+                      <img srcSet="/images/identity_freedom_1x.webp" alt='identity_freedom' className="min-w-[316px]"/>
+                    </picture>
                   </div>
                   <div>
                     <p className="py-2 font-light">With TowneSquare you get</p>

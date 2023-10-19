@@ -38,9 +38,21 @@ function Screen2() {
       style={{ left: "150vw", top: `50vh`, minWidth: "1000px" }}
     >
       <div className="relative min-w-[316px]">
-        <img src="/images/features/feature2/layout.svg" alt='layout' className="min-w-[316px]" />
+        <picture>
+          <source
+            srcSet="/images/features/feature2/layout_1x.webp"
+            type="image/webp"
+          />
+          <img srcSet="/images/features/feature2/layout_1x.webp" alt='layout' className="min-w-[316px]"/>
+        </picture>
         <div className="hide-scrollbar absolute inset-0 mt-[114px] mb-[58px] mx-[10px] overflow-x-hidden overflow-y-scroll">
-          <img src="/images/features/feature2/content.svg" alt='layout' className="w-full" />
+        <picture>
+          <source
+            srcSet="/images/features/feature2/content_1x.webp"
+            type="image/webp"
+          />
+          <img srcSet="/images/features/feature2/content_1x.webp" alt='content' className="min-w-[316px]"/>
+        </picture>
         </div>
       </div>
       <div>

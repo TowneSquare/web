@@ -135,10 +135,10 @@ function Vision() {
                   <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
                     <picture>
                       <source
-                        srcSet="/images/financial_freedom_1x.webp"
+                        srcSet="/images/financial_freedom_2x.webp"
                         type="image/webp"
                       />
-                      <img srcSet="/images/financial_freedom_1x.webp" alt='financial_freedom' className="min-w-[316px]"/>
+                      <img srcSet="/images/financial_freedom_2x.webp" alt='financial_freedom' className="min-w-[316px]"/>
                     </picture>
                   </div>
                   <div>
@@ -164,10 +164,10 @@ function Vision() {
                   <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
                     <picture>
                       <source
-                        srcSet="/images/informational_freedom_1x.webp"
+                        srcSet="/images/informational_freedom_2x.webp"
                         type="image/webp"
                       />
-                      <img srcSet="/images/informational_freedom_1x.webp" alt='informational_freedom' className="min-w-[316px]"/>
+                      <img srcSet="/images/informational_freedom_2x.webp" alt='informational_freedom' className="min-w-[316px]"/>
                     </picture>
                   </div>
                   <div>
@@ -195,10 +195,10 @@ function Vision() {
                    <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
                     <picture>
                       <source
-                        srcSet="/images/identity_freedom_1x.webp"
+                        srcSet="/images/identity_freedom_2x.webp"
                         type="image/webp"
                       />
-                      <img srcSet="/images/identity_freedom_1x.webp" alt='identity_freedom' className="min-w-[316px]"/>
+                      <img srcSet="/images/identity_freedom_2x.webp" alt='identity_freedom' className="min-w-[316px]"/>
                     </picture>
                   </div>
                   <div>

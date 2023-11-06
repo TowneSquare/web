@@ -123,21 +123,21 @@ const Home: React.FC<HeaderProps> = ({ clickWaitlist }) => {
                   top: offset.top,
                 }}
               />
-              <div className="relative min-w-[316px]">
+              <div className="relative min-w-[316px] h-[650px] w-[300px]">
                 <picture>
                   <source
-                    srcSet="/images/home/index/layout_1x.webp"
+                    srcSet="/images/home/index/layout_2x.webp"
                     type="image/webp"
                   />
-                  <img srcSet="/images/home/index/layout_1x.webp" alt='layout' className="min-w-[316px]"/>
+                  <img srcSet="/images/home/index/layout_2x.webp" alt='layout' className="min-w-[316px]"/>
                 </picture>
-                <div className="hide-scrollbar absolute inset-0 mt-[114px] mb-[54px] mx-[10px] overflow-x-hidden overflow-y-scroll z-10">
+                <div className="hide-scrollbar absolute inset-0 mt-[114px] mx-[10px] overflow-x-hidden overflow-y-scroll z-10 h-[524px] w-[300px]">
                   <picture>
                     <source
-                      srcSet="/images/home/index/content_1x.webp"
+                      srcSet="/images/home/index/content_2x.webp"
                       type="image/webp"
                     />
-                    <img srcSet="/images/home/index/content_1x.webp" alt="content" className="w-full"/>
+                    <img srcSet="/images/home/index/content_2x.webp" alt="content" className="w-full"/>
                   </picture>
                 </div>
                 <div className="absolute inset-0 mt-[545px] ml-[245px] mr-[10px] z-20">
